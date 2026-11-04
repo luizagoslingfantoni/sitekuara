@@ -1,0 +1,30 @@
+.course-reference-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1fr) minmax(0,.9fr);gap:32px;align-items:start}
+.course-reference-grid figure{min-height:0;align-self:stretch}
+.course-reference-grid figure img{object-position:center}
+body #explorar.course-reference-intro .course-reference-copy h2{font-size:clamp(28px,2.45vw,40px)!important;max-width:none!important;margin-bottom:24px!important}
+.course-reference-copy p{font-size:16px;line-height:1.6;margin-bottom:18px}
+.course-reference-grid form{min-width:0;margin:0!important;padding:26px!important;border-radius:20px}
+.course-reference-grid form h3{font-size:28px!important;line-height:1.15!important}
+.course-reference-grid form p,.course-reference-grid form label{font-size:15px!important;line-height:1.45!important}
+.course-reference-grid form input:not([type=checkbox]):not([type=hidden]){min-width:0;width:100%;height:44px}
+.course-reference-grid form .form-grid{gap:16px}
+.geo-pathways__grid{grid-template-columns:1fr!important;gap:24px}
+.geo-pathways__card{display:grid!important;grid-template-columns:1.2fr .8fr!important;padding:0!important;overflow:hidden;min-height:0!important;gap:0!important}
+.geo-pathways__card .modality-copy{padding:36px;min-width:0}
+.geo-pathways__card .modality-copy>span{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+.geo-pathways__card .modality-copy>a{display:inline-flex;margin-top:20px}
+.geo-pathways__card .modality-image{width:100%;height:100%;min-height:320px;object-fit:cover}
+.geo-pathways__card--presence{grid-template-columns:.8fr 1.2fr!important}
+.geo-pathways__card--presence .modality-image{grid-column:1;grid-row:1}
+.geo-pathways__card--presence .modality-copy{grid-column:2;grid-row:1}
+@media(max-width:1100px){.course-reference-grid{grid-template-columns:.8fr 1.2fr}.course-reference-grid form{grid-column:2}.course-reference-grid figure{grid-row:1 / span 2;min-height:400px}}
+@media(max-width:700px){.course-reference-grid{grid-template-columns:1fr}.course-reference-grid figure{grid-row:auto;min-height:300px}.course-reference-grid form{grid-column:auto}.geo-pathways__card,.geo-pathways__card--presence{grid-template-columns:1fr!important}.geo-pathways__card--presence .modality-image,.geo-pathways__card--presence .modality-copy{grid-column:auto;grid-row:auto}.geo-pathways__card .modality-image{height:260px;min-height:0}.geo-pathways__card .modality-copy{padding:28px}}
+
+/* Modalidades lado a lado, com imagens alternadas. */
+.geo-pathways__grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px}
+.geo-pathways__card{grid-template-columns:1.35fr .65fr!important}
+.geo-pathways__card--presence{grid-template-columns:.65fr 1.35fr!important}
+.geo-pathways__card .modality-copy{padding:28px}
+.geo-pathways__card .modality-copy h3{font-size:clamp(24px,2.1vw,34px);line-height:1.12}
+@media(max-width:980px){.geo-pathways__grid{grid-template-columns:1fr!important}}
+@media(max-width:700px){.geo-pathways__card,.geo-pathways__card--presence{grid-template-columns:1fr!important}}

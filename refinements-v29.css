@@ -1,0 +1,36 @@
+.social-page__main{padding-top:0!important}
+body:has(.social-opening) .site-header:not([data-scroll-theme]){background:transparent!important}
+body:has(.social-opening) .site-header:not([data-scroll-theme]) .brand img{filter:brightness(0) invert(1)!important}
+body:has(.social-opening) .site-header:not([data-scroll-theme]) :is(.main-nav>a,.nav-dropdown__trigger){color:#233754!important}
+.social-page__main .social-opening{grid-template-columns:minmax(0,43fr) minmax(0,29fr) minmax(0,28fr)}
+.social-page__main .social-opening .about-opening__story{padding-right:2.5rem!important}
+.social-opening .social-form-card{margin-right:2.5rem}
+.social-opening .social-form-card form{grid-template-columns:minmax(0,1fr)}
+body:has(.blog-article__prose),body:has(.blog-article__prose) .site-footer{background:#fff!important;background-image:none!important;color:#233754}
+body:has(.blog-article__prose) .site-header:not([data-scroll-theme]){background:#fff!important}
+.blog-article__aside{border-top:0}
+.blog-article__aside .content-meta,.blog-article__aside .content-meta>*{color:#233754!important}
+.blog-article__aside .content-meta>span:nth-child(2){display:flex;align-items:center;gap:.7rem}
+.article-author-portrait{width:40px;height:40px;margin:0;flex-shrink:0}
+.blog-article__thesis strong{font-size:1rem!important;line-height:1.5}
+.article-related{max-width:1000px;width:calc(100% - 2 * var(--side));margin:0 auto;padding:0 0 5rem}
+.article-related__heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+.article-related__heading h2{font-size:2rem;color:#233754;margin:0}
+.article-related__heading button{width:40px;height:40px;border:1px solid #23375440;border-radius:50%;color:#233754;background:transparent;cursor:pointer;margin-left:.5rem}
+.article-related__track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem}
+.article-related__track .writing-card{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;min-width:0}
+.article-related__track .writing-card h2{font-size:1.2rem}
+.article-related__track .writing-meta{font-size:.7rem}
+.course-hero--forno-de-latao h1 .latao-title-second{display:block;font-size:calc(1em - 5.33px);margin-top:.15em}
+.course-hero--forno-de-latao .kiln-hero__copy{max-width:1000px}
+.online-title-status{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.online-title-status h1{margin:0!important}
+.online-title-status .course-status{margin:0}
+@media(max-width:1200px){.social-page__main .social-opening{grid-template-columns:40fr 60fr}}
+@media(max-width:760px){.social-page__main .social-opening{display:block}.social-opening .social-form-card{margin-right:var(--side)}.article-related__track .writing-card{flex-basis:85%}.article-related__heading h2{font-size:1.7rem}}
+body .social-page__main .social-opening .social-form-card form.social-signup__form{grid-template-columns:minmax(0,1fr)!important}
+body:has(.blog-article__prose) .site-header:not([data-scroll-theme]) :is(.main-nav>a,.nav-dropdown__trigger){color:#233754!important}
+body:has(.blog-article__prose) .site-header:not([data-scroll-theme]) .brand img{filter:none!important}
+.blog-article__aside .content-meta span span{color:#233754!important}
+
+.article-related__heading h2{font-family:Inter,Arial,sans-serif;font-weight:600;letter-spacing:-.04em}

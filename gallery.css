@@ -1,0 +1,50 @@
+.gallery-page{background:#faf9f6;color:#233754;font-family:Inter,Arial,sans-serif}
+.gallery-main{padding:110px 24px 70px;background:#faf9f6;min-height:70vh}
+.gallery-title{font:600 2rem/1.1 Inter,Arial,sans-serif;letter-spacing:-.05em;text-align:center;margin:0 0 25px;color:#233754}
+.gallery-toolbar{position:sticky;top:82px;z-index:5;display:flex;flex-direction:column;align-items:center;margin-bottom:24px;pointer-events:none}
+.gallery-filters{display:flex;align-items:center;padding:6px;gap:3px;background:#fffefaeF;backdrop-filter:blur(18px);border:1px solid #23375409;border-radius:40px;box-shadow:0 5px 24px #2337540d;pointer-events:auto}
+.gallery-filters button{font:500 .85rem/1.4 Inter,Arial,sans-serif;color:#233754;border:0;background:transparent;padding:11px 19px;border-radius:24px;cursor:pointer;white-space:nowrap;transition:background .2s,box-shadow .2s}
+.gallery-filters button:hover{background:#eee8de}
+.gallery-filters button[aria-pressed=true]{background:white;box-shadow:0 2px 7px #23375428}
+.gallery-filters button:focus-visible,.masonry-photo:focus-visible{outline:2px solid #a24d2f;outline-offset:3px}
+.firing-dropdown{position:relative}
+#firing-toggle{display:flex;align-items:center;gap:12px}
+#firing-toggle i{width:7px;height:7px;border-right:1px solid;border-bottom:1px solid;transform:rotate(45deg);margin-top:-4px}
+#firing-options{position:absolute;right:0;top:calc(100% + 12px);width:245px;padding:8px;background:#fffefa;border:1px solid #23375415;border-radius:16px;box-shadow:0 10px 35px #23375420}
+#firing-options button{display:block;width:100%;text-align:left;border-radius:9px;padding:11px 14px}
+#gallery-count{font:400 .72rem/1.4 Inter,Arial,sans-serif;color:#233754;background:#faf9f6db;border-radius:10px;margin:8px 0 0;padding:3px 10px}
+.gallery-masonry{columns:4;column-gap:14px;max-width:1800px;margin:auto}
+.masonry-photo{display:block;position:relative;width:100%;padding:0;margin:0 0 14px;border:0;border-radius:18px;overflow:hidden;background:#e4d9c8;break-inside:avoid;cursor:zoom-in}
+.masonry-photo img{display:block;width:100%;height:auto;transition:transform .5s}
+.masonry-photo:hover img{transform:scale(1.025)}
+.masonry-photo>span{position:absolute;bottom:0;left:0;right:0;padding:35px 18px 18px;color:white;background:linear-gradient(transparent,#0009);text-align:left;font:500 .85rem/1.4 Inter,Arial,sans-serif;opacity:0;transition:opacity .2s}
+.masonry-photo:hover>span,.masonry-photo:focus-visible>span{opacity:1}
+.gallery-main [hidden]{display:none!important}
+.gallery-empty{text-align:center;padding:70px 20px;color:#233754}
+.photo-viewer{position:fixed;inset:0;width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;padding:60px 75px 25px;border:0;background:#142136f5;color:white}
+.photo-viewer::backdrop{background:#142136}
+.photo-viewer[open]{display:flex;align-items:center;justify-content:center}
+.photo-viewer figure{margin:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.photo-viewer figure img{max-width:100%;max-height:calc(100% - 55px);object-fit:contain;border-radius:5px}
+.photo-viewer figcaption{font:400 .85rem/1.5 Inter,Arial,sans-serif;text-align:center}
+.photo-viewer button{position:absolute;display:grid;place-items:center;width:44px;height:44px;border:1px solid #ffffff70;border-radius:50%;background:#233754;color:white;cursor:pointer}
+.photo-close{right:20px;top:16px;font-size:28px}
+.photo-prev{left:16px;top:50%}.photo-next{right:16px;top:50%}
+.photo-viewer button i{width:10px;height:10px;border-top:2px solid;border-right:2px solid;transform:rotate(45deg)}
+.photo-prev i{transform:rotate(-135deg)!important}
+@media(max-width:1100px){.gallery-masonry{columns:3}}
+@media(max-width:760px){.gallery-main{padding:100px 12px 45px}.gallery-masonry{columns:2;column-gap:10px}.masonry-photo{margin-bottom:10px;border-radius:12px}.gallery-filters{flex-wrap:wrap;justify-content:center;border-radius:22px;max-width:100%}.gallery-filters button{padding:9px 12px;font-size:.8rem}.gallery-toolbar{top:72px}.photo-viewer{padding:65px 45px 25px}.photo-prev{left:4px}.photo-next{right:4px}.photo-viewer button{width:36px;height:36px}}
+@media(prefers-reduced-motion:reduce){.masonry-photo img,.masonry-photo>span{transition:none}}
+
+/* Ajustes da Galeria: imagens sem legendas e fundo contínuo. */
+.gallery-title{font-size:calc(2rem + 10pt)}
+#gallery-count{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.gallery-page .site-footer{background:#faf9f6;background-image:none;color:#233754}
+.gallery-page .footer__column h3,.gallery-page .footer__column span,.gallery-page .footer__bottom,.gallery-page .footer-contact{color:#233754!important}
+.gallery-page .footer__bottom{border-color:#23375430}
+.gallery-page .footer__brand img{filter:none}
+.photo-viewer figure img{max-height:100%}
+/* Mosaico de ponta a ponta, com a margem fina da referência. */
+.gallery-page .gallery-main{width:100%;max-width:none;padding-inline:24px;box-sizing:border-box}
+.gallery-page .gallery-masonry{width:100%;max-width:none;margin-inline:0}
+@media(max-width:760px){.gallery-page .gallery-main{padding-inline:12px}}

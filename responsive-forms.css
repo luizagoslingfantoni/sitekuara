@@ -1,0 +1,33 @@
+/* Cards follow available space instead of squeezing four columns. */
+.individual-session__facts{min-width:0;container-type:inline-size}
+.individual-session .individual-mentorship__theme-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.individual-session .individual-mentorship__theme-grid article{min-width:0;height:auto;aspect-ratio:auto;padding:24px;overflow:visible}
+.individual-session .individual-mentorship__theme-grid :is(h3,p,.revision-fact){overflow:visible;text-overflow:clip;white-space:normal;max-height:none;-webkit-line-clamp:unset;overflow-wrap:break-word}
+@container(min-width:760px){.individual-session .individual-mentorship__theme-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@container(max-width:359px){.individual-session .individual-mentorship__theme-grid{grid-template-columns:1fr}}
+@media(max-width:1100px){.individual-session__columns{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}.individual-session__facts{grid-column:1/-1;grid-row:auto}.individual-session .individual-session__policies{grid-column:2;border-top:0;border-left:1px solid #f5eee530;padding:0 0 0 24px;margin:0;display:block}.individual-session .individual-session__policies>div+div{margin-top:24px;padding-top:24px;border-top:1px solid #f5eee530}}
+@media(max-width:650px){.individual-session__columns{grid-template-columns:minmax(0,1fr);gap:32px}.individual-session .individual-session__policies{grid-column:auto;border-left:0;border-top:1px solid #f5eee530;padding:24px 0 0}.individual-session .revision-actions{flex-wrap:wrap;gap:16px}.individual-session .kuara-button{max-width:100%;white-space:normal}.individual-session h2{margin-bottom:24px}}
+/* The form gets its own roomy row before the desktop side column becomes cramped. */
+.social-opening .social-form-card{container-type:inline-size;min-width:0}
+body .social-page__main .social-opening .social-form-card form.social-signup__form{grid-template-columns:minmax(0,1fr)!important;gap:20px}
+.social-opening .social-form-card :is(input,button){box-sizing:border-box;max-width:100%}
+.social-opening .social-form-card input:not([type=checkbox]){min-height:48px;font-size:16px}
+.social-opening .social-form-card .page-form__consent{display:flex;gap:10px;align-items:flex-start}
+.social-opening .social-form-card .page-form__consent input{flex:0 0 18px;width:18px;height:18px;margin-top:3px}
+.social-opening .social-form-card .page-form__consent span{min-width:0}
+.social-opening .social-form-card button{width:100%;min-height:48px;white-space:normal}
+@container(min-width:430px){body .social-page__main .social-opening .social-form-card form.social-signup__form{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:1600px) and (min-width:1001px){
+ .social-page__main .social-opening{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+ .social-opening .about-opening__portrait{grid-column:1;grid-row:1}
+ .social-page__main .social-opening .about-opening__story{grid-column:2;padding:7rem clamp(24px,4vw,56px) 32px!important}
+ .social-opening .social-form-card{grid-column:1/-1;align-self:start;justify-self:center;width:calc(100% - 64px);max-width:720px;margin:40px 0 56px!important;padding:36px}
+}
+@media(max-width:1000px){
+ .social-page__main .social-opening{display:flex;flex-direction:column}
+ .social-opening .about-opening__portrait{width:100%;height:clamp(260px,48svh,420px);margin:0}
+ .social-page__main .social-opening .about-opening__story{padding:36px 24px 28px!important}
+ .social-opening .social-form-card{align-self:stretch;width:auto;max-width:none;margin:0 16px 40px!important;padding:24px;border-radius:20px}
+ .social-opening .social-form-card h3{font-size:1.6rem;line-height:1.2}
+}
+@media(max-width:360px){.social-opening .social-form-card{margin-inline:12px!important;padding:20px}.social-page__main .social-opening .about-opening__story{padding-inline:20px!important}}

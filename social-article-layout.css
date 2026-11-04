@@ -1,0 +1,51 @@
+/* A imagem segue até o topo; os links continuam legíveis sobre a coluna branca. */
+body:has(.about-page) .site-header:not([data-scroll-theme]){background:transparent!important}
+body:has(.about-page) .site-header:not([data-scroll-theme]) .brand img{filter:brightness(0) invert(1)!important}
+body:has(.about-page) .site-header:not([data-scroll-theme]) :is(.main-nav>a,.nav-dropdown__trigger){color:#233754!important}
+.social-page__main{background:#f7f8f7}
+.social-page__back{position:absolute;top:6rem;left:var(--side);z-index:2;padding:0!important}
+.social-page__back .page-back{color:#fff!important;text-shadow:0 1px 6px #0009}
+.social-page__main .social-opening{display:grid;grid-template-columns:minmax(0,43fr) minmax(0,32fr) minmax(0,25fr);gap:0;padding:0;align-items:stretch;background:linear-gradient(#f7f8f7ed,#f7f8f7ed),url('/assets/textura-areia-optimized.jpg') center/cover}
+.social-opening .about-opening__portrait{position:relative;top:0;height:auto;min-height:0!important}
+.social-opening .about-opening__portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.social-page__main .social-opening .about-opening__story{padding:8rem 2rem 4rem!important}
+.social-opening .about-opening__story-inner{max-width:none}
+.social-opening h1{font-size:var(--section-title);margin-bottom:1.5rem}
+.social-opening .about-opening__story p{font-size:1rem;line-height:1.7}
+.social-opening .social-form-card{align-self:center;margin:7rem 2rem 4rem 0;padding:1.5rem;min-width:0;border-radius:1.6rem;background:#233754}
+.social-opening .social-form-card form{margin:0;padding:0;background:transparent;border:0;box-shadow:none;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.social-opening .social-form-card :is(h3,p,.page-form__wide,.form-recaptcha,button){grid-column:1/-1}
+.social-opening .social-form-card :is(h3,p,label,a){color:#f5eee5}
+.social-opening .social-form-card h3{font-size:1.6rem;line-height:1.15;margin:0}
+.social-opening .social-form-card p{font-size:.95rem;line-height:1.5;margin:0}
+.social-opening .social-form-card label{font-size:.9rem;min-width:0}
+.social-opening .social-form-card input:not([type=checkbox]){width:100%;min-width:0;color:#233754;background:#fff}
+.social-opening .social-form-card .page-form__consent{font-size:.8rem;line-height:1.5}
+.social-opening .form-recaptcha{max-width:100%;overflow:auto}
+.social-photo-gallery{background:#f7f8f7}
+/* Artigo: título, foto e leitura em uma coluna confortável. */
+body:has(.blog-article__prose){background:#f7f8f7}
+body:has(.blog-article__prose) main{background:#fff}
+.blog-article__header{padding:9rem 0 2.5rem;background:#fff}
+.blog-article__header .shell{max-width:1000px}
+.blog-article__header h1{max-width:none;text-align:center;margin:0;font-size:var(--section-title)}
+.blog-article__image{width:calc(100% - 2 * var(--side));max-width:1000px;height:420px;margin:0 auto;overflow:hidden;border-radius:12px}
+.blog-article__image img{width:100%;height:100%;object-fit:cover;object-position:center}
+.blog-article__layout{max-width:1000px;grid-template-columns:190px minmax(0,1fr);gap:3.5rem;padding-top:2rem;padding-bottom:5rem}
+.blog-article__aside{position:sticky;top:6rem;align-self:start}
+.article-author-portrait{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center 25%;margin-bottom:1rem}
+.blog-article__aside .content-meta{display:flex;flex-direction:column;align-items:flex-start;gap:1rem;font-size:.85rem;line-height:1.5}
+.blog-article__aside .content-meta>span:nth-child(2){order:-2}
+.blog-article__aside .content-meta>time{order:-1}
+.blog-article__aside .content-meta>span:first-child{border-top:1px solid #23375430;padding-top:1rem;width:100%}
+.blog-article__prose .article-intro{color:#233754;font-size:1.2rem}
+@media(max-width:1200px){.social-page__main .social-opening{grid-template-columns:40fr 60fr}.social-opening .about-opening__portrait{grid-row:span 2}.social-opening .social-form-card{grid-column:2;margin:0 2rem 4rem}.social-page__main .social-opening .about-opening__story{padding-bottom:2rem!important}}
+@media(max-width:760px){.social-page__main .social-opening{display:block}.social-opening .about-opening__portrait{height:65svh;min-height:0!important}.social-page__main .social-opening .about-opening__story{padding:3rem var(--side) 2rem!important}.social-opening .social-form-card{margin:0 var(--side) 3rem}.blog-article__header{padding-top:8rem}.blog-article__image{height:260px}.blog-article__layout{grid-template-columns:1fr;gap:2rem}.blog-article__aside{position:static;display:flex;align-items:center;gap:1rem}.blog-article__aside .content-meta{flex-direction:row;flex-wrap:wrap;gap:.6rem 1rem}.blog-article__aside .content-meta>span:first-child{border:0;padding:0;width:auto}.article-author-portrait{flex-shrink:0;margin:0}.social-opening .form-recaptcha{width:100%}}
+.social-opening .social-form-card{width:auto;max-width:none;align-self:start;margin-top:8rem}
+.social-opening .social-form-card :is(h3,p,label,a,span){color:#f5eee5!important}
+.social-opening .social-form-card .page-form__consent{align-items:flex-start}
+.social-page__main .social-opening{background-image:linear-gradient(#f7f8f7d9,#f7f8f7d9),url('/assets/textura-areia-optimized.jpg')}
+@media(max-width:1200px){.social-opening .social-form-card{margin-top:0}}
+body .social-page__main .social-opening .social-form-card .social-signup__form :is(h3,p,label,a,span){color:#f5eee5!important}
+body .social-page__main .social-opening .social-form-card .social-signup__form label.page-form__consent{font-size:.85rem!important}
+.social-opening .social-form-card label:not(.page-form__consent){display:flex;flex-direction:column;justify-content:flex-end;gap:.35rem}

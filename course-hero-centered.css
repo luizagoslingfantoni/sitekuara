@@ -1,0 +1,24 @@
+/* Approved centered course hero. */
+.course-hero{position:relative;min-height:100svh;overflow:hidden;isolation:isolate;background:#233754}
+.course-hero .kiln-hero__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.course-hero .kiln-hero__tone{position:absolute;inset:0;background:rgba(0,0,0,.58)}
+.course-hero .kiln-hero__inner{position:relative;z-index:1;display:flex;min-height:100svh;justify-content:center;align-items:center;padding:120px var(--side) 100px}
+.course-hero .kiln-hero__copy{width:100%;max-width:1150px;margin:auto;text-align:center}
+.course-hero .kiln-hero__copy .course-hero__label{max-width:none;margin:0 0 22px;text-align:center;font-size:11px;font-weight:500;letter-spacing:.025em;line-height:1.4;text-transform:uppercase;color:#fff}
+.course-hero h1{max-width:none!important;margin:0 auto!important;font-size:clamp(2rem,4.25vw,3.9rem)!important;line-height:1.03!important;letter-spacing:0!important;font-weight:700;text-align:center;color:#fff}
+.course-hero h1 span{font:inherit}
+.course-hero h2{display:table;width:auto;max-width:90%;margin:20px auto 0!important;padding:4px 8px;background:#a24d2f;color:#fff;font-size:clamp(1rem,1.4vw,1.25rem)!important;line-height:1.25!important;letter-spacing:0;font-weight:600;text-align:center}
+.course-hero .course-hero__description{max-width:550px;margin:16px auto 0;text-align:center}
+.course-hero .course-hero__description p{max-width:none;margin:0 0 14px;color:#fff;font-size:clamp(1rem,1.4vw,1.25rem);font-weight:500;line-height:1.35;text-align:center}
+.course-hero .course-hero__description p:last-child{margin-bottom:0}
+.course-hero .course-status{display:inline-flex;margin:22px auto 0}
+.course-hero--mentoria-individual .course-hero__description,.course-hero--barros-artesanais .course-hero__description,.course-hero--fornos-de-tijolos .course-hero__description{max-width:680px}
+.course-hero--mentoria-individual .kiln-hero__photo{object-position:center 35%}
+@media(max-width:600px){.course-hero .kiln-hero__inner{padding:120px 20px 100px}.course-hero h1{font-size:clamp(1.6rem,7.2vw,2.6rem)!important}.course-hero .course-hero__description p{font-size:1rem}.course-hero h2{max-width:100%}}
+.course-hero .kiln-hero__copy p.course-hero__label{font-size:11px!important;line-height:1.4!important}
+
+/* Improve contrast against the outdoor scene and avoid an orphaned temperature. */
+.course-hero--forno-de-latao .kiln-hero__tone{background:linear-gradient(180deg,rgba(7,13,18,.5),rgba(7,13,18,.76) 35%,rgba(7,13,18,.76) 68%,rgba(7,13,18,.5))}
+.course-hero--forno-de-latao .course-hero__description{max-width:610px}
+.course-hero--forno-de-latao .course-hero__description p{text-wrap:balance}
+.course-hero--forno-de-latao .course-hero__description .keep-together{white-space:nowrap}

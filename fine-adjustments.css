@@ -1,0 +1,25 @@
+a.cta-noarrow.text-link--arrow::after,a.cta-noarrow.revision-cta::after,a.cta-noarrow .css-link-arrow{display:none!important}
+.newsletter-form__submit i{display:none!important}
+.follow__agenda{display:flex!important;flex-direction:column;gap:28px!important}.follow__agenda .follow-cards{width:100%}.follow__agenda .agenda-preview{max-width:560px}
+.pure-icon--mail{width:20px!important;height:14px!important;border:1.5px solid currentColor;border-radius:2px;overflow:hidden;flex:none}
+.pure-icon--mail::before{width:12px;height:12px;border:0;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;top:-7px;left:2.5px;transform:rotate(45deg)}
+.pure-icon--mail::after{display:none}
+.pure-icon--instagram{width:17px!important;height:17px!important;border:1.5px solid currentColor;border-radius:5px;flex:none;position:relative}
+.pure-icon--instagram::before{width:7px;height:7px;border:1.5px solid currentColor;border-radius:50%;left:3.5px;top:3.5px;transform:none}
+.pure-icon--instagram::after{width:2px;height:2px;right:2px;top:2px;background:currentColor;border:0;border-radius:50%;transform:none}
+.pure-icon--instagram b{display:none}
+.about-commitment__grid{align-items:stretch}.about-commitment__copy{display:flex;flex-direction:column}.about-commitment__copy>.social-policy-link{margin-top:auto;align-self:flex-start}.about-commitment__grid>figure{height:100%}.about-commitment__grid>figure>img{height:100%;object-fit:cover}
+#ceramica-geopoetica-online h3{color:#233754!important}
+.kiln-module__terms{font-weight:400!important}.kiln-module__terms strong{font-weight:700!important}.kiln-complete__offer{font-weight:400!important}
+.kiln-presence__catalog .kiln-modules{align-items:stretch}.kiln-presence__catalog .formation-pdf{align-self:stretch;height:auto!important;min-height:0!important}
+.works-exhibition-card{background:#d2a348;color:#233754;border-radius:20px;padding:28px;margin-top:28px}.works-exhibition-card h2{font-size:28px!important;line-height:1.15}.works-exhibition-card p,.works-exhibition-card address{color:#233754!important;font-size:16px;line-height:1.6}.works-exhibition-card address{font-style:normal;margin-block:18px}.works-exhibition-card a{color:#233754!important}
+a.cta-noarrow .formation-card__link i,a.cta-noarrow .formation-card__all-arrow{display:none!important}
+.kiln-presence__catalog .formation-pdf{display:flex;flex-direction:column}.formation-pdf .kiln-pdf__body{min-height:0;padding:18px 22px;flex:1}.formation-pdf .kiln-pdf__body h3{font-size:22px;line-height:1.15;margin:0 0 10px}.formation-pdf .kiln-pdf__body p{font-size:14px;line-height:1.4;margin:0 0 12px}.formation-pdf .kiln-pdf__body>span:first-child{margin-bottom:8px}.formation-pdf .kiln-pdf__pending{margin-top:auto}
+body:has(.formation-pdf) .kiln-presence__catalog .kiln-modules{grid-auto-rows:1fr}body:has(.formation-pdf) .kiln-presence__catalog .kiln-module{align-self:stretch}body:has(.formation-pdf) .kiln-presence__catalog .kiln-module:not([open]) summary{height:100%}body:has(.formation-pdf) .kiln-presence__catalog .kiln-module:not([open]) .kiln-module__body{flex:1}
+a.cta-noarrow .formation-card__footer i{display:none!important}
+.collective-works__copy>.works-exhibition-card{box-sizing:border-box;width:100%;max-width:65ch;margin-inline:0}.works-exhibition-card .exhibition-label{display:inline-block;padding:6px 10px;border:1px solid currentColor;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.07em;margin-bottom:16px;text-transform:uppercase}
+.collective-instagram a.revision-cta,.collective-instagram a.revision-cta:hover,.collective-instagram a.revision-cta .revision-swipe>span{color:#fff!important}
+.site-footer .pure-icon--mail,.site-footer .pure-icon--instagram{display:inline-block!important;position:relative!important;flex:0 0 20px!important;width:20px!important;box-sizing:border-box!important;padding:0!important;margin:0!important;transform:none!important;mask:none!important;-webkit-mask:none!important;overflow:hidden!important;color:inherit!important}
+.site-footer .pure-icon--mail::before,.site-footer .pure-icon--mail::after,.site-footer .pure-icon--instagram::before,.site-footer .pure-icon--instagram::after,.site-footer .pure-icon--mail b,.site-footer .pure-icon--instagram b{display:none!important;content:none!important}
+.site-footer .pure-icon--mail{height:15px!important;border:1.5px solid currentColor!important;border-radius:2px!important;background:linear-gradient(35deg,transparent 45%,currentColor 48%,currentColor 57%,transparent 60%) left top/50% 70% no-repeat,linear-gradient(-35deg,transparent 45%,currentColor 48%,currentColor 57%,transparent 60%) right top/50% 70% no-repeat!important}
+.site-footer .pure-icon--instagram{height:20px!important;border:1.5px solid currentColor!important;border-radius:6px!important;background:radial-gradient(circle at center,transparent 3px,currentColor 3.3px,currentColor 4.5px,transparent 4.8px),radial-gradient(circle at 77% 23%,currentColor 1.1px,transparent 1.4px)!important}

@@ -1,0 +1,7 @@
+body .kiln-fit .requirements-title{color:#a24d2f!important}
+.course-status{animation:course-status-breathe 3.8s ease-in-out infinite}
+@keyframes course-status-breathe{0%,100%{box-shadow:0 0 0 0 rgba(231,88,49,0);filter:brightness(1)}50%{box-shadow:0 0 0 5px rgba(231,88,49,.13);filter:brightness(1.08)}}
+@media(prefers-reduced-motion:reduce){.course-status{animation:none}}
+.formation-detail--latao .kiln-gallery__track{animation-duration:300s}
+
+.formation-detail--latao .kiln-module__image img{object-position:center 45%}

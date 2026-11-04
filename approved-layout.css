@@ -1,0 +1,11 @@
+/* Diagramação aprovada: introdução e formulário, depois módulos. */
+.course-intro-approved{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+.course-intro-approved__copy h2{max-width:22ch;margin:0 0 1.5rem}.course-intro-approved__copy p{max-width:60ch;font-size:1rem;line-height:1.65}
+.course-intro-approved>form{min-width:0;margin:0}
+.kiln-presence__layout.presence-approved{display:block}
+.presence-approved .kiln-presence__intro.presence-approved__heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(2rem,4vw,4rem);position:static;align-items:start;margin-bottom:2.5rem}
+.presence-approved__heading .kiln-presence__proposal{margin:0;min-height:0}.presence-approved__heading>div>p{max-width:38ch}
+.presence-approved__catalog .kiln-modules,.presence-approved__catalog .corrected-module-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+.presence-approved__catalog .kiln-module{min-width:0}.presence-approved__catalog .revision-download{max-width:30rem;margin-top:1.5rem}
+@media(max-width:950px){.course-intro-approved{grid-template-columns:1fr 1fr;gap:2rem}.presence-approved__catalog .kiln-modules,.presence-approved__catalog .corrected-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.course-intro-approved,.presence-approved .kiln-presence__intro.presence-approved__heading{grid-template-columns:1fr;gap:1.5rem}.course-intro-approved__copy h2{max-width:none}.presence-approved__catalog .kiln-modules,.presence-approved__catalog .corrected-module-grid{grid-template-columns:1fr}}

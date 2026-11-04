@@ -1,0 +1,68 @@
+.blog-page{background:#f7f3ed;color:#233754;font-family:Inter,Arial,sans-serif}
+.writings-main{padding-top:80px;background:#f7f3ed}
+.writings-hero{position:relative;display:grid;place-items:center;height:33.333svh;isolation:isolate;overflow:hidden;background:#a24d2f}
+.writings-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;z-index:-2}
+.writings-hero::after{content:"";position:absolute;inset:0;background:rgba(133,54,29,.78);mix-blend-mode:multiply;z-index:-1}
+.writings-hero h1{margin:0;padding:1rem;color:white;text-align:center;font:600 calc(2rem + 10pt)/1.08 Inter,Arial,sans-serif;letter-spacing:-.05em;text-shadow:0 1px 10px #47201544}
+.writings-content{width:min(calc(100% - 48px),1120px);margin:auto;padding:42px 0 72px;background:transparent}
+.writings-tools{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:26px}
+.writing-search{display:flex;align-items:center;gap:14px;width:min(100%,360px);border-bottom:1px solid #23375450;padding:10px 0}
+.writing-search i{width:14px;height:14px;border:1.5px solid #233754;border-radius:50%;position:relative;flex:none;margin:0 3px}
+.writing-search i:after{content:"";position:absolute;width:6px;height:1.5px;background:#233754;right:-5px;bottom:-3px;transform:rotate(45deg)}
+.writing-search input{border:0;background:transparent;min-width:0;width:100%;font:400 .9rem/1.5 Inter,Arial,sans-serif;color:#233754;outline-offset:5px}
+.writing-filter select{font:400 .85rem/1.5 Inter,Arial,sans-serif;color:#233754;background:transparent;border:1px solid #23375430;border-radius:24px;padding:11px 32px 11px 16px;max-width:100%}
+.writings-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;align-items:stretch}
+.writing-card{display:flex;flex-direction:column;min-width:0;color:#233754;border-radius:14px;overflow:hidden;background:#fff;text-decoration:none;box-shadow:0 4px 16px #23375406;transition:background .25s,color .25s}
+.writing-card__image{height:175px;overflow:hidden}
+.writing-card__image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.writing-card__copy{display:flex;flex-direction:column;flex:1;padding:22px}
+.writing-kicker{font-size:.63rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#a24d2f;margin-bottom:10px}
+.writing-card h2{font:600 1.35rem/1.15 Inter,Arial,sans-serif;letter-spacing:-.04em;margin:0 0 12px;color:inherit}
+.blog-page main .writing-card p{font:400 .86rem/1.6 Inter,Arial,sans-serif;color:inherit;margin:0 0 12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.writing-read{font-size:.78rem;font-weight:700;color:#a24d2f;margin-bottom:16px}
+.writing-meta{display:flex;flex-wrap:wrap;gap:9px 12px;margin-top:auto;padding-top:14px;border-top:1px solid #23375422;font-size:.66rem;line-height:1.4}
+.writing-meta>span,.writing-meta>time{display:inline-flex;gap:5px;align-items:center}
+.writing-meta .pure-icon{scale:.7;margin:-3px}
+.writing-card--pinned:hover{background:#a24d2f;color:white}
+.writing-card--pinned:hover .writing-kicker,.writing-card--pinned:hover .writing-read{color:white}
+.writing-card--pinned:hover .writing-meta{border-color:#ffffff55}
+.writing-card--pinned:hover img{transform:scale(1.025)}
+.writing-newsletter{background:#e5dfce;color:#233754;border-radius:14px;padding:24px 20px;display:flex;flex-direction:column}
+.writing-newsletter h2{font:600 1.9rem/1.06 Inter,Arial,sans-serif;letter-spacing:-.05em;margin:0 0 15px;color:#233754}
+.blog-page main .writing-newsletter>p{font:400 .9rem/1.5 Inter,Arial,sans-serif;margin:0 0 20px;color:#233754}
+.writing-newsletter form{display:grid;gap:13px;margin-top:auto}
+.writing-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.writing-fields label{min-width:0;font-size:.75rem;font-weight:600;display:grid;gap:6px}
+.writing-fields input{min-width:0;width:100%;height:40px;padding:7px;border:1px solid #23375420;border-radius:4px;background:white;color:#233754;font:400 .9rem Inter,Arial,sans-serif;box-sizing:border-box}
+.writing-consent{display:flex;gap:8px;align-items:flex-start;font-size:.73rem;line-height:1.5}
+.writing-consent input{flex:none;margin:3px 0 0;width:15px;height:15px;accent-color:#233754}
+.writing-consent a{color:inherit;text-decoration:underline}
+.writing-newsletter button{border:1px solid #233754;border-radius:25px;padding:11px;background:transparent;color:#233754;font:700 .85rem Inter,Arial,sans-serif;cursor:pointer}
+.writing-newsletter button:hover{background:#233754;color:white}
+.writing-captcha{min-height:78px;max-width:100%}
+.writing-captcha--preview{display:grid;place-items:center;padding:12px;border:1px dashed #23375455;border-radius:4px;box-sizing:border-box;font-size:.72rem;line-height:1.5;text-align:center;color:#233754}
+.blog-page main .writing-form-status{font-size:.78rem;line-height:1.5;margin:0;color:#233754}
+.writings-empty{padding:30px 0;color:#233754}
+.writings-main [hidden]{display:none!important}
+.blog-page .site-footer{background:#f7f3ed;background-image:none;color:#233754}
+.blog-page .footer__column h3,.blog-page .footer__column span,.blog-page .footer-contact,.blog-page .footer__bottom{color:#233754!important}
+.blog-page .footer__brand img{filter:none}.blog-page .footer__bottom{border-color:#23375430}
+@media(max-width:1100px) and (min-width:761px){.writings-grid{gap:16px}.writing-card__copy{padding:18px}.writing-newsletter{padding:20px 14px}.writing-captcha{overflow-x:auto}}
+@media(max-width:760px){.writings-main{padding-top:66px}.writings-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.writings-content{width:calc(100% - 32px)}.writing-newsletter{grid-column:1/-1}.writing-newsletter form{max-width:100%}.writing-card__copy{padding:18px}.writing-card__image{height:160px}.writings-hero h1{font-size:calc(2rem + 10pt)}.writings-tools{gap:14px}.writing-filter{max-width:50%}}
+@media(max-width:480px){.writings-grid{grid-template-columns:1fr;gap:22px}.writing-card__image{height:200px}.writing-card__copy{padding:22px}.writing-newsletter{padding:26px 22px}.writings-tools{flex-direction:column;align-items:stretch}.writing-filter{max-width:none}.writing-filter select{width:100%}.writing-search{width:100%}}
+@media(prefers-reduced-motion:reduce){.writing-card,.writing-card__image img{transition:none}}
+/* Menu sobre o hero e newsletter no padrão azul dos cursos. */
+.blog-page .writings-main{padding-top:0}
+.blog-page .site-header:not(.is-scrolled){background:transparent;color:white;border:0;box-shadow:none;backdrop-filter:none}
+.blog-page .site-header:not(.is-scrolled) .brand img{filter:brightness(0) invert(1)}
+.blog-page .site-header:not(.is-scrolled) .menu-button{color:white}
+.writing-newsletter{background:#233754;color:#fff}
+.writing-newsletter h2,.blog-page main .writing-newsletter>p,.writing-newsletter label,.writing-newsletter .writing-captcha--preview,.blog-page main .writing-form-status{color:white}
+.writing-captcha--preview{border-color:#ffffff70}
+.writing-newsletter button{background:#a24d2f;color:white;border-color:#a24d2f;border-radius:0}
+.writing-newsletter button:hover{background:#d3ad49;border-color:#d3ad49;color:#233754}
+.writings-more{display:flex;justify-content:center;margin-top:40px}
+.writings-more button{padding:13px 32px;border:1px solid #233754;border-radius:26px;background:transparent;color:#233754;font:600 .9rem Inter,Arial,sans-serif;cursor:pointer}
+.writings-more button:hover:not(:disabled){background:#233754;color:white}
+.writings-more button:disabled{opacity:.45;cursor:default}
+.blog-page main .writing-newsletter>p,.blog-page main .writing-newsletter .writing-form-status{color:#fff!important}

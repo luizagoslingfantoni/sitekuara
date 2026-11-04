@@ -1,0 +1,45 @@
+/* Ajustes finais de alinhamento e continuidade dos fundos. */
+.course-fit-faq .kiln-fit__heading{justify-content:flex-start;align-items:center}
+.individual-mentorship .individual-opening,.individual-mentorship .individual-opening__story{background:#233754!important}
+.individual-mentorship .individual-opening__story :is(h1,h2,p,strong,a,span){color:#f5eee5!important}
+.individual-mentorship .site-header:not([data-scroll-theme]){background:transparent;color:#f5eee5}
+.individual-mentorship .site-header:not([data-scroll-theme]) :is(a,button){color:#f5eee5!important}
+.mentorias-page .mentorias-offerings,.mentorias-page .site-footer{background:#f5eee5!important;background-image:none!important;border-top:0;box-shadow:none}
+.mentorias-page .site-footer{margin-top:0;color:#233754}
+.mentorias-page .site-footer::before,.mentorias-page .site-footer::after{display:none}
+body.collective-page .collective-shop,body.collective-page .site-footer{background:#f5eee5!important;background-image:none!important;border-top:0;box-shadow:none}
+body.collective-page .site-footer,body.collective-page .site-footer :is(h3,p,a,span){color:#233754!important}
+body.collective-page .site-footer .footer__brand img{filter:none!important}
+body.collective-page .site-footer .footer__bottom{border-color:#23375430}
+
+/* Orientações: abertura editorial, foto 45% e painel 55%. */
+.individual-mentorship .individual-opening{grid-template-columns:minmax(0,45fr) minmax(0,55fr);align-items:stretch;min-height:100svh}
+.individual-mentorship .individual-opening__portrait{min-height:0}
+.individual-mentorship .individual-opening__portrait img{object-position:50% 28%}
+.individual-mentorship .individual-opening__story{display:flex;justify-content:stretch;align-items:stretch;padding:6.5rem clamp(1rem,1.8vw,2rem) clamp(1rem,1.8vw,2rem)}
+.individual-mentorship .individual-opening__story::before{content:none}
+.individual-opening__card{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%;max-width:none;margin:0;background:#f7f8f7;border-radius:.9rem;padding:clamp(2rem,3.4vw,4rem)}
+.individual-mentorship .individual-opening__card h1{font-size:var(--hero-h1-size);font-weight:600;line-height:1.04;letter-spacing:-.065em;margin:0 0 clamp(2rem,3vw,3rem);text-wrap:initial}
+.individual-mentorship .individual-opening__card :is(h1,h2,p,strong,a,span){color:#233754!important}
+.individual-mentorship .individual-opening__card p{max-width:62ch;font-size:1rem;line-height:1.65;margin:0 0 1.15rem}
+.individual-mentorship .individual-opening__card p:last-of-type{margin-bottom:0}
+.individual-mentorship .individual-opening__card .revision-cta{display:inline-block;margin-top:2rem}
+.individual-mentorship .site-header:not([data-scroll-theme]){background:#233754!important}
+.individual-mentorship .site-header .nav-dropdown__menu :is(a,button,span){color:#233754!important}
+@media(max-width:900px){.individual-mentorship.menu-open .site-header .nav-dropdown__menu :is(a,button,span){color:#f5eee5!important}}
+@media(max-width:760px){.individual-mentorship .individual-opening{display:block;min-height:0}.individual-mentorship .individual-opening__portrait{height:65svh}.individual-mentorship .individual-opening__story{padding:1rem}.individual-opening__card{padding:2rem 1.5rem}.individual-mentorship .individual-opening__card h1{font-size:clamp(2rem,8vw,2.8rem)}}
+
+/* Proposta editorial: hierarquia clara, leitura contida e chamada separada. */
+.individual-mentorship .individual-opening{grid-template-columns:minmax(0,.44fr) minmax(0,.56fr)}
+.individual-mentorship .individual-opening__story{padding:7rem clamp(1.25rem,2.4vw,3rem) 2.5rem}
+.individual-opening__card{justify-content:flex-start;gap:0;border-radius:.6rem;padding:clamp(2rem,3.5vw,4.25rem);box-shadow:0 14px 38px #10223818}
+.individual-opening__intro,.individual-opening__body,.individual-opening__action{width:100%;max-width:36rem;margin-inline:auto}
+.individual-mentorship .individual-opening__card h1{font-size:clamp(2.8rem,3.5vw,4rem);line-height:1.06;letter-spacing:-.055em;margin:0 0 1.75rem}
+.individual-mentorship .individual-opening__intro>p{font-size:clamp(1.08rem,1.25vw,1.25rem);line-height:1.55;max-width:34ch;margin:0!important;font-weight:500}
+.individual-opening__intro{padding-bottom:1.75rem;margin-bottom:1.75rem;border-bottom:1px solid #23375422}
+.individual-mentorship .individual-opening__body p{font-size:.95rem;line-height:1.7;max-width:58ch;margin:0 0 1rem}
+.individual-mentorship .individual-opening__body p:last-child{margin-bottom:0}
+.individual-opening__action{padding-top:1.75rem;margin-top:auto}
+.individual-mentorship .individual-opening__action .revision-cta{margin-top:0;font-size:.95rem}
+.individual-mentorship .individual-opening__action :is(a,span){color:#a24d2f!important}
+@media(max-width:760px){.individual-mentorship .individual-opening{display:block}.individual-mentorship .individual-opening__story{padding:1.25rem}.individual-opening__card{padding:2rem 1.5rem}.individual-mentorship .individual-opening__card h1{font-size:clamp(2.5rem,9vw,3.5rem)}}

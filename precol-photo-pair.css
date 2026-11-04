@@ -1,0 +1,4 @@
+.precol-page .course-reference-grid>figure.precol-photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-self:start;aspect-ratio:auto;height:var(--intro-photo-height,240px)!important;min-height:0;max-height:var(--intro-form-height,420px);overflow:hidden}
+.precol-page .course-reference-grid>figure.precol-photo-pair img{position:static;display:block;width:100%;height:100%;min-height:0;aspect-ratio:auto;object-fit:cover;object-position:center}
+@media(max-width:700px){.precol-page .course-reference-grid>figure.precol-photo-pair{grid-row:auto;height:var(--intro-photo-height,240px)!important;gap:10px}}
+.precol-page .course-reference-grid>figure.precol-photo-pair>.process-mosaic__open{position:relative;inset:auto;display:block;width:100%;height:100%;min-width:0;min-height:0;overflow:hidden}

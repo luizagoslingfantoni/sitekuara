@@ -1,0 +1,69 @@
+/* Shared navigation feedback; page-specific refinements remain scoped. */
+body .main-nav :is(a,button):is(:hover,:focus-visible),
+body .main-nav :is(a,button):is(:hover,:focus-visible) .nav-dropdown__course-name,
+body .site-footer a:is(:hover,:focus-visible),body .footer a:is(:hover,:focus-visible){font-weight:700!important}
+body[data-polish="home"] main>.hero{top:var(--stack-top,0px)}
+/* One underline, on the course CTA only, when its card is hovered or focused. */
+body[data-polish="home"] .formation-card__footer span{border:0!important;text-decoration:none!important;box-shadow:none!important}
+body[data-polish="home"] .formation-card__footer span::after,
+body[data-polish="home"] .formation-card__footer span::before{content:none!important;display:none!important}
+body[data-polish="home"] .formation-card:is(:hover,:focus-visible) .formation-card__footer .course-more{text-decoration:underline!important;text-underline-offset:.22em;text-decoration-thickness:1px!important}
+/* Explicit button class, used only on the CTAs requested in this revision. */
+body a.kuara-button,body .individual-mentorship__contact a.kuara-button{
+ display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.7rem 1rem;
+ background:#a24d2f!important;color:#fff!important;border:0!important;border-radius:.25rem;
+ text-decoration:none!important;box-shadow:none!important;font-weight:700;
+ transition:background-color .2s ease,color .2s ease;
+}
+body a.kuara-button:is(:hover,:focus-visible){background:#233754!important;color:#fff!important}
+body a.kuara-button::before,body a.kuara-button::after,
+body a.kuara-button .cta-underlined-label::after{content:none!important;display:none!important}
+body a.kuara-button *,body a.kuara-button:is(:hover,:focus-visible) *{color:inherit!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
+body a.kuara-button.kuara-button--dark,body .individual-mentorship__contact a.kuara-button{background:#e7b95f!important;color:#233754!important}
+body a.kuara-button.kuara-button--dark:is(:hover,:focus-visible),body .individual-mentorship__contact a.kuara-button:is(:hover,:focus-visible){background:#f7f8f7!important;color:#233754!important}
+body[data-polish="home"] .newsletter-form__submit{background:#a24d2f!important;color:#fff!important;border:0!important;border-radius:.25rem;transition:background-color .2s ease,color .2s ease}
+body[data-polish="home"] .newsletter-form__submit:is(:hover,:focus-visible){background:#233754!important;color:#fff!important}
+body[data-polish="home"] .newsletter-form__submit,body[data-polish="home"] .newsletter-form__submit *{text-decoration:none!important}
+body[data-polish="home"] .newsletter-form__submit::after{content:none!important}
+.about-page img[src*="historia-forno"]{filter:contrast(1.06) saturate(1.04) brightness(1.015)}
+.about-page .editorial-five-mosaic figure{overflow:hidden;transition:box-shadow .25s ease}
+.about-page .editorial-five-mosaic img{transition:transform .45s ease}
+.about-page .editorial-five-mosaic figure:has(button:is(:hover,:focus-visible)){box-shadow:0 8px 22px #23375424}
+.about-page .editorial-five-mosaic button:is(:hover,:focus-visible) img{transform:scale(1.035)}
+body.blog-page main .writing-card:is(:hover,:focus-visible,:focus-within),
+body.blog-page main .writing-card:is(:hover,:focus-visible,:focus-within) :is(h2,h3,p,span,small,strong,time){color:#fff!important}
+body.blog-page main .writing-card:is(:hover,:focus-visible,:focus-within){background:#a24d2f!important}
+.social-page__main .social-opening .about-opening__story p:not(.about-kicker){font-size:1rem;line-height:1.7}
+.kuara-instagram-icon{display:inline-block;width:1.15em;height:1.15em;flex:0 0 1.15em;vertical-align:-.18em;margin-right:.4em;overflow:visible}
+body a.member-instagram{display:inline-flex;align-items:center;text-decoration:none!important;border:0!important;box-shadow:none!important}
+body a.member-instagram::after,body a.member-instagram::before{content:none!important}
+body a.member-instagram:is(:hover,:focus-visible){text-decoration:underline!important;text-decoration-thickness:1px!important;text-underline-offset:.23em}
+a.kuara-button:focus-visible,.newsletter-form__submit:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){
+ body[data-polish="home"] main>:is(.hero,.welcome.section,.courses.section,.people.section),.about-page .about-opening{position:relative!important;top:auto!important}
+}
+@media(prefers-reduced-motion:reduce){
+ body a.kuara-button,.about-page .editorial-five-mosaic img,.about-page .editorial-five-mosaic figure{transition:none}
+ .about-page .editorial-five-mosaic button:is(:hover,:focus-visible) img{transform:none}
+}
+
+body a.polished-handle,body a.polished-handle *{text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
+body a.polished-handle::before,body a.polished-handle::after{content:none!important}
+body a.polished-handle:is(:hover,:focus-visible){text-decoration:underline!important;text-underline-offset:.23em}
+
+/* Buttons own their typography and hover, without inheriting text-link effects. */
+body main a.kuara-button{font-family:inherit;font-size:.86rem;line-height:1.4;letter-spacing:0;text-transform:none;width:fit-content;max-width:100%;min-height:44px;padding:.7rem 1rem;border-radius:4px;transform:none!important}
+body main a.kuara-button:not(.revision-cta) *{transform:none!important}
+body main a.kuara-button,body main a.kuara-button:is(:hover,:focus-visible){text-decoration:none!important}
+body main a.kuara-button.kuara-button--paper{background:#f7f8f7!important;color:#233754!important;margin-top:1rem}
+body main a.kuara-button.kuara-button--paper:is(:hover,:focus-visible){background:#e7b95f!important;color:#233754!important}
+body[data-polish="home"] .home-ending .follow__subscribe .newsletter-form__submit{color:#fff!important;background:#a24d2f!important;min-height:44px;padding:.7rem 1rem;border:0!important;font-size:.86rem}
+body[data-polish="home"] .home-ending .follow__subscribe .newsletter-form__submit:is(:hover,:focus-visible){color:#fff!important;background:#233754!important}
+body .kuara-instagram-icon{width:24px!important;height:24px!important;min-width:24px;flex:0 0 24px;margin-right:8px;stroke-width:1.8}
+body .footer-contact .kuara-instagram-icon{width:20px!important;height:20px!important;min-width:20px;flex-basis:20px}
+.precol-page .course-reference-grid>figure{align-self:start}
+.precol-page .course-reference-grid>figure img{position:static;display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:2/3}
+body main a.kuara-button.kuara-button--paper:is(:hover,:focus-visible){background:#a24d2f!important;color:#fff!important}
+body main .geo-pathways__card--presence a.kuara-button.kuara-button--paper:is(:hover,:focus-visible){background:#233754!important;color:#fff!important}
+.precol-page .course-reference-grid>figure{height:auto!important;aspect-ratio:2/3;min-height:0}
+body.contact-page .kuara-instagram-icon{margin-right:0}

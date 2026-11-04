@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kuaraceramicas.com.br/sitemap.xml

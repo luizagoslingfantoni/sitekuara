@@ -1,0 +1,23 @@
+.about-page .about-opening{grid-template-columns:minmax(0,43fr) minmax(0,33fr) minmax(0,24fr)}
+.about-page .about-opening__story{padding:clamp(7rem,9vw,11rem) 2.5rem 4rem}
+.about-page .about-opening__story-inner{max-width:none}
+.about-page .about-opening h1{margin-bottom:2.5rem}
+.about-page .about-opening__photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;align-content:start;padding:clamp(7rem,9vw,11rem) 2rem 4rem 0}
+.about-opening__photos figure,.about-story-trio figure,.about-editorial-photos figure{margin:0;min-width:0;overflow:hidden;border-radius:1rem}
+.about-opening__photos .process-mosaic__open,.about-story-trio .process-mosaic__open,.about-editorial-photos .process-mosaic__open{display:block;width:100%;height:100%;border:0;padding:0;background:none;cursor:zoom-in}
+.about-opening__photos img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.about-story-trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1.8rem 0}
+.about-story-trio img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.about-page .about-practice--editorial{padding:clamp(2rem,4vw,5rem);background:linear-gradient(#23375422,#23375422),url('/assets/hero-clay.jpg') center/cover}
+.about-editorial-panel{display:grid;grid-template-columns:1.1fr 1fr .9fr 1fr;gap:clamp(1.5rem,3vw,3.5rem);padding:clamp(2rem,3vw,4rem);background:#e5dbcf;color:#233754}
+.about-page .about-editorial-panel h2{color:#233754;margin:0 0 1.5rem;font-size:var(--section-title)}
+.about-page .about-editorial-panel p{color:#233754;font-size:1rem;line-height:1.7;margin:0 0 1.6rem}
+.about-editorial-panel mark{background:#a94e2d;color:#fff;padding:.08em .2em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.about-editorial-photos{display:grid;grid-template-rows:1fr 1fr;gap:1rem;min-height:28rem}
+.about-editorial-photos figure{position:relative;min-height:0}
+.about-editorial-photos img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+.about-commitment__grid>figure{align-self:stretch;position:relative;min-height:30rem}
+.about-commitment__grid>figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 48%;max-height:none!important}
+@media(max-width:1200px){.about-page .about-opening{grid-template-columns:40fr 60fr}.about-page .about-opening__photos{grid-column:2;grid-template-columns:repeat(3,minmax(0,1fr));padding:0 2.5rem 3rem}.about-page .about-opening__portrait{grid-row:span 2}.about-editorial-panel{grid-template-columns:repeat(2,minmax(0,1fr))}.about-editorial-photos{min-height:26rem}}
+@media(max-width:760px){.about-page .about-opening{display:block}.about-page .about-opening__story{padding:3rem var(--side) 1rem}.about-page .about-opening__photos{padding:0 var(--side) 3rem;gap:.65rem}.about-editorial-panel{grid-template-columns:1fr;padding:1.5rem}.about-editorial-photos{grid-template-columns:1fr 1fr;grid-template-rows:1fr;min-height:16rem}.about-page .about-practice--editorial{padding:1.25rem}.about-commitment__grid>figure{height:30rem;min-height:0}.about-opening__photos figure,.about-story-trio figure{border-radius:.7rem}}
+.about-page .about-practice--editorial .about-editorial-panel p{color:#233754!important;font-weight:400}

@@ -1,0 +1,17 @@
+.about-page .about-opening{grid-template-columns:minmax(0,43fr) minmax(0,57fr);position:sticky;top:var(--about-stack-top,0px);z-index:0}
+.about-page .about-opening__story{padding:clamp(7rem,9vw,11rem) clamp(2rem,6vw,7rem) 4rem}
+.about-page .about-opening__portrait{grid-row:auto}
+.about-page>.about-practice{position:relative;z-index:1;box-shadow:0 -16px 36px #18171318}
+.about-page>.about-research,.about-page>.about-commitment{position:relative;z-index:1}
+.individual-session__columns{align-items:stretch}
+.individual-session .individual-mentorship__contact-copy{display:flex;flex-direction:column;min-height:0}
+.individual-session .editorial-five-mosaic{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:minmax(0,1fr);flex:1;height:auto;min-height:230px;margin-top:2rem}
+.individual-session .editorial-five-mosaic figure{grid-column:auto;grid-row:auto}
+.individual-session__notes{margin-bottom:0}
+@media(max-width:900px){.individual-session .editorial-five-mosaic{height:280px;flex:none;min-height:0}}
+@media(max-width:760px){.about-page .about-opening{display:block}.about-page .about-opening__story{padding:3rem var(--side)}.individual-session .editorial-five-mosaic{height:220px;gap:6px}}
+@media(prefers-reduced-motion:reduce){.about-page .about-opening{position:relative;top:auto}}
+/* A faixa de fotos acompanha as duas bordas dos avisos da coluna esquerda. */
+@media(min-width:901px){
+ .individual-session .editorial-five-mosaic{flex:none;min-height:0;height:var(--notes-photo-height,150px);margin-top:var(--notes-photo-gap,2rem)}
+}

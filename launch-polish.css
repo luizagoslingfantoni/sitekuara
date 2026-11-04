@@ -1,0 +1,133 @@
+/* Revisão pré-lançamento: mantém os tokens visuais do site e a hierarquia editorial. */
+:root{--launch-blue:#233754;--launch-clay:#a24d2f;--launch-paper:#f5eee5;--launch-body:1rem}
+.main-nav{gap:clamp(.85rem,1.45vw,1.65rem)}
+.nav-dropdown--about .nav-dropdown__menu{min-width:12rem}
+.nav-dropdown--about .nav-dropdown__menu a{font-size:.78rem}
+.nav-dropdown__course:hover .nav-dropdown__formats,.nav-dropdown__course:focus-visible .nav-dropdown__formats{opacity:0}
+.inner-page main :is(.kiln-prologue__text,.kiln-intro__text,.about-opening__story,.about-practice__copy,.social-commitment__grid,.individual-mentorship__grid,.blog-article__prose,.collective-intro__copy,.collective-works__copy) p,
+.welcome__copy .body-copy p{color:var(--launch-blue);font-family:Inter,Arial,sans-serif;font-size:var(--launch-body);font-weight:400;line-height:1.65}
+.inner-page main :is(.kiln-prologue__text,.social-commitment__grid,.individual-mentorship__grid) strong{font-weight:600}
+.inner-page main a.text-link:not(.kiln-hero__cta):not(.text-link--light),
+.inner-page main .page-back{color:var(--launch-clay)}
+.inner-page main a.text-link:not(.kiln-hero__cta):not(.text-link--light):hover,
+.inner-page main a.text-link:not(.kiln-hero__cta):not(.text-link--light):focus-visible,
+.inner-page main .page-back:hover,.inner-page main .page-back:focus-visible{color:var(--launch-blue)}
+.inner-page main :is(.page-form,.social-signup__form) button[type=submit]{background:var(--launch-clay);color:var(--launch-paper)}
+.inner-page main :is(.page-form,.social-signup__form) button[type=submit]:hover,
+.inner-page main :is(.page-form,.social-signup__form) button[type=submit]:focus-visible{background:var(--launch-blue)}
+.welcome__copy .text-link,.courses .formation-card__footer{color:var(--launch-clay)}
+.welcome__copy .text-link:hover,.welcome__copy .text-link:focus-visible,.courses .formation-card:hover .formation-card__footer,.courses .formation-card:focus-visible .formation-card__footer{color:var(--launch-blue)}
+.follow__intro .text-link,.follow__intro .text-link:hover,.follow__intro .text-link:focus-visible{align-self:flex-start;padding:.6rem .8rem;color:var(--launch-clay);background:var(--launch-paper)}
+.follow__intro .text-link:hover,.follow__intro .text-link:focus-visible{color:var(--launch-paper);background:var(--launch-blue)}
+.person-feature__copy .text-link{align-self:flex-start;padding:.65rem .9rem;color:var(--launch-paper)!important;background:var(--launch-clay)}
+.person-feature__copy .text-link:hover,.person-feature__copy .text-link:focus-visible{color:var(--launch-paper)!important;background:var(--launch-blue)}
+.inner-page main :is(.about-practice,.about-commitment) a.text-link{display:inline-flex;padding:.6rem .8rem;color:var(--launch-clay)!important;background:var(--launch-paper);border:1px solid var(--launch-paper)}
+.inner-page main :is(.about-practice,.about-commitment) a.text-link:hover,.inner-page main :is(.about-practice,.about-commitment) a.text-link:focus-visible{color:var(--launch-paper)!important;background:var(--launch-blue)}
+.agenda-preview:hover,.agenda-preview:focus-visible{background:var(--launch-blue)}
+.nowrap{white-space:nowrap}
+
+/* Agenda editorial em dois terços; newsletter no terço final. */
+.follow__layout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.5vw,2.5rem);align-items:start}
+.follow__intro{grid-column:1/-1;max-width:none}
+.follow__intro h2{margin-bottom:.7rem}
+.follow__intro>p{max-width:46rem}
+.follow__intro .text-link{margin-top:.8rem}
+.follow-cards--preview{grid-column:1/3;display:flex;width:100%;max-width:none;min-height:19rem;gap:1rem;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;margin:0;padding:0 0 .65rem}
+.follow-cards--preview>.agenda-preview{flex:0 0 min(19rem,100%);scroll-snap-align:start}
+.follow__subscribe{grid-column:3;min-width:0;margin:0;padding:1.3rem;border:1px solid rgba(245,238,229,.5);border-radius:.8rem}
+.follow__subscribe>p{margin:0 0 1rem;color:var(--launch-paper);font-size:var(--launch-body);line-height:1.55}
+.follow__subscribe .newsletter-form{display:grid;grid-template-columns:1fr;gap:.65rem}
+.follow__subscribe .newsletter-form label{grid-column:1}
+.follow__subscribe .newsletter-form label span{font-size:.68rem}
+.follow__subscribe .newsletter-form input:not([type=checkbox]){padding:.25rem 0 .45rem;font-size:.85rem}
+.newsletter-form__consent{display:flex!important;flex-direction:row;align-items:flex-start;gap:.6rem;margin:.3rem 0}
+.newsletter-form__consent input{flex:none;width:auto!important;margin:.2rem 0 0;accent-color:var(--launch-paper)}
+.newsletter-form__consent span{color:var(--launch-paper)!important;font-size:.72rem!important;font-weight:400;letter-spacing:normal!important;text-transform:none!important;line-height:1.4}
+.newsletter-form__consent a{color:inherit;text-decoration:underline}
+.follow__subscribe .newsletter-form__submit{justify-self:start;padding:.65rem .9rem;border:0;border-radius:.25rem;color:var(--launch-paper);background:var(--launch-clay)}
+.follow__subscribe .newsletter-form__submit:hover,.follow__subscribe .newsletter-form__submit:focus-visible{color:var(--launch-paper);background:var(--launch-blue)}
+.form-recaptcha{grid-column:1/-1;min-height:78px;overflow:hidden}
+@media(max-width:900px){.follow__layout{grid-template-columns:repeat(2,minmax(0,1fr))}.follow-cards--preview{grid-column:1/-1;grid-row:2}.follow__subscribe{grid-column:1/-1;grid-row:3;max-width:38rem}.follow__subscribe .newsletter-form{grid-template-columns:repeat(2,minmax(0,1fr))}.follow__subscribe .newsletter-form label{grid-column:auto}.follow__subscribe .newsletter-form__consent,.follow__subscribe .form-recaptcha{grid-column:1/-1}}
+@media(max-width:640px){.follow__layout{display:block}.follow__intro{margin-bottom:1.5rem}.follow-cards--preview{margin-bottom:1.5rem}.follow-cards--preview>.agenda-preview{flex-basis:min(68vw,15rem)}.follow__subscribe .newsletter-form{grid-template-columns:1fr}.follow__subscribe .newsletter-form label{grid-column:1}}
+
+/* Nossa história: um card de blog ocupa somente uma das três colunas editoriais. */
+.about-research__columns{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:980px){.about-research__columns{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.about-research__columns{grid-template-columns:1fr}}
+
+/* Imagens de apoio no mesmo eixo das introduções. */
+.kiln-prologue__grid{align-items:stretch}
+.kiln-prologue__lead{display:flex;min-width:0;flex-direction:column;justify-content:space-between;gap:2.5rem}
+.kiln-prologue__lead img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:.45rem}
+.kiln-prologue__lead h2{margin:0}
+.kiln-hero__copy p{max-width:35rem}
+.formation-detail:has(.geo-intro) .kiln-hero__copy p{max-width:32rem}
+.inner-page:has(.kiln-hero) .kiln-hero h1{max-width:15ch}
+.inner-page:has(#kiln-title) .kiln-hero h2{font-size:clamp(2.55rem,3.95vw,4.6rem);line-height:1.05;font-weight:500;max-width:17ch;letter-spacing:-.055em}
+.inner-page:has(#kiln-title) .kiln-hero__copy p{max-width:32rem}
+@media(max-width:850px){.kiln-prologue__grid{align-items:start}.kiln-prologue__lead{gap:1.5rem}.inner-page:has(.geo-intro) .kiln-inclusions__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.inner-page:has(#kiln-title) .kiln-hero h2{font-size:calc(var(--hero-h1-size) - .25rem)}.inner-page:has(.geo-intro) .kiln-inclusions__grid{grid-template-columns:1fr}}
+
+/* FAQ azul do Forno Pré-Colombiano e rodapé integrado. */
+.precol-faq,.inner-page:has(.precol-faq) .site-footer{color:var(--launch-paper);background:var(--launch-blue)}
+.precol-faq h2{color:var(--launch-paper)}
+.precol-faq .faq-list details{background:var(--launch-paper)}
+.precol-faq .faq-list summary,.precol-faq .faq-list details p{color:var(--launch-blue)}
+.inner-page:has(.precol-faq) .site-footer a,.inner-page:has(.precol-faq) .site-footer p,.inner-page:has(.precol-faq) .site-footer h3{color:var(--launch-paper)}
+.inner-page:has(.precol-faq) .site-footer .footer__brand img{filter:brightness(0) invert(1)}
+
+/* Cartões de cursos integralmente clicáveis, preservando o único link semântico. */
+.offering{position:relative;transition:box-shadow .2s ease,transform .2s ease}
+.offering:hover,.offering:focus-within{box-shadow:0 16px 36px rgba(35,55,84,.12);transform:translateY(-2px)}
+.offering__copy>a[href]::after{position:absolute;inset:0;content:""}
+.offering__copy>a[href]:focus-visible{outline:2px solid var(--launch-clay);outline-offset:4px}
+.offerings-column>h2{min-height:0}
+
+/* Integrantes: quatro retratos numa linha, com navegação horizontal em telas menores. */
+.collective-members{grid-template-columns:repeat(4,minmax(0,1fr))}
+.collective-members__controls{display:none;justify-content:flex-end;gap:.6rem;margin-top:.8rem}
+.collective-members__controls button{width:2.5rem;height:2.5rem;border:1px solid var(--launch-clay);border-radius:50%;color:var(--launch-clay);background:transparent;font:1.2rem Inter,Arial,sans-serif;cursor:pointer}
+.collective-members__controls button:hover,.collective-members__controls button:focus-visible{color:var(--launch-paper);background:var(--launch-blue);border-color:var(--launch-blue)}
+@media(max-width:900px){.collective-members{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;padding-bottom:1rem}.collective-members figure{flex:0 0 min(42vw,19rem);scroll-snap-align:start}}
+@media(max-width:900px){.collective-members__controls{display:flex}}
+@media(max-width:520px){.collective-members figure{flex-basis:min(74vw,17rem)}}
+
+/* Páginas reabertas para revisão da cliente. */
+.review-page__back{padding-top:6.5rem}
+.review-page__back .page-back{position:static;color:var(--launch-clay)}
+.review-page__intro{padding-top:2rem;padding-bottom:4rem;background:var(--launch-paper)}
+.review-page__intro h1,.review-thanks h1{margin:0 0 1.2rem;color:var(--launch-blue);font:600 var(--hero-h1-size)/1.03 Inter,Arial,sans-serif;letter-spacing:-.065em}
+.review-page__intro p:last-child,.review-thanks p{max-width:42rem;color:var(--launch-blue);font-size:var(--launch-body);line-height:1.65}
+.review-page__eyebrow{margin:0 0 1rem;color:var(--launch-clay);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.review-page__body{background:#fff}
+.review-page__body h2{font-size:var(--content-title)}
+.review-page__events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.review-page__events .agenda-preview{height:22rem}
+.review-page__events .agenda-preview__details{max-height:none;opacity:1;transform:none}
+.contact-page .contact-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.contact-page .contact-layout>div>p,.contact-page .contact-channels{color:var(--launch-blue);font-size:var(--launch-body)}
+.contact-page .contact-form{border-radius:1rem}
+.review-thanks main{min-height:65svh;padding-top:6rem;background:var(--launch-paper)}
+@media(max-width:850px){.review-page__events{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-page .contact-layout{grid-template-columns:1fr}}
+@media(max-width:640px){.review-page__events{grid-template-columns:1fr}.review-page__events .agenda-preview{max-width:22rem}}
+
+/* Orientações individuais com abertura editorial, como Políticas Sociais. */
+.individual-mentorship .individual-opening{display:grid;grid-template-columns:minmax(0,.46fr) minmax(0,.54fr);min-height:48rem;background:#fff}
+.individual-opening__portrait{min-height:40rem;margin:0}
+.individual-opening__portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.individual-opening__story{display:flex;flex-direction:column;justify-content:center;padding:clamp(3rem,6vw,7rem)}
+.individual-opening__story h1{margin:0 0 2rem;color:var(--launch-blue);font:600 var(--hero-h1-size)/1.02 Inter,Arial,sans-serif;letter-spacing:-.065em}
+.individual-opening__story p{max-width:42rem;margin:0 0 1.15rem;color:var(--launch-blue);font:400 var(--launch-body)/1.65 Inter,Arial,sans-serif}
+.individual-opening__story .text-link{align-self:flex-start;margin-top:1rem}
+.individual-mentorship__details .kiln-hero__cta{color:var(--launch-clay)}
+.individual-mentorship__details .kiln-hero__cta:hover,.individual-mentorship__details .kiln-hero__cta:focus-visible{color:var(--launch-blue)}
+@media(max-width:760px){.individual-mentorship .individual-opening{display:block}.individual-opening__portrait{height:55svh;min-height:0}.individual-opening__story{padding:3rem var(--side)}}
+
+/* Texto corrido em todas as áreas claras segue Bem-vinda à Kûara. */
+main p:not(.eyebrow):not(.collective-piece__technique):not(.review-page__eyebrow):not(.form-status){color:var(--launch-blue);font-family:Inter,Arial,sans-serif;font-size:var(--launch-body);font-weight:400;line-height:1.65}
+main :is(.hero,.kiln-hero,.geo-pathways__card,.kiln-learn,.kiln-interest,.about-practice,.about-commitment,.follow) p:not(.eyebrow),
+main .follow__subscribe p{color:var(--launch-paper)!important}
+main .hero p.eyebrow{color:rgba(255,255,255,.82)}
+main .collective-piece__technique{color:var(--launch-clay)}
+main :is(li,dd){color:var(--launch-blue);font-family:Inter,Arial,sans-serif;font-size:var(--launch-body);font-weight:400;line-height:1.65}
+main :is(.geo-pathways__card,.kiln-interest,.about-commitment,.follow) :is(li,dd){color:var(--launch-paper)}

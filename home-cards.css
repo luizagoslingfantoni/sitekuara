@@ -1,0 +1,25 @@
+/* Home: formações um pouco mais largas, preservando margens laterais. */
+#mentorias.courses > .shell{width:min(calc(100% - 2 * var(--side)),1620px);max-width:1620px;margin-inline:auto}
+@media(min-width:1024px){#mentorias.courses > .shell{width:min(calc(100% - 1.5 * var(--side)),1620px)}}
+
+/* Textura mineral leve, preservando o contraste dos cards. */
+#mentorias.courses{background-color:#f5eee5;background-image:linear-gradient(rgba(245,238,229,.64),rgba(245,238,229,.64)),url('/assets/textura-areia-optimized.jpg');background-size:cover;background-position:center}
+
+/* Cada seção desliza sobre a anterior após a leitura de todo seu conteúdo. */
+main > .welcome.section,main > .courses.section,main > .people.section{position:sticky;top:var(--stack-top,0px);box-shadow:0 -16px 36px rgba(24,23,19,.07)}
+main > .welcome.section{z-index:1}
+main > .courses.section{z-index:2}
+main > .people.section{z-index:3;border-radius:1.2rem 1.2rem 0 0}
+main > .community.section{position:relative;z-index:4}
+.community-slider{min-width:0}
+.community-slider__controls{display:flex;justify-content:flex-end;gap:.65rem;margin:0 0 1.2rem}
+.community-slider__controls button{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #233754;border-radius:50%;background:transparent;color:#233754;cursor:pointer;transition:background .2s,color .2s}
+.community-slider__controls button:hover:not(:disabled){background:#233754;color:#fff}
+.community-slider__controls button:disabled{opacity:.3;cursor:default}
+.community-slider__controls button:focus-visible,.community-slider__track:focus-visible{outline:2px solid #a84c2c;outline-offset:4px}
+.community-slider__controls button span{width:9px;height:9px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg);margin-left:-3px}
+.community-slider__controls button:first-child span{transform:rotate(-135deg);margin-left:3px}
+.community-slider__track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#b9ad9b transparent;padding-bottom:1rem}
+.community-slider__track .community-quote{flex:0 0 clamp(19rem,28vw,24rem);width:auto;scroll-snap-align:start}
+@media(max-width:640px){.community-slider__track .community-quote{flex-basis:86%;min-width:0}.community-slider__controls{margin-top:.75rem}}
+@media(prefers-reduced-motion:reduce){main > .welcome.section,main > .courses.section,main > .people.section{position:relative;top:auto}}

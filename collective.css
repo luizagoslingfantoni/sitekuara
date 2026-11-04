@@ -1,0 +1,160 @@
+.collective-page .site-header--inner:not(.is-scrolled){color:#f5eee5;background:transparent}
+.collective-page .site-header--inner:not(.is-scrolled) .brand img{filter:brightness(0) invert(1)}
+.collective-page .site-header--inner:not(.is-scrolled) .main-nav>a,.collective-page .site-header--inner:not(.is-scrolled) .nav-dropdown__trigger{color:#f5eee5}
+.collective-page .page-back{color:#f5eee5}
+.collective-hero{position:relative;display:flex;min-height:100svh;align-items:center;justify-content:center;overflow:hidden;isolation:isolate;padding:0;background:#231916;color:#f5eee5}
+.collective-hero__image,.collective-hero__overlay{position:absolute;inset:0;width:100%;height:100%}
+.collective-hero__image{z-index:-2;object-fit:cover;object-position:center 44%}
+.collective-hero__overlay{z-index:-1;background:linear-gradient(180deg,rgba(17,13,12,.58),rgba(17,13,12,.38) 24%,rgba(17,13,12,.54) 68%,rgba(17,13,12,.62))}
+.collective-hero__inner{display:grid;min-height:100svh;place-items:center;padding-block:8rem 6rem;text-align:center}
+.collective-hero h1{max-width:17ch;margin:0 auto;color:#f5eee5;font-family:Inter,Arial,sans-serif;font-size:clamp(2.8rem,4.2vw,4.8rem);font-weight:600;letter-spacing:-.065em;line-height:1.02;text-wrap:balance;text-shadow:0 3px 24px rgba(0,0,0,.35)}
+.collective-hero h2{margin:1.5rem 0 0;color:#f5eee5;font-family:Inter,Arial,sans-serif;font-size:clamp(1.02rem,1.48vw,1.36rem);font-weight:400;letter-spacing:-.025em;line-height:1.5;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.collective-hero .hero__explore{z-index:2}
+.collective-intro{padding:clamp(5rem,9vw,9rem) 0;background:#f5eee5}
+.collective-intro__grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(2rem,7vw,8rem);align-items:start}
+.collective-intro__lead p{max-width:21ch;margin:0;color:#a24d2f;font-family:Lora,Georgia,serif;font-size:clamp(1.7rem,2.5vw,2.75rem);font-weight:400;line-height:1.3;letter-spacing:-.035em}
+.collective-intro__text{max-width:34rem;padding-top:.3rem}
+.collective-intro__text p,.collective-works__grid p{margin:0 0 1.25rem;color:#233754;font-size:1rem;line-height:1.7}
+.collective-members{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.7rem,1.6vw,1.5rem);margin-top:clamp(3rem,6vw,6rem)}
+.collective-members figure{min-width:0;margin:0}
+.collective-members__placeholder{display:grid;aspect-ratio:3/4;place-items:center;overflow:hidden;background:#d8c3ab url('/assets/textura-areia-optimized.jpg') center/cover}
+.collective-members__placeholder::after{content:'Retrato em breve';padding:.45rem .7rem;border:1px solid rgba(35,55,84,.35);border-radius:99px;color:#233754;background:rgba(245,238,229,.82);font-size:.71rem;font-weight:600;letter-spacing:.035em}
+.collective-members figcaption{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.25rem .75rem;padding-top:1rem;border-top:1px solid rgba(35,55,84,.22);margin-top:.65rem;color:#233754}
+.collective-members figcaption strong{font-size:1rem;font-weight:600}.collective-members figcaption span{color:#71664d;font-size:.76rem}
+.collective-works{padding:clamp(5rem,8vw,8rem) 0;background:#e9dfd2}
+.collective-works__grid{display:grid;grid-template-columns:minmax(0,.37fr) minmax(0,.63fr);gap:clamp(2rem,6vw,7rem);margin-bottom:clamp(3rem,6vw,5rem)}
+.collective-works h2,.collective-shop__heading h2{margin:0;color:#233754;font-family:Inter,Arial,sans-serif;font-size:clamp(2.6rem,4.5vw,4.6rem);font-weight:600;line-height:1.04;letter-spacing:-.06em}
+.collective-works__gallery.process-mosaic{height:clamp(31rem,46vw,45rem);gap:.65rem}
+.collective-works__gallery .process-mosaic__item{border-radius:.25rem}
+.collective-shop{padding:clamp(5rem,8vw,8rem) 0;background:#f5eee5}
+.collective-shop__heading{display:block;margin-bottom:clamp(2rem,4vw,3.5rem)}
+.collective-shop__eyebrow{margin:0 0 .8rem;color:#a24d2f;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.collective-slider{width:calc(100vw - var(--side) - var(--side));margin-inline:auto;overflow:hidden;padding:0}
+.collective-slider__track{display:flex;width:max-content;gap:1rem;animation:collective-drift 45s linear infinite alternate;will-change:transform}
+.collective-slider__page{display:grid;width:calc(100vw - var(--side) - var(--side));flex:none;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:1rem}
+.collective-slider:hover .collective-slider__track,.collective-slider:focus-within .collective-slider__track{animation-play-state:paused}
+@keyframes collective-drift{to{transform:translateX(calc(-100% + 100vw - var(--side) - var(--side)))}}
+.collective-piece{display:flex;width:clamp(16rem,21vw,20rem);min-width:0;flex-direction:column;overflow:hidden;border:1px solid rgba(35,55,84,.14);background:#fff}
+.collective-piece__visual{display:grid;aspect-ratio:4/5;place-items:center;background:#d8c3ab url('/assets/textura-areia-optimized.jpg') center/cover}
+.collective-piece__visual span{padding:.45rem .7rem;border:1px solid rgba(35,55,84,.35);border-radius:99px;color:#233754;background:rgba(245,238,229,.82);font-size:.71rem;font-weight:600}
+.collective-piece__body{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:1.15rem 1.2rem 1.3rem}
+.collective-piece__technique{margin:0 0 .45rem;color:#a24d2f;font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.collective-piece h3{margin:0;color:#233754;font-size:1.1rem;font-weight:600;line-height:1.25}
+.collective-piece strong{margin-top:.55rem;color:#141414;font-size:.94rem;font-weight:600}
+.collective-piece__link{margin-top:1.4rem;padding:0 0 .2rem;border:0;border-bottom:1px solid currentColor;color:#a24d2f;background:transparent;font:700 .86rem Inter,Arial,sans-serif;cursor:pointer;transition:color .2s ease}
+.collective-piece__link:hover,.collective-piece__link:focus-visible{color:#141414}
+.collective-detail{width:min(60rem,calc(100% - 2rem));max-width:none;max-height:min(90dvh,52rem);padding:0;border:0;border-radius:.35rem;color:#233754;background:#f5eee5;box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.collective-detail::backdrop{background:rgba(13,20,24,.72)}
+.collective-detail__layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:34rem}
+.collective-detail__image{display:grid;min-height:27rem;place-items:center;background:#d8c3ab url('/assets/textura-areia-optimized.jpg') center/cover}
+.collective-detail__image span{padding:.5rem .8rem;border:1px solid rgba(35,55,84,.35);border-radius:99px;background:rgba(245,238,229,.83);font-size:.73rem;font-weight:600}
+.collective-detail__body{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:clamp(2rem,4vw,3.8rem)}
+.collective-detail__close{position:absolute;top:1rem;right:1rem;width:2.5rem;height:2.5rem;border:1px solid rgba(35,55,84,.3);border-radius:50%;color:#233754;background:transparent;font:400 1.7rem/1 Inter,Arial,sans-serif;cursor:pointer}
+.collective-detail__eyebrow{margin:0 0 1rem;color:#a24d2f;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.collective-detail h2{margin:0 0 1.4rem;color:#233754;font-size:clamp(2rem,3.4vw,3.4rem);font-weight:600;line-height:1.03;letter-spacing:-.055em}
+.collective-detail__description{margin:0 0 2rem;font-size:.94rem;line-height:1.65}
+.collective-detail dl{display:grid;width:100%;grid-template-columns:1fr 1fr;gap:1rem;margin:auto 0 1.7rem;padding-top:1.1rem;border-top:1px solid rgba(35,55,84,.2)}
+.collective-detail dt{margin-bottom:.4rem;color:#71664d;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}.collective-detail dd{margin:0;font-size:1rem;font-weight:600}
+.collective-detail__cta{display:inline-block;padding:.8rem 1.1rem;color:#f5eee5;background:#a24d2f;font-size:.86rem;font-weight:700;text-decoration:none;transition:background .2s ease}
+.collective-detail__cta:hover,.collective-detail__cta:focus-visible{background:#233754}
+.collective-intro__grid{grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);align-items:start}
+.collective-intro__copy{max-width:34rem}
+.collective-intro__copy p{margin:0 0 1.4rem;color:#233754;font-family:Inter,Arial,sans-serif;font-size:1rem;line-height:1.75}
+.collective-intro__copy p:first-child{color:#a24d2f;font-size:clamp(1.2rem,1.7vw,1.65rem);font-weight:500;line-height:1.5}
+.collective-members{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin:0 auto}
+.collective-members img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 34%;border-radius:.25rem}
+.collective-members figcaption{padding-top:.55rem;margin-top:0;border:0}
+.collective-works__grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.collective-works__visual{display:flex;min-height:100%;flex-direction:column;gap:1.4rem}
+.collective-works__visual img{display:block;width:100%;height:0;min-height:12rem;flex:1;object-fit:cover;border-radius:.25rem}
+.collective-works__copy{display:flex;flex-direction:column;justify-content:space-between}
+.collective-works__copy p:last-child{margin-bottom:0}
+.collective-slider{overflow:hidden;padding:0}
+.collective-slider__track{display:flex;width:max-content;gap:1rem;animation:collective-drift 45s linear infinite alternate;will-change:transform}
+.collective-piece{width:100%;border-radius:.3rem}
+.collective-piece h3{font-family:Inter,Arial,sans-serif}
+.collective-detail dl{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:auto}
+.collective-detail__navigation{display:flex;width:100%;align-items:center;justify-content:flex-end;gap:1rem;margin-top:1.2rem}
+.collective-detail__navigation button{width:2.7rem;height:2.7rem;border:0;color:#233754;background:transparent;font:400 1.8rem Inter,Arial,sans-serif;cursor:pointer}
+.collective-detail__navigation button:hover,.collective-detail__navigation button:focus-visible{color:#a24d2f}
+.collective-detail__navigation span{font-size:.8rem;font-weight:600}
+@media(max-width:760px){.collective-intro__grid,.collective-works__grid{grid-template-columns:1fr}.collective-works__visual img{max-height:26rem;aspect-ratio:16/10}.collective-works__copy{gap:0}.collective-slider{overflow:visible;padding:0;scroll-snap-type:none}.collective-slider__track{display:grid;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));animation:none}.collective-piece{width:100%;scroll-snap-align:none}}
+@media(max-width:520px){.collective-members{gap:.8rem}.collective-members img{aspect-ratio:3/4}.collective-slider__track{gap:.6rem}.collective-piece__body{padding:.8rem}.collective-piece h3{font-size:.96rem}.collective-piece__visual{aspect-ratio:3/4}}
+@media(max-width:760px){.collective-works__gallery.process-mosaic{height:34rem}.collective-detail__layout{grid-template-columns:1fr}.collective-detail__image{min-height:16rem;aspect-ratio:16/9}.collective-detail__body{padding:2rem}.collective-detail h2{max-width:80%}}
+@media(max-width:520px){.collective-page .page-back{display:none}.collective-hero h1{font-size:clamp(2.8rem,11vw,4rem)}.collective-hero__image{object-position:center center}.collective-hero__overlay{background:rgba(17,13,12,.53)}.collective-members figcaption{display:block}.collective-members figcaption span{display:block;margin-top:.25rem}.collective-works__gallery.process-mosaic{height:35rem}.collective-detail{max-height:92dvh;overflow-y:auto}.collective-detail__image{min-height:13rem}}
+
+/* Editorial portraits and collection details */
+.collective-intro{padding-block:clamp(5rem,8vw,8rem)}
+.collective-intro__grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,6vw,6rem);margin-bottom:clamp(3rem,5vw,5rem)}
+.collective-intro h1{max-width:12ch;margin:0;color:#a24d2f;font:600 clamp(2.1rem,3.6vw,3.8rem)/1.1 Inter,Arial,sans-serif;letter-spacing:-.055em}
+.collective-intro__copy{max-width:39rem}
+.collective-intro__copy p,.collective-intro__copy p:first-child{margin:0 0 1.2rem;color:#233754;font:400 1rem/1.7 Inter,Arial,sans-serif;letter-spacing:normal}
+.collective-intro__copy p:last-child{margin-bottom:0}
+.collective-members{grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.75rem,1.6vw,1.5rem)}
+.collective-members img{aspect-ratio:2/3;object-position:center 28%}
+.collective-members figcaption{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .5rem;padding-top:.7rem}
+.collective-works__copy{display:block;padding-top:calc(clamp(2.6rem,4.5vw,4.6rem) + 1.4rem)}
+.collective-works__copy p{margin-bottom:1.15rem}
+.collective-shop__heading h2{max-width:17ch;color:#a24d2f;font-size:clamp(2rem,3.2vw,3.4rem);line-height:1.1}
+.collective-piece{border:1px solid rgba(35,55,84,.16);border-radius:.75rem;background:#f5eee5}
+.collective-piece__visual{aspect-ratio:4/4.5;background:#d8c3ab url('/assets/textura-areia-optimized.jpg') center/cover}
+.collective-piece__visual img{display:block;width:100%;height:100%;object-fit:cover}
+.collective-slider__page .collective-piece{height:100%}
+.collective-slider__page .collective-piece__visual{height:clamp(11rem,15vw,15rem);flex:none;aspect-ratio:auto}
+.collective-slider__page .collective-piece__body{min-height:10.75rem}
+.collective-piece__visual span{border:0;border-radius:0;background:none;color:#233754;font-size:.8rem}
+.collective-piece__body{padding:.9rem .7rem 1rem}
+.collective-piece h3{font-size:.96rem}
+.collective-piece strong{font-size:.92rem}
+.collective-piece__actions{display:flex;width:100%;align-items:center;justify-content:space-between;gap:.25rem;margin-top:auto;padding-top:1.1rem}
+.collective-piece__buy,.collective-piece__link{margin:0;padding:0;border:0;border-bottom:1px solid currentColor;border-radius:0;color:#a24d2f;background:none;font:700 .65rem/1.5 Inter,Arial,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer}
+.collective-piece__buy:hover,.collective-piece__buy:focus-visible,.collective-piece__link:hover,.collective-piece__link:focus-visible{color:#233754}
+.collective-detail{width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:clamp(1rem,3vw,3rem);border:0;border-radius:0;color:#f5eee5;background:#141414;box-shadow:none}
+.collective-detail::backdrop{background:rgba(0,0,0,.9)}
+.collective-detail__frame{position:relative;display:flex;width:100%;height:100%;align-items:center;justify-content:center}
+.collective-detail__layout{display:grid;width:min(calc(100% - 7rem),72rem);min-height:0;height:min(80dvh,43rem);grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);overflow:hidden;border-radius:1rem;background:#f5eee5}
+.collective-detail__image{min-height:0;background:#d8c3ab url('/assets/textura-areia-optimized.jpg') center/cover}
+.collective-detail__image img{display:block;width:100%;height:100%;object-fit:contain}
+.collective-detail__image span{border:0;border-radius:0;background:none;font-size:.85rem}
+.collective-detail__body{justify-content:center;align-items:flex-start;padding:clamp(2rem,4vw,4rem);color:#233754}
+.collective-detail h2{font-family:Inter,Arial,sans-serif;font-size:clamp(2rem,3vw,3.2rem)}
+.collective-detail__description{font-size:1rem}
+.collective-detail dl{grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 2rem}
+.collective-detail__cta{padding:.85rem 1.3rem;border-radius:.35rem}
+.collective-detail .collective-detail__close{position:absolute;top:0;right:0;width:2.8rem;height:2.8rem;border:0;border-radius:0;color:#f5eee5;background:none;font:400 2rem/1 Inter,Arial,sans-serif}
+.collective-detail .gallery-lightbox__nav{width:2.8rem;height:2.8rem;color:#f5eee5}
+.collective-detail__count{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:.8rem}
+@media(max-width:900px){.collective-members{grid-template-columns:repeat(2,minmax(0,1fr))}.collective-members img{aspect-ratio:2/3}.collective-detail__layout{width:min(calc(100% - 5rem),72rem)}}
+@media(min-width:761px) and (max-width:1100px){.collective-piece__actions{align-items:flex-start;flex-direction:column;gap:.45rem}}
+@media(max-width:760px){.collective-intro__grid,.collective-works__grid{grid-template-columns:1fr}.collective-intro h1{max-width:16ch}.collective-works__copy{padding-top:0}.collective-slider{overflow:visible}.collective-slider__track{display:block;width:100%;animation:none}.collective-slider__page{display:grid;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;gap:.6rem;margin-bottom:.6rem}.collective-slider__page .collective-piece{height:24rem}.collective-slider__page .collective-piece__visual{height:clamp(11rem,36vw,17rem)}.collective-detail{max-height:none;overflow:hidden}.collective-detail__layout{display:flex;width:calc(100% - 1rem);height:calc(100% - 4rem);max-height:none;flex-direction:column;overflow:auto}.collective-detail__image{min-height:35vh}.collective-detail__body{padding:1.5rem}.collective-detail h2{max-width:none}.collective-detail .gallery-lightbox__nav{top:auto;bottom:0;transform:none}.collective-detail__count{bottom:.85rem}}
+@media(prefers-reduced-motion:reduce){.collective-slider__track{animation:none}.collective-slider{overflow-x:auto;scroll-snap-type:x mandatory}.collective-slider__page{scroll-snap-align:start}}
+@media(max-width:640px){.collective-hero h1{font-size:2.8rem}}
+@media(max-width:520px){.collective-members img{aspect-ratio:2/3}.collective-members figcaption{display:block}.collective-piece__actions{align-items:flex-start;flex-direction:column;gap:.5rem}.collective-piece__buy,.collective-piece__link{font-size:.75rem}.collective-detail__layout{height:calc(100% - 5rem)}.collective-detail__image{min-height:30vh}}
+
+/* Fixed collection grid: two complete rows first, with the remaining works on request. */
+.collective-slider{width:calc(100vw - var(--side) - var(--side));overflow:visible}
+.collective-slider__track{display:grid;width:100%;grid-template-columns:repeat(6,minmax(0,1fr));gap:1rem;animation:none;transform:none;will-change:auto}
+.collective-slider__track>.collective-piece{height:23rem;width:100%;min-width:0}
+.collective-slider__track>.collective-piece .collective-piece__visual{position:relative;height:12rem;flex:none;overflow:hidden;aspect-ratio:auto}
+.collective-slider__track>.collective-piece .collective-piece__visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.collective-slider__track>.collective-piece .collective-piece__body{min-height:0;flex:1;padding:.9rem .45rem 1rem}
+.collective-slider__track>.collective-piece h3{min-height:2.5em}
+.collective-slider__track>.collective-piece .collective-piece__buy,.collective-slider__track>.collective-piece .collective-piece__link{font-size:.75rem}
+.collective-slider__track>.collective-piece[hidden],.collective-shop__more[hidden]{display:none}
+.collective-shop__more{display:block;margin:2rem auto 0;padding:.75rem 1rem;border:1px solid #a24d2f;border-radius:.35rem;color:#a24d2f;background:transparent;font:600 .9rem Inter,Arial,sans-serif;cursor:pointer;transition:background .2s,color .2s}
+.collective-shop__more:hover,.collective-shop__more:focus-visible{color:#f5eee5;background:#a24d2f}
+@media(max-width:1100px){.collective-slider__track{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.collective-slider__track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.collective-slider__track>.collective-piece{height:24rem}.collective-slider__track>.collective-piece .collective-piece__visual{height:clamp(11rem,36vw,17rem)}}
+@media(max-width:380px){.collective-slider__track{grid-template-columns:1fr}.collective-slider__track>.collective-piece{height:25rem}.collective-slider__track>.collective-piece .collective-piece__visual{height:15rem}}
+
+/* O catálogo é um convite de download, integrado à grade sem criar um 13º card solto. */
+.collective-catalog-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:18rem;margin-top:clamp(2.5rem,5vw,5rem);overflow:hidden;border-radius:.75rem;color:#f5eee5;background:#71664d;text-decoration:none}
+.collective-catalog-card img{display:block;width:100%;height:100%;max-height:25rem;object-fit:cover;object-position:left center}
+.collective-catalog-card__body{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(1.5rem,4vw,4rem)}
+.collective-catalog-card__eyebrow{margin-bottom:1.3rem;color:#f5eee5;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.collective-catalog-card strong{max-width:15ch;font-size:clamp(1.8rem,3.2vw,3.4rem);font-weight:600;letter-spacing:-.055em;line-height:1.05}
+.collective-catalog-card__description{max-width:28rem;margin-top:1.1rem;font-size:1rem;line-height:1.6}
+.collective-catalog-card__action{margin-top:1.8rem;padding-bottom:.25rem;border-bottom:1px solid currentColor;font-size:.95rem;font-weight:700}
+.collective-catalog-card:hover .collective-catalog-card__action,.collective-catalog-card:focus-visible .collective-catalog-card__action{color:#fff;border-bottom-width:2px}
+.collective-catalog-card:focus-visible{outline:3px solid #a24d2f;outline-offset:4px}
+@media(max-width:760px){.collective-catalog-card{grid-template-columns:1fr}.collective-catalog-card img{height:14rem}.collective-catalog-card__body{padding:1.5rem}.collective-catalog-card strong{max-width:none}}

@@ -1,0 +1,30 @@
+/* Escala tipográfica única para todos os heros do site.
+   O tamanho é o mesmo da home; cada página conserva sua cor e composição. */
+:root {
+  --hero-h1-size: clamp(2.8rem, 4.2vw, 4.8rem);
+  --hero-h2-size: clamp(1.02rem, 1.48vw, 1.36rem);
+  --hero-text-size: 1rem;
+}
+
+:is(.hero, .mentorias-hero, .kiln-hero, .collective-hero, .page-hero, .blog-hero, .about-opening) h1 {
+  font-size: var(--hero-h1-size);
+  line-height: 1.02;
+}
+
+:is(.mentorias-hero, .kiln-hero, .collective-hero) h2 {
+  font-size: var(--hero-h2-size);
+  line-height: 1.5;
+}
+
+.hero__bottom p,
+.mentorias-hero__copy > p:not(.eyebrow),
+.kiln-hero__copy > p,
+.page-hero__lead,
+.blog-hero p:last-child,
+.about-opening__story p:not(.about-kicker) {
+  font-size: var(--hero-text-size);
+}
+
+@media (max-width: 640px) {
+  :root { --hero-h1-size: 2.8rem; }
+}

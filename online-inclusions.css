@@ -1,0 +1,124 @@
+/* Geopoética: benefícios compactos ao lado do título. */
+:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-mentorship__inner{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(1.5rem,3vw,3.5rem)}
+:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-mentorship__inner h1{margin:0}
+.geo-online-benefits{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(.5rem,1vw,1rem);padding:0;margin:0;list-style:none;color:#233754}
+.geo-online-benefits li{display:flex;justify-content:center;align-items:center;min-height:4.5rem;padding:.65rem .45rem;border:1.5px solid #233754;border-radius:.6rem;text-align:center;font-size:clamp(.78rem,.9vw,1rem);line-height:1.45}
+:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-journey .kiln-fit{margin-top:0!important;padding-top:0!important;border-top:0}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;max-width:none;align-items:start}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact details,:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact details:last-child{width:100%;transform:none!important}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact summary{min-height:7rem;padding:1rem 2.5rem 1rem 1rem;font-size:.95rem}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact details p{padding:0 1rem 1rem;font-size:.9rem}
+@media(max-width:1200px){:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-mentorship__inner{grid-template-columns:1fr}:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.geo-online-benefits{grid-template-columns:repeat(3,minmax(0,1fr))}.geo-online-benefits li{font-size:.85rem}:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.geo-online-benefits{grid-template-columns:repeat(2,minmax(0,1fr))}:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{grid-template-columns:1fr}:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact summary{min-height:4.5rem}}
+
+/* Larguras contidas: benefícios iguais ao maior conteúdo, sem expansão. */
+:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-mentorship__inner{grid-template-columns:max-content max-content;justify-content:start}
+.geo-online-benefits{width:max-content;max-width:100%;grid-template-columns:repeat(6,1fr);gap:.75rem}
+.geo-online-benefits li{padding:.65rem .9rem;font-size:.875rem;white-space:nowrap}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{width:max(850px,calc(100% - 500px));max-width:100%;margin-inline:auto;gap:1rem}
+@media(max-width:1200px){:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-mentorship__inner{grid-template-columns:minmax(0,1fr)}:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{width:100%;max-width:900px}}
+@media(max-width:760px){.geo-online-benefits{grid-template-columns:repeat(3,1fr)}:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{max-width:580px}}
+@media(max-width:480px){.geo-online-benefits{grid-template-columns:repeat(2,1fr)}:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{max-width:340px}}
+
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-online-benefits li{background:#f7f8f7;border:0}
+
+@media(min-width:1201px) and (max-width:1500px){.formation-detail--latao .kiln-mentorship__inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Perguntas sem caixas, alinhadas ao título; abertura por clique/teclado. */
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact{margin-left:0;margin-right:auto;gap:1rem 1.5rem}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact details,
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact details:is(:hover,:focus-within,[open]){border:0;border-radius:0;background:transparent;box-shadow:none;transform:none!important;transition:none}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact summary{padding:1rem 1.65rem 1rem 0;color:#233754}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact summary::after{content:"";right:.3rem;top:50%;width:.5rem;height:.5rem;border:0;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-70%) rotate(45deg);color:#233754}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact details[open] summary::after{content:"";transform:translateY(-25%) rotate(225deg)}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact details p{padding:0 1rem 1rem 0;animation:none}
+:is(.geo-page,.formation-detail--latao,.precol-page) .geo-faq-compact summary:focus-visible{outline:2px solid #a24d2f;outline-offset:4px}
+
+/* FAQ editorial: contato à esquerda e respostas laterais. */
+.faq-editorial{display:grid;grid-template-columns:minmax(15rem,.75fr) minmax(0,2fr);gap:clamp(2.5rem,5vw,6rem);align-items:start}
+.faq-editorial__intro h2{margin:0 0 2rem}
+.faq-contact{padding:clamp(1.4rem,2.2vw,2.2rem);border-radius:1rem;background:#233754;color:#fff}
+.faq-contact h3{margin:0 0 1.5rem;color:#fff;font-size:1.25rem;line-height:1.3}
+.faq-contact__cta{display:inline-block;color:#fff;font-size:.95rem}
+.faq-contact p{margin:2rem 0 0;color:#fff;font-size:.85rem;line-height:1.7}
+.faq-contact p a{color:#fff;text-decoration:underline;text-underline-offset:.2em;overflow-wrap:anywhere}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions{display:block;width:100%;max-width:none;margin:0}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions details{position:relative;display:flow-root;padding:1.25rem 2rem 1.25rem 0;border:0;border-bottom:1px solid #23375426;border-radius:0;background:transparent;box-shadow:none}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions details:is(:hover,:focus-within,[open]){border-bottom:1px solid #23375426}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions summary{display:block;position:static;min-height:0;padding:0 1rem 0 0;line-height:1.45;font-size:1rem}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions summary::after{top:1.7rem;right:.3rem}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions details[open] summary{float:left;width:43%}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions details p{margin:0 0 0 47%;padding:0;font-size:.94rem;line-height:1.65;color:#233754}
+@media(max-width:1000px){.faq-editorial{grid-template-columns:minmax(14rem,.8fr) minmax(0,1.5fr);gap:2rem}:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions details[open] summary{float:none;width:auto}:is(.geo-page,.formation-detail--latao,.precol-page) .faq-editorial__questions details p{margin:1rem 0 0}}
+@media(max-width:700px){.faq-editorial{grid-template-columns:1fr}.faq-contact{max-width:26rem}}
+
+/* Composição mais contida e contraste explícito no card de contato. */
+.faq-editorial{grid-template-columns:18rem minmax(0,40rem);gap:clamp(2rem,4vw,4rem);max-width:62rem;margin-inline:auto}
+.faq-contact{width:100%;max-width:18rem;padding:1.5rem;border-radius:1rem;box-shadow:0 8px 24px #2337540a}
+:is(.geo-page,.formation-detail--latao,.precol-page) .faq-contact :is(h3,p,a,span,svg){color:#fff!important;opacity:1}
+.faq-contact h3{font-size:1.2rem;max-width:15ch;margin-bottom:1.25rem}
+.faq-contact__icon{display:block;width:1.9rem;height:1.9rem;margin-bottom:1rem}
+.faq-contact__cta{font-size:.82rem;line-height:1.5;padding-bottom:.4rem;border-bottom:1px solid #ffffff70}
+.faq-contact p{position:relative;margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid #ffffff26;font-size:.75rem;line-height:1.8}
+.faq-contact__mail-icon{display:block;width:1.15rem;height:1.15rem;margin-bottom:.45rem}
+.faq-contact p a{white-space:normal}
+@media(max-width:1000px){.faq-editorial{grid-template-columns:17rem minmax(0,1fr);gap:2rem}}
+@media(max-width:700px){.faq-editorial{grid-template-columns:1fr}.faq-contact{max-width:18rem}}
+
+/* Percurso, requisitos e perguntas reunidos em uma seção compacta. */
+.course-fit-faq__layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,.9fr) minmax(0,1fr);gap:1.5rem;align-items:start}
+.course-fit-faq h2{margin:0 0 1.5rem;font-size:clamp(1.35rem,1.7vw,2rem);line-height:1.15;letter-spacing:-.04em;color:#233754}
+.course-fit-faq__cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:stretch}
+.course-fit-faq .kiln-fit__card{min-height:0;padding:1.15rem;border-radius:.8rem}
+.course-fit-faq .kiln-fit__heading{margin-bottom:.75rem;gap:.5rem}
+.course-fit-faq .kiln-fit__heading h3{font-size:1.05rem}
+.course-fit-faq .kiln-fit__card li{font-size:.85rem;line-height:1.5;padding-block:.65rem}
+.course-fit-faq .kiln-fit__card--prepare{background:#f5eee5}
+.course-fit-faq .kiln-fit__card--prepare dl{margin:0}
+.course-fit-faq .kiln-fit__card--prepare dl>div{display:block;padding-block:.75rem}
+.course-fit-faq .kiln-fit__card--prepare dt{color:#a24d2f;font-size:.8rem;margin-bottom:.3rem}
+.course-fit-faq .kiln-fit__card--prepare dd{font-size:.85rem;line-height:1.5;margin:0}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-fit-faq .faq-editorial__questions{background:#f5eee5;padding:.25rem 1rem;width:100%;max-width:none}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-fit-faq .faq-editorial__questions details{padding:1rem 1.5rem 1rem 0}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-fit-faq .faq-editorial__questions summary{font-size:.85rem;line-height:1.45}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-fit-faq .faq-editorial__questions summary::after{top:1.35rem}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-fit-faq .faq-editorial__questions details[open] summary{float:none;width:auto}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-fit-faq .faq-editorial__questions details p{margin:.8rem 0 0;font-size:.85rem;line-height:1.55}
+@media(max-width:1100px){.course-fit-faq__layout{grid-template-columns:repeat(2,minmax(0,1fr))}.course-fit-faq__audience{grid-column:1/-1}}
+@media(max-width:650px){.course-fit-faq__layout,.course-fit-faq__cards{grid-template-columns:1fr}.course-fit-faq__audience{grid-column:auto}}
+
+/* Fundo limpo nos requisitos e FAQ; contato integrado à última linha. */
+.course-fit-faq .kiln-fit__card--prepare{background:transparent;border:0;box-shadow:none;padding:0}
+.course-fit-faq .kiln-fit__card--prepare dl>div:first-child{border-top:0}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-fit-faq .faq-editorial__questions{background:transparent;padding:0}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-faq-contact-inline{margin:1.2rem 0 0;font-size:.85rem;line-height:1.7;color:#a24d2f!important}
+:is(.geo-page,.formation-detail--latao,.precol-page) .course-faq-contact-inline :is(a,span){color:#a24d2f!important}
+.course-faq-contact-inline a{display:inline-block;vertical-align:bottom;margin-left:.2em}
+.course-faq-contact-inline .revision-swipe{line-height:1.7}
+
+/* Quatro colunas iguais e interações suaves nos cards. */
+.course-fit-faq__layout{grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;max-width:none;width:calc(100% - (2 * var(--side)))}
+.course-fit-faq__audience{grid-column:span 2}
+.course-fit-faq__cards{gap:1.25rem}
+.course-fit-faq .kiln-fit__heading{display:flex;align-items:center;justify-content:center;gap:.5rem}
+.course-fit-faq .kiln-fit__heading h3{margin:0;line-height:1.25}
+.course-fit-faq .kiln-fit__heading>span{display:inline-flex;align-items:center;justify-content:center;flex:none;margin:0}
+:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-gallery{background:#233754!important}
+:is(.geo-page,.formation-detail--latao,.precol-page) .gallery-lightbox,
+:is(.geo-page,.formation-detail--latao,.precol-page) .gallery-lightbox__frame,
+:is(.geo-page,.formation-detail--latao,.precol-page) .gallery-lightbox__image{background:#233754!important}
+:is(.geo-page,.formation-detail--latao,.precol-page) .gallery-lightbox::backdrop{background:#233754}
+:is(.geo-page,.formation-detail--latao,.precol-page) .gallery-lightbox :is(button,.gallery-lightbox__caption,.gallery-lightbox__caption span){color:#fff}
+.geo-online-benefits li{transition:background-color .22s ease,color .22s ease;cursor:default}
+:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-learn{transition:transform .28s ease,box-shadow .28s ease}
+@media(hover:hover) and (pointer:fine){
+ :is(.geo-page,.formation-detail--latao,.precol-page) .geo-online-benefits li:hover{background:#233754;color:#fff}
+ :is(.geo-page,.formation-detail--latao,.precol-page) .kiln-learn:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:0 12px 25px #23375424}
+ :is(.geo-page,.formation-detail--latao,.precol-page) .kiln-learn:nth-child(even):hover{transform:translateY(-5px) rotate(.5deg)}
+}
+@media(max-width:1100px){.course-fit-faq__layout{grid-template-columns:repeat(2,minmax(0,1fr))}.course-fit-faq__audience{grid-column:1/-1}}
+@media(max-width:650px){.course-fit-faq__layout,.course-fit-faq__cards{grid-template-columns:1fr}.course-fit-faq__audience{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){.geo-online-benefits li,:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-learn{transition:none}:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-learn:hover,:is(.geo-page,.formation-detail--latao,.precol-page) .kiln-learn:nth-child(even):hover{transform:none}}
+
+.precol-faq-layout{display:grid;grid-template-columns:minmax(14rem,1fr) minmax(0,2fr);gap:3rem;max-width:65rem}.precol-page .precol-faq{position:relative;z-index:1;background:#f7f8f7;color:#233754}@media(max-width:700px){.precol-faq-layout{grid-template-columns:1fr;gap:1rem}}

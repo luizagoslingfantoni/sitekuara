@@ -1,0 +1,20 @@
+/* Course introduction photos: full-size view and face-first framing. */
+.course-reference-grid>figure>.process-mosaic__open{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.course-reference-grid>figure>.process-mosaic__open:focus-visible{outline:3px solid #a24d2f;outline-offset:5px}
+.geo-page .course-reference-grid>figure img{object-position:50% 38%}
+.gallery-lightbox__nav[hidden],.gallery-lightbox__count[hidden]{display:none!important}
+.formation-detail--queimas .kiln-presence__proposal .revision-actions{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap;gap:12px 20px}
+.formation-detail--queimas .kiln-presence__proposal .revision-actions a{flex:0 0 auto;width:auto}
+.queimas-combo-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px;font-weight:400}
+
+/* Download card follows the solid-color course invitation on the home page. */
+.kiln-presence__catalog .formation-pdf--blue{position:relative;overflow:hidden;isolation:isolate;background:#233754;color:#f5eee5;border:0;border-radius:1.45rem;padding:1.6rem;align-self:stretch;transition:background .25s ease}
+.kiln-presence__catalog .formation-pdf--blue:hover,.kiln-presence__catalog .formation-pdf--blue:focus-visible{background:#2d4668;color:#f5eee5;border-radius:1.45rem}
+.formation-pdf--blue::before{position:absolute;inset:auto -30% -45% 20%;height:85%;border:1px solid rgba(245,238,229,.22);border-radius:50%;content:"";pointer-events:none;z-index:-1}
+.formation-pdf--blue .kiln-pdf__body{padding:0;display:flex;flex-direction:column;justify-content:flex-end;gap:14px}
+.formation-pdf--blue .kiln-pdf__body h3{max-width:12ch;margin:0;color:#f5eee5;font-size:clamp(1.65rem,2.7vw,2.65rem);font-weight:600;letter-spacing:-.05em;line-height:1.08}
+.formation-pdf--blue .kiln-pdf__body p{margin:0;color:#f5eee5}
+.formation-pdf--blue .kiln-pdf__download{margin:6px 0 0;color:#f5eee5;width:30px;height:30px;transition:transform .2s ease}
+.formation-pdf--blue:hover .kiln-pdf__download{transform:translateY(3px)}
+@media(prefers-reduced-motion:reduce){.formation-pdf--blue,.formation-pdf--blue .kiln-pdf__download{transition:none}}
+main .formation-pdf--blue .kiln-pdf__body p{color:#f5eee5!important}

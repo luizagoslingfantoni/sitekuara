@@ -1,0 +1,36 @@
+/* Fotografias e formulário: atualização de 14/10/2026. */
+.mentorias-hero{background-image:linear-gradient(90deg,rgba(14,23,35,.7),rgba(14,23,35,.12)),url('/assets/mentorias-hero-out26.jpg')}
+.geo-page .kiln-hero__tone{background:linear-gradient(90deg,rgba(22,20,18,.72),rgba(22,20,18,.15))}
+.geo-page .course-reference-grid>.course-reference-copy .geo-intro-group{margin:28px 0 0;min-height:0;display:block}
+.geo-page .course-reference-grid>.course-reference-copy .geo-intro-group img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;border-radius:12px}
+.geo-page .course-reference-grid>figure{align-self:start;height:640px;max-height:80vh}
+.social-form-card{min-width:0;width:100%;padding:clamp(20px,3vw,40px);border-radius:24px;background:#233754;box-shadow:0 12px 36px #23375412}
+main .social-form-card form.kuara-form{margin:0;padding:0;background:transparent;border-radius:0;min-width:0;width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}
+main .social-form-card form.kuara-form :is(h3,p,label,a){color:#f5eee5}
+main .social-form-card form.kuara-form input:not([type=checkbox]){min-width:0;width:100%;font-size:16px}
+main .social-form-card form.kuara-form .page-form__consent{grid-column:1/-1;min-width:0}
+.social-photo-gallery{background:#fff}
+.social-photo-gallery h2{color:#233754;margin-bottom:32px}
+.social-photo-gallery__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.social-photo-gallery__grid figure{margin:0;overflow:hidden;border-radius:16px}
+.social-photo-gallery__grid img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+@media(max-width:700px){.geo-page .course-reference-grid>figure{height:360px;max-height:none}.social-photo-gallery__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+@media(max-width:600px){main .social-form-card form.kuara-form{grid-template-columns:minmax(0,1fr)}.social-form-card{padding:22px 18px;border-radius:20px}main .social-form-card form.kuara-form>*{min-width:0}main .social-form-card form.kuara-form .form-recaptcha{max-width:100%;overflow:auto}main .social-form-card form.kuara-form button{min-width:0;max-width:100%}}
+.social-form-card{background:#f5eee5}
+main .social-form-card form.kuara-form :is(h3,p,label,a){color:#233754}
+main .social-form-card form.kuara-form button:hover,main .social-form-card form.kuara-form button:focus-visible{background:#233754;color:#fff}
+@media(max-width:380px){.social-form-card .form-recaptcha>div{transform:scale(.86);transform-origin:left top}.social-form-card .form-recaptcha:not(:empty){height:70px;overflow:hidden!important}}
+main .social-form-card form.kuara-form :is(h2,h3,p,label,legend,span,a){color:#233754!important}
+.geo-page .course-reference-grid>.course-reference-copy .geo-intro-group img{position:static;inset:auto}
+
+.geo-page .course-reference-grid>figure{height:auto;aspect-ratio:3/4;max-height:none}.geo-page .course-reference-grid>figure img{object-fit:cover}
+
+/* Prevent portrait source dimensions from stretching the modality cards. */
+@media(min-width:701px){.geo-page .geo-pathways__card .modality-image{contain:size;min-height:0;height:100%;min-width:0;align-self:stretch}}
+.geo-page .kiln-module img[src$="geo-carvao.jpg"]{object-position:50% 78%}
+.geo-page .kiln-module img[src$="geo-modelagem.jpg"]{object-position:50% 82%}
+
+/* Keep the group photo close to the interest form height, without stretching the section. */
+.geo-page .course-reference-grid>figure{height:clamp(380px,38vw,550px);aspect-ratio:auto;min-height:0}
+.geo-page .course-reference-grid>figure img{object-position:50% 100%}
+@media(max-width:700px){.geo-page .course-reference-grid>figure{height:auto;aspect-ratio:1/1;min-height:0}}

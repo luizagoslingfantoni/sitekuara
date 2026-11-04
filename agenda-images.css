@@ -1,0 +1,1 @@
+.agenda-page .agenda-image-selected{background:#eee7de}.agenda-page .agenda-image-cover{object-fit:cover}.agenda-page .agenda-image-contain{object-fit:contain;background:#f7f3ed}.agenda-page .agenda-event__image:has(.agenda-image-contain){background:#f7f3ed}

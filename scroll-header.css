@@ -1,0 +1,7 @@
+/* The fixed header takes the background of the visible section. */
+body .site-header[data-scroll-theme]{background:var(--scroll-header-bg)!important;color:var(--scroll-header-ink)!important;backdrop-filter:none;box-shadow:none;border-color:transparent;transition:background-color .25s ease,color .25s ease}
+body .site-header[data-scroll-theme] .main-nav>a,body .site-header[data-scroll-theme] .nav-dropdown__trigger,body .site-header[data-scroll-theme] .menu-button{color:var(--scroll-header-ink)!important}
+body .site-header[data-scroll-theme=dark] .brand img{filter:brightness(0) invert(1)!important}
+body .site-header[data-scroll-theme=light] .brand img{filter:none!important}
+@media(max-width:900px){body.menu-open .site-header .main-nav.is-open>a,body.menu-open .site-header .main-nav.is-open .nav-dropdown__trigger,body.menu-open .site-header .menu-button{color:#f5eee5!important}body.menu-open .site-header .brand img{filter:brightness(0) invert(1)!important}}
+@media(prefers-reduced-motion:reduce){body .site-header[data-scroll-theme]{transition:none}}

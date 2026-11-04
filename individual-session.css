@@ -1,0 +1,23 @@
+/* Orientação individual: abertura completa e informações em duas colunas. */
+.individual-opening__portrait{position:relative;align-self:stretch;min-height:0}
+.individual-opening__portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.individual-opening__story{padding-top:clamp(7rem,9vw,10rem);padding-bottom:4rem}
+.individual-mentorship .page-back{color:#fff!important;text-shadow:0 1px 5px #0008}
+.individual-mentorship .site-header:not([data-scroll-theme]) .brand img{filter:brightness(0) invert(1)!important}
+.individual-session__columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.5rem,5vw,6rem);align-items:start}
+.individual-session h2{color:#f5eee5;margin:0 0 2rem}
+.individual-session .individual-mentorship__theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:0}
+.individual-session .individual-mentorship__theme-grid article{padding:1.5rem;border-radius:1rem;background:#f5eee5}
+.individual-session .individual-mentorship__theme-grid article:nth-child(2){background:#e5b765}
+.individual-session .individual-mentorship__theme-grid article:nth-child(3){background:#b9cbd0}
+.individual-session .individual-mentorship__theme-grid article:nth-child(4){background:#e0d6c6}
+.individual-session .individual-mentorship__theme-grid :is(h3,p,svg){color:#233754!important}
+.individual-session .individual-mentorship__theme-grid h3{margin:0 0 .6rem}
+.individual-session .individual-mentorship__theme-grid .revision-fact{color:#141414!important}
+.individual-session .individual-mentorship__contact-copy{position:static;padding:0}
+.individual-session .individual-mentorship__attention{margin-top:2rem}
+.about-page .about-opening__portrait{position:relative;top:0;align-self:stretch;height:auto;min-height:0}
+.about-page .about-opening__portrait img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:50% 25%}
+@media(max-width:900px){.individual-session__columns{grid-template-columns:1fr;gap:3rem}}
+@media(max-width:760px){.individual-opening__portrait{height:65svh;min-height:0}.individual-opening__story{padding:3rem var(--side)}.about-page .about-opening__portrait{height:65svh}.individual-session .individual-mentorship__theme-grid article{padding:1.2rem}}
+@media(max-width:380px){.individual-session .individual-mentorship__theme-grid{grid-template-columns:1fr}}

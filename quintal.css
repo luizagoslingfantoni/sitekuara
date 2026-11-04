@@ -1,0 +1,113 @@
+.quintal-page,.quintal-page h1,.quintal-page h2,.quintal-page h3,.quintal-page h4,.quintal-page p,.quintal-page .kiln-program__list summary{font-family:Inter,Arial,sans-serif}
+.quintal-overview{padding-block:clamp(4.5rem,7vw,7rem);background:#f5eee5}
+.quintal-overview__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
+.quintal-overview__grid>div{padding:1.5rem;border:1px solid rgba(35,55,84,.12);border-top:3px solid #a24d2f;border-radius:.55rem;background:#fff}
+.quintal-overview__grid>div:first-child{border-top-color:#233754;background:#e8ddd0}
+.quintal-overview h2,.quintal-path__heading h2,.quintal-path__split h2,.quintal-faq h2,.quintal-inclusions h2{font-family:Inter,Arial,sans-serif;font-size:clamp(1.7rem,2.55vw,2.5rem);font-weight:600;line-height:1.1;letter-spacing:-.045em}
+.quintal-overview h3{font-family:Inter,Arial,sans-serif;font-size:clamp(1.3rem,1.7vw,1.7rem);font-weight:600}
+.quintal-overview p,.quintal-path__heading p{font-size:1rem;line-height:1.7}
+.quintal-path{padding-block:clamp(4.5rem,7vw,7rem);background:#fff}
+.quintal-path--fornos{background:#f5eee5}
+.quintal-path__heading{max-width:42rem;margin-bottom:3.5rem}
+.quintal-path__heading h2{color:#a24d2f}
+.quintal-path__split{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,5vw,5rem)}
+.quintal-learning{grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.quintal-learning article{min-height:12rem;padding:1rem;border:0;border-radius:.6rem;background:#f5eee5}
+.quintal-path--fornos .quintal-learning article{background:#fff}
+.quintal-learning h3{font-family:Inter,Arial,sans-serif;font-size:.98rem;font-weight:600}
+.quintal-learning p,.quintal-path__program .kiln-program__list p{font-size:.85rem;line-height:1.55}
+.quintal-path__image{border-radius:.5rem}
+.quintal-fit__card,.quintal-fit__form{border-radius:.6rem}
+.quintal-faq{padding-top:clamp(3rem,5vw,5rem);border-top:1px solid rgba(35,55,84,.18)}
+.quintal-page .interest-form h3{font-family:Inter,Arial,sans-serif}
+@media(max-width:1100px){.quintal-learning{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.quintal-overview__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quintal-overview__grid>div:first-child{grid-column:1/-1}.quintal-path__split{grid-template-columns:1fr}}
+@media(max-width:650px){.quintal-overview__grid,.quintal-fit,.quintal-faq__grid{grid-template-columns:1fr}.quintal-overview__grid>div:first-child{grid-column:auto}.quintal-learning{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Shared visual language with Forno de Latão and Queimas Poéticas. */
+.quintal-path__heading{max-width:42rem;margin-bottom:clamp(3rem,5vw,5rem)}
+.quintal-path__heading h2{margin-bottom:1rem;color:#233754;font-size:clamp(2rem,3vw,3.2rem)}
+.quintal-path--fornos .quintal-path__heading h2{color:#a24d2f}
+.quintal-path__split{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,4vw,5rem)}
+.quintal-path__split h2{min-height:0;margin:0 0 2rem;color:#233754;font-size:clamp(2rem,3vw,3.2rem)}
+.quintal-learning{grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.quintal-learning article,.quintal-path--fornos .quintal-learning article{display:flex;min-height:16rem;flex-direction:column;align-items:flex-start;padding:1rem;border:2px solid #fff;border-radius:1rem;color:#f5eee5;background:#233754;box-shadow:0 8px 24px rgba(35,55,84,.1)}
+.quintal-learning article:nth-child(3n+2),.quintal-path--fornos .quintal-learning article:nth-child(3n+2){background:#9d3e22}
+.quintal-learning article span{display:block;margin:0 0 auto;color:#f5eee5;font-size:1.45rem;line-height:1}
+.quintal-learning h3{margin:1rem 0 .35rem;color:#f5eee5;font-size:1.05rem;line-height:1.2}
+.quintal-learning p{color:#f5eee5;font-size:1rem;line-height:1.4}
+.quintal-path__side{display:flex;min-width:0;flex-direction:column}
+.quintal-path__program{order:0;margin-top:0;background:transparent}
+.quintal-path__image{order:1;height:clamp(14rem,19vw,19rem);margin-top:2rem;border-radius:1rem}
+.quintal-path__program .kiln-program__list{display:block}
+.quintal-path__program .kiln-program__list details,.quintal-path__program .kiln-program__list details[open]{overflow:visible;border:0;border-top:1px solid rgba(35,55,84,.28);border-radius:0;background:transparent;box-shadow:none;transform:none}
+.quintal-path__program .kiln-program__list details:last-child{border-bottom:1px solid rgba(35,55,84,.28)}
+.quintal-path__program .kiln-program__list summary{min-height:4rem;padding:1rem 1.6rem 1rem 0;color:#233754;font-size:1rem;line-height:1.35}
+.quintal-path__program .kiln-program__list summary i{width:.55rem;height:.55rem;margin-right:.35rem;border-right:1.5px solid #9d3e22;border-bottom:1.5px solid #9d3e22;border-radius:0;background:transparent;transform:rotate(45deg)}
+.quintal-path__program .kiln-program__list summary i::before,.quintal-path__program .kiln-program__list summary i::after{content:none}
+.quintal-path__program .kiln-program__list details[open] summary i{transform:rotate(225deg)}
+.quintal-path__program .kiln-program__list details>div{padding:0 1.8rem 1.3rem 0}
+.quintal-path__program .kiln-program__list p{font-size:1rem;line-height:1.4}
+.quintal-fit{align-items:stretch;gap:1rem;margin-top:clamp(4rem,7vw,7rem)}
+.quintal-fit__title{grid-column:1/-1;margin:0 0 .4rem;color:#a24d2f;font:600 clamp(1.25rem,1.8vw,1.65rem)/1.2 Inter,Arial,sans-serif;letter-spacing:-.035em}
+.quintal-fit__card{min-height:0;padding:clamp(1.35rem,2.2vw,2rem);border-radius:1.2rem}
+.quintal-fit__card--yes{background:#71664d}
+.quintal-fit__card--no{background:#af6154}
+.quintal-fit__card--prepare{background:#f5eee5}
+.quintal-fit__heading{display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem}
+.quintal-fit__heading>span{display:grid;width:2rem;height:2rem;flex:none;place-items:center;border:1px solid currentColor;border-radius:50%;font-size:1rem;line-height:1}
+.quintal-fit__card .quintal-fit__heading h3{margin:0;color:inherit;font-size:clamp(1.25rem,1.8vw,1.65rem)}
+.quintal-fit__card p{max-width:none;padding-top:1rem;border-top:1px solid currentColor;color:inherit;font-size:1rem;line-height:1.45}
+.quintal-fit__card--yes p,.quintal-fit__card--no p{border-color:rgba(245,238,229,.35)}
+.quintal-fit__card--prepare p{border-color:rgba(20,20,20,.2)}
+.quintal-fit__form.kiln-interest{display:grid;min-width:0;max-width:none;height:100%;align-self:stretch;gap:1rem;margin:0;padding:clamp(1.35rem,2.2vw,2rem);border-radius:1.2rem;color:#f5eee5;background:#233754}
+.quintal-fit__form.kiln-interest h3{margin:0;color:#f5eee5;font-size:clamp(1.6rem,2.4vw,2.4rem)}
+.quintal-fit__form.kiln-interest>p:not(.form-status){margin:0;color:#f5eee5;font-size:1rem;line-height:1.5}
+.quintal-fit__form.kiln-interest button{width:max-content;min-width:6rem;padding:.7rem 1.1rem;border-radius:.4rem}
+.quintal-faq{margin-top:clamp(4rem,7vw,6rem);padding-top:clamp(3rem,5vw,5rem);border-top:1px solid rgba(35,55,84,.2)}
+.quintal-faq h2{margin-bottom:2rem;color:#233754;font-size:clamp(2rem,3vw,3.2rem)}
+.quintal-faq__grid{gap:clamp(1.5rem,3vw,3rem)}
+.quintal-faq .faq-list summary,.quintal-faq .faq-list p{font-size:1rem;line-height:1.5}
+.quintal-path__split h2,.quintal-faq h2{font-size:clamp(1.7rem,2.4vw,2.4rem)}
+.quintal-inclusions{background:#f5eee5}
+.quintal-inclusions>.shell{display:grid;grid-template-columns:minmax(11rem,.27fr) minmax(0,.73fr);align-items:start;gap:clamp(1.5rem,4vw,4rem)}
+.quintal-inclusions .quintal-eyebrow{display:none}
+.quintal-inclusions h2{max-width:12ch;margin:0;color:#233754;font-size:clamp(2rem,3vw,3.2rem)}
+.quintal-inclusions__icon{font-size:2rem;line-height:1}
+.quintal-inclusions .kiln-inclusions__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.quintal-inclusions .kiln-inclusions__grid article{min-height:14.5rem;gap:1.3rem;padding:1.15rem}
+.quintal-inclusions .kiln-inclusions__grid h3{min-height:0;margin-bottom:.45rem;font-size:1.04rem}
+.quintal-inclusions .kiln-inclusions__grid p{font-size:.9rem;line-height:1.45}
+@media(max-width:1050px){.quintal-path__split{grid-template-columns:1fr}.quintal-learning{grid-template-columns:repeat(3,minmax(0,1fr))}.quintal-inclusions>.shell{grid-template-columns:1fr}.quintal-inclusions h2{max-width:none}}
+@media(max-width:760px){.quintal-fit{grid-template-columns:1fr}.quintal-faq__grid{grid-template-columns:1fr}.quintal-inclusions .kiln-inclusions__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.quintal-learning{grid-template-columns:repeat(2,minmax(0,1fr))}.quintal-learning article{min-height:13rem}.quintal-learning p{font-size:.88rem}.quintal-inclusions .kiln-inclusions__grid{grid-template-columns:1fr}.quintal-fit__form.kiln-interest{grid-template-columns:1fr}}
+@media(max-width:400px){.quintal-learning{grid-template-columns:1fr}}
+
+/* O mesmo arranjo editorial da jornada em Forno de Latão. */
+.quintal-fit{display:grid;grid-template-columns:minmax(11rem,.27fr) repeat(2,minmax(0,.365fr));align-items:stretch;gap:1rem;margin-top:clamp(4rem,7vw,7rem)}
+.quintal-fit__title{grid-column:1;grid-row:1/3;max-width:12ch;margin:0;color:#233754;font-size:clamp(2rem,3vw,3.2rem);line-height:1.08;letter-spacing:-.055em}
+.quintal-fit__card,.quintal-fit__form.kiln-interest{min-width:0;min-height:0;height:100%;padding:clamp(1.35rem,2.2vw,2rem);border-radius:1.2rem}
+.quintal-fit__card--yes{grid-column:2;grid-row:1}
+.quintal-fit__card--no{grid-column:3;grid-row:1}
+.quintal-fit__card--prepare{grid-column:2;grid-row:2;background:#f5eee5}
+.quintal-fit__form.kiln-interest{grid-column:3;grid-row:2;align-content:start;gap:.65rem .85rem;padding:1.4rem}
+.quintal-fit__heading{margin-bottom:1.1rem}
+.quintal-fit__heading>span{width:2rem;height:2rem;border-color:currentColor}
+.quintal-fit__heading svg{width:1.1rem;height:1.1rem;stroke:currentColor}
+.quintal-fit__card .quintal-fit__heading h3{font-size:clamp(1.25rem,1.8vw,1.65rem)}
+.quintal-fit__card ul,.quintal-fit__card dl{margin:0;padding:0;list-style:none}
+.quintal-fit__card li{padding:.75rem 0;border-top:1px solid rgba(245,238,229,.35);font-size:1rem;line-height:1.45}
+.quintal-fit__card--prepare dl>div{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:1rem;padding:.6rem 0;border-top:1px solid rgba(20,20,20,.2)}
+.quintal-fit__card--prepare dt{color:#9d3e22;font-size:.8rem;font-weight:700}
+.quintal-fit__card--prepare dd{margin:0;font-size:.9rem;line-height:1.45}
+.quintal-fit__form.kiln-interest h3{font-size:1.65rem}
+.quintal-fit__form.kiln-interest>p:not(.form-status){font-size:.9rem;line-height:1.4}
+.quintal-fit__form.kiln-interest label{gap:.3rem;font-size:.78rem}
+.quintal-fit__form.kiln-interest input:not([type=checkbox]){min-height:2.55rem;padding:.45rem .65rem}
+.quintal-fit__form.kiln-interest .page-form__consent{font-size:.76rem!important;line-height:1.35}
+.quintal-fit__form.kiln-interest button{min-width:7.5rem;min-height:2.8rem;justify-content:center;padding:.6rem .9rem}
+@media(max-width:980px){.quintal-fit{grid-template-columns:repeat(2,minmax(0,1fr))}.quintal-fit__title{grid-column:1/-1;grid-row:auto;max-width:none}.quintal-fit__card--yes,.quintal-fit__card--no,.quintal-fit__card--prepare,.quintal-fit__form.kiln-interest{grid-column:auto;grid-row:auto}}
+@media(max-width:760px){.quintal-fit{grid-template-columns:1fr}.quintal-fit__title{grid-column:1}.quintal-fit__card--prepare dl>div{grid-template-columns:minmax(6rem,.3fr) minmax(0,.7fr)}}
+@media(max-width:480px){.quintal-fit__card--prepare dl>div{grid-template-columns:1fr;gap:.15rem}.quintal-fit__form.kiln-interest{grid-template-columns:1fr}}
+
+.quintal-learning article span svg{display:block;width:1.45rem;height:1.45rem}

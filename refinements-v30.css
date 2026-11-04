@@ -1,0 +1,47 @@
+body .social-page__main .social-opening .social-form-card form.social-signup__form{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.social-page__main .social-opening{grid-template-columns:minmax(0,43fr) minmax(0,31fr) minmax(0,26fr)}
+.social-opening .social-form-card{margin-left:1rem;margin-right:2.5rem;padding:1.4rem}
+.social-page__main .social-opening .about-opening__story{padding-right:2.5rem!important}
+body:has(.social-opening) .site-footer{background:#f7f8f7!important;background-image:none!important;color:#233754!important}
+body:has(.social-opening) .site-footer :is(h3,p,a,span){color:#233754!important}
+body:has(.social-opening) .footer__brand img{filter:none!important}
+.article-related__track{scrollbar-width:none;-ms-overflow-style:none}
+.article-related__track::-webkit-scrollbar{display:none}
+.article-related__heading button{border:0;border-radius:0;font-size:1.5rem;background:transparent}
+.online-title-status{display:flex;align-items:center;gap:1.5rem}
+.online-title-status .course-status{position:static!important;flex:none;max-width:none;inset:auto!important;margin:0!important}
+.precol-complete-price{border-top:1px solid #23375430;padding-top:1rem;margin-top:1rem;display:grid;gap:.65rem;font-size:1rem}
+.precol-complete-price>div{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}.precol-complete-price>div span{padding:.25rem .55rem;background:#a24d2f;color:white;border-radius:1rem;font-size:.75rem}.precol-complete-price>strong:last-child{font-size:1.8rem}
+/* Contato: composição editorial com matéria, canais diretos e formulário. */
+body.contact-page{background:#f7f8f7;color:#233754}
+.contact-page .secondary-main{padding:0;background:linear-gradient(#f7f8f7ed,#f7f8f7ed),url('/assets/textura-areia-optimized.jpg') center/cover}
+.contact-page .contact-editorial{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);column-gap:clamp(3rem,7vw,8rem);row-gap:2rem;max-width:1240px;padding:9rem 0 5rem;align-items:start}
+.contact-scene{grid-column:1;grid-row:2;margin:0;position:relative;border-radius:1rem;overflow:hidden;height:230px}
+.contact-scene img{width:100%;height:100%;object-fit:cover}.contact-scene figcaption{position:absolute;inset:auto 0 0;padding:2.5rem 1.3rem 1.2rem;background:linear-gradient(transparent,#182b39cc);color:#fff;font-size:.8rem}
+.contact-page .contact-editorial__copy{grid-column:1;grid-row:1}
+.contact-page .contact-editorial__copy h1{font:600 clamp(3rem,5vw,5rem)/1.02 Inter,Arial,sans-serif;letter-spacing:-.06em;color:#233754;margin:1rem 0 1.5rem}
+.contact-page .contact-editorial__copy>p:not(.secondary-eyebrow){max-width:35ch;font-size:1rem;line-height:1.7;color:#233754}
+.contact-page .contact-editorial__channels{display:grid;gap:0;margin-top:1.6rem}
+.contact-page .contact-editorial__channels>a{display:flex;align-items:center;gap:1rem;border-bottom:1px solid #23375425;padding:.9rem 0;color:#233754;font-size:.95rem;text-decoration:none}
+.contact-page .contact-editorial__channels small{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#a24d2f;margin-bottom:.25rem}
+body.contact-page .secondary-main form.contact-form{grid-column:2;grid-row:1/3;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem 1rem;padding:2.3rem;border-radius:1.5rem;background:#233754;color:#fff;box-shadow:none;margin:0}
+body.contact-page form.contact-form :is(h3,label,p,span,a){color:#f7f8f7!important}
+body.contact-page form.contact-form h3{grid-column:1/-1;font:600 1.8rem/1.15 Inter,Arial,sans-serif;letter-spacing:-.04em;margin:0 0 .6rem}
+body.contact-page form.contact-form label:not(.page-form__consent){display:flex;flex-direction:column;justify-content:end;gap:.5rem;font-size:.85rem}
+body.contact-page form.contact-form :is(input:not([type=checkbox]),textarea){width:100%;min-width:0;background:#f7f8f7;border:1px solid transparent;border-radius:.35rem;color:#233754;padding:.8rem}
+body.contact-page form.contact-form textarea{min-height:145px;resize:vertical}
+body.contact-page form.contact-form .page-form__consent{font-size:.78rem;line-height:1.6;align-items:start}
+body.contact-page form.contact-form button{grid-column:1/-1;background:#e7b85f;color:#233754;border:0;border-radius:.35rem;min-height:46px;font-weight:600}
+.contact-page .site-footer{background:#f7f8f7!important;background-image:none!important;color:#233754}
+.contact-page .site-header:not([data-scroll-theme]){background:transparent!important}
+.contact-page .site-header:not([data-scroll-theme]) :is(.main-nav>a,.nav-dropdown__trigger){color:#233754!important}
+.contact-page .site-header:not([data-scroll-theme]) .brand img{filter:none!important}
+@media(max-width:1200px){.social-page__main .social-opening{grid-template-columns:40fr 60fr}.social-opening .social-form-card{margin:0 2rem 4rem}}
+@media(max-width:800px){.contact-page .contact-editorial{grid-template-columns:1fr;padding-top:7rem;gap:2rem}.contact-page .contact-editorial__copy,.contact-scene,body.contact-page .secondary-main form.contact-form{grid-column:1;grid-row:auto}.contact-scene{height:200px}.contact-page .contact-editorial__copy{order:-1}body.contact-page .secondary-main form.contact-form{padding:1.5rem}.online-title-status{gap:1rem}}
+@media(max-width:760px){.social-page__main .social-opening{display:block}.social-opening .social-form-card{margin-inline:var(--side)}}
+@media(max-width:400px){body.contact-page .secondary-main form.contact-form{grid-template-columns:1fr}body .social-page__main .social-opening .social-form-card form.social-signup__form{grid-template-columns:1fr!important}}
+body .social-opening .social-form-card form.social-signup__form{align-items:stretch!important}
+body .social-opening .social-form-card form.social-signup__form label:not(.page-form__consent){align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end!important}
+body .social-opening .social-form-card form.social-signup__form label:not(.page-form__consent) input{margin-top:auto}
+body:has(.social-opening) .site-footer{background-image:linear-gradient(#f7f8f7d9,#f7f8f7d9),url('/assets/textura-areia-optimized.jpg')!important;background-size:cover!important}
+.contact-page .site-footer{background-image:linear-gradient(#f7f8f7ed,#f7f8f7ed),url('/assets/textura-areia-optimized.jpg')!important;background-size:cover!important}

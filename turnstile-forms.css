@@ -1,0 +1,4 @@
+[data-turnstile-widget],.turnstile-status{grid-column:1/-1;min-width:0;max-width:100%}
+[data-turnstile-widget]{display:flex;justify-content:flex-start;margin-block:8px}
+.turnstile-status{font:inherit;line-height:1.5;margin:8px 0 0}
+.turnstile-status:empty{display:none}
