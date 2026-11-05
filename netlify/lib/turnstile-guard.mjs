@@ -45,8 +45,13 @@ export async function guardForm(request, context, { secret, fetcher = fetch } = 
       body: JSON.stringify({ secret, response:token }),
       redirect: 'error', signal: AbortSignal.timeout(8000),
     });
-    if (!response.ok) { console.error('Turnstile verification HTTP', response.status); return fail(503, 'A verificação está indisponível. Tente novamente.'); }
     verdict = await response.json();
+    if (!response.ok) {
+      const codes = Array.isArray(verdict['error-codes']) ? verdict['error-codes'] : [];
+      console.error('Turnstile verification HTTP', response.status, codes.join(','));
+      if (codes.includes('invalid-input-secret') || codes.includes('missing-input-secret')) return fail(503, 'O formulário está indisponível por um erro de configuração da verificação de segurança.');
+      return fail(503, 'A verificação está indisponível. Tente novamente.');
+    }
   } catch (error) { console.error('Turnstile verification failed:', error.name, error.message); return fail(503, 'A verificação está indisponível. Tente novamente.'); }
   if (verdict.success !== true || verdict.hostname !== url.hostname || verdict.action !== data['form-name']) return fail(403, 'A verificação expirou ou não foi aceita. Tente novamente.');
   // Sign only validated contact fields. The visitor cannot supply this proof.
