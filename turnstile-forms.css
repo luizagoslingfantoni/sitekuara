@@ -3,3 +3,4 @@
 .turnstile-status{font:inherit;line-height:1.5;margin:8px 0 0}
 .turnstile-status:empty{display:none}
 .turnstile-status[data-state="success"]{padding:14px 16px;border:1px solid currentColor;border-radius:8px;overflow-wrap:anywhere}
+body.contact-page main form.contact-form button[type=submit]:is(:hover,:focus-visible){background:#f7f8f7;color:#233754}

@@ -62,3 +62,8 @@ test('all eight forms validate then route to their own list without real API cal
   assert.equal(result.listId,28+index);
  }
 });
+test('invalid Cloudflare secret returns a configuration error and never stores the form', async () => {
+ const response=await guardForm(request(),{next:()=>assert.fail('Must not store')},{secret,fetcher:async()=>({ok:false,status:400,json:async()=>({success:false,'error-codes':['invalid-input-secret']})})});
+ assert.equal(response.status,503);
+ assert.match(await response.text(),/configuração/);
+});
