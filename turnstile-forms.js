@@ -23,11 +23,11 @@
       const field = form.elements.namedItem('cf-turnstile-response');
       const id = window.turnstile.render(holder, {
         sitekey: '0x4AAAAAAFyz0vmm5nreHXuC',
-        action: form.getAttribute('name'), language:'pt-br', theme:'light',
+        action: form.getAttribute('name'), language:'pt-br', theme:'light', appearance:'interaction-only',
         size: form.clientWidth < 320 ? 'compact' : 'flexible',
         'response-field': false,
         callback: token => { field.value = token; if (form.querySelector('[data-turnstile-status]')?.dataset.state !== 'success' && form.querySelector('[data-turnstile-status]')?.dataset.state !== 'error') status(form, ''); },
-        'expired-callback': () => { field.value = ''; status(form, 'A verificação expirou. Confirme novamente antes de enviar.'); },
+        'expired-callback': () => { field.value = ''; status(form, 'A verificação está sendo renovada. Aguarde um instante antes de enviar.'); },
         'error-callback': () => { field.value = ''; status(form, 'Não foi possível carregar a verificação. Confira a conexão ou recarregue a página.'); },
       });
       widgets.set(form, id);

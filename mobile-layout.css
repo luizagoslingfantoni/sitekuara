@@ -5,7 +5,7 @@
     overflow-x: clip;
     overflow-y: visible;
   }
-  main .shell, .individual-session__columns, .course-reference-copy,
+  main .shell:not(.collective-members), .individual-session__columns, .course-reference-copy,
   .about-opening__story, .social-editorial__copy { overflow: visible; }
   main :where(h1,h2,h3,p,label,summary), .site-footer { overflow-wrap: break-word; }
   main form, main fieldset { max-width: 100%; }
@@ -15,4 +15,29 @@
   .kiln-gallery, .community-slider, .follow-cards--preview, .article-related { min-width: 0; max-width: 100%; }
   .individual-mentorship__theme-grid article { height: auto; overflow: visible; }
   .individual-mentorship__theme-grid :is(p,h3) { white-space: normal; overflow-wrap: break-word; }
+}
+
+/* Background layers may never paint over the preceding section. */
+.home-ending{overflow:clip;display:flow-root}
+@media(max-width:900px){
+ .home-ending{overflow:clip}
+ main .shell.collective-members{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;touch-action:pan-x pan-y;max-width:calc(100% - 2 * var(--side));padding-bottom:1rem}
+ main .shell.collective-members figure{flex:0 0 min(74vw,17rem);scroll-snap-align:start}
+ .collective-members__controls button:disabled{opacity:.35;cursor:default}
+ .community-slider__track .community-quote{height:auto;max-height:none;overflow:visible}
+ .home-ending .follow__intro{position:static}
+ main :where(.kiln-learning,.quintal-learning,.individual-session__cards,.individual-mentorship__theme-grid) > *{min-width:0;height:auto;max-height:none}
+ main :where(.kiln-learning,.quintal-learning,.individual-session__cards,.individual-mentorship__theme-grid) :is(p,h3){white-space:normal;overflow-wrap:anywhere}
+}
+@media(max-width:900px){
+ .collective-page .collective-hero{min-height:0;display:flex;flex-direction:column;padding-top:72px;background:#233754;overflow:hidden}
+ .collective-page .collective-hero__image{position:relative;inset:auto;z-index:0;display:block;width:100%;height:auto;object-fit:contain;object-position:center}
+ .collective-page .collective-hero__overlay{display:none}
+ .collective-page .collective-hero__inner{min-height:0;padding:28px 0 76px}
+ .collective-page .collective-hero h1{font-size:clamp(2.2rem,9vw,3rem);text-shadow:none}
+ .collective-page .collective-hero .hero__explore{bottom:24px}
+}
+
+@media(max-width:900px){
+ .article-excerpt{height:auto!important;max-height:none!important;overflow:visible!important;-webkit-line-clamp:unset!important;line-clamp:unset!important;display:block!important}
 }

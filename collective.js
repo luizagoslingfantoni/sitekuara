@@ -90,7 +90,7 @@
   }
 ];
 
-  const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget metus vitae mauris volutpat fermentum. Curabitur vitae purus sed magna facilisis interdum.';
+
 
   const track = document.querySelector('[data-collective-track]');
   const moreButton = document.querySelector('[data-collective-more]');
@@ -109,7 +109,9 @@
     const piece = allPieces[currentIndex];
     dialog.querySelector('[data-piece-technique]').textContent = piece.technique;
     dialog.querySelector('[data-piece-name]').textContent = piece.name;
-    dialog.querySelector('[data-piece-description]').textContent = description;
+    const description = dialog.querySelector('[data-piece-description]');
+    description.textContent = piece.description || '';
+    description.hidden = !piece.description;
     dialog.querySelector('[data-piece-dimensions]').textContent = piece.dimensions;
     dialog.querySelector('[data-piece-price]').textContent = currency.format(piece.value);
     const detailImage = dialog.querySelector('[data-piece-image]');
@@ -197,7 +199,29 @@ if (memberGallery) {
   }
   memberGallery.after(controls);
   const [previous, next] = controls.querySelectorAll('button');
-  const step = () => memberGallery.querySelector('figure')?.getBoundingClientRect().width ?? 280;
-  previous.addEventListener('click', () => memberGallery.scrollBy({ left: -(step() + 16), behavior: 'smooth' }));
-  next.addEventListener('click', () => memberGallery.scrollBy({ left: step() + 16, behavior: 'smooth' }));
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const step = () => (memberGallery.querySelector('figure')?.getBoundingClientRect().width ?? 280) + (parseFloat(getComputedStyle(memberGallery).gap) || 0);
+  const update = () => {
+    previous.disabled = memberGallery.scrollLeft <= 2;
+    next.disabled = memberGallery.scrollLeft + memberGallery.clientWidth >= memberGallery.scrollWidth - 2;
+  };
+  const move = direction => memberGallery.scrollBy({left:direction * step(),behavior:reducedMotion.matches?'auto':'smooth'});
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  memberGallery.addEventListener('keydown', event => {
+    if(event.key==='ArrowLeft'||event.key==='ArrowRight') {event.preventDefault();move(event.key==='ArrowRight'?1:-1);}
+  });
+  let drag;
+  memberGallery.addEventListener('pointerdown',event=>{
+    if(event.pointerType!=='mouse'||event.button!==0||event.target.closest('a,button'))return;
+    drag={x:event.clientX,left:memberGallery.scrollLeft};
+    memberGallery.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  });
+  memberGallery.addEventListener('pointermove',event=>{if(drag)memberGallery.scrollLeft=drag.left+drag.x-event.clientX;});
+  memberGallery.addEventListener('pointerup',()=>{drag=null;});
+  memberGallery.addEventListener('pointercancel',()=>{drag=null;});
+  memberGallery.addEventListener('scroll',update,{passive:true});
+  new ResizeObserver(update).observe(memberGallery);
+  update();
 }
