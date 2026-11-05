@@ -26,7 +26,7 @@
         action: form.getAttribute('name'), language:'pt-br', theme:'light',
         size: form.clientWidth < 320 ? 'compact' : 'flexible',
         'response-field': false,
-        callback: token => { field.value = token; if (form.querySelector('[data-turnstile-status]')?.dataset.state !== 'success') status(form, ''); },
+        callback: token => { field.value = token; if (form.querySelector('[data-turnstile-status]')?.dataset.state !== 'success' && form.querySelector('[data-turnstile-status]')?.dataset.state !== 'error') status(form, ''); },
         'expired-callback': () => { field.value = ''; status(form, 'A verificação expirou. Confirme novamente antes de enviar.'); },
         'error-callback': () => { field.value = ''; status(form, 'Não foi possível carregar a verificação. Confira a conexão ou recarregue a página.'); },
       });
@@ -49,7 +49,10 @@
       status(form, 'Validando e enviando…');
       try {
         const response = await fetch(form.action, { method:'POST', headers:{ 'Content-Type':'application/x-www-form-urlencoded' }, body:new URLSearchParams(fields).toString() });
-        if (!response.ok) throw new Error('Não foi possível concluir o envio.');
+        if (!response.ok) {
+          const detail = (response.headers.get('content-type') || '').startsWith('text/plain') ? (await response.text()).slice(0,300) : '';
+          throw new Error(detail || `Não foi possível concluir o envio (erro ${response.status}).`);
+        }
         form.reset();
         if (window.turnstile && widgets.has(form)) window.turnstile.reset(widgets.get(form));
         status(form, form.name.startsWith('newsletter-')
@@ -61,8 +64,9 @@
         feedback.focus({ preventScroll: true });
         feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         if (button) button.disabled = false;
-      } catch {
-        status(form, 'Não foi possível concluir o envio. Seus campos foram mantidos. Confirme a verificação e tente novamente.');
+      } catch (error) {
+        status(form, `${error.message || 'Não foi possível concluir o envio.'} Seus campos foram mantidos. Tente novamente.`);
+        form.querySelector('[data-turnstile-status]').dataset.state = 'error';
         form.elements.namedItem('cf-turnstile-response').value = '';
         if (window.turnstile && widgets.has(form)) window.turnstile.reset(widgets.get(form));
         if (button) button.disabled = false;

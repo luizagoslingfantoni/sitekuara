@@ -9,7 +9,7 @@ function setup(ok) {
  const button={disabled:false}; const token={value:'valid-token'};
  const form={name:'newsletter-kuara',clientWidth:300,action:'/newsletter/obrigado/',elements:{namedItem:()=>token},getAttribute:()=> 'newsletter-kuara',reportValidity:()=>true,querySelector:s=>s==='[type="submit"]'?button:s==='[data-turnstile-status]'?feedback:{},addEventListener:(event,handler)=>submit=handler,reset:()=>resetCount++};
  const window={turnstile:{render:(holder,options)=>{widgetOptions=options;return 'widget'},reset(){}}};
- vm.runInNewContext(source,{document:{querySelectorAll:()=>[form]},location:{hostname:'kuaraceramicas.com.br'},window,FormData:class extends Map{constructor(){super([['cf-turnstile-response','valid-token']])}},URLSearchParams,fetch:async()=>({ok})});
+ vm.runInNewContext(source,{document:{querySelectorAll:()=>[form]},location:{hostname:'kuaraceramicas.com.br'},window,FormData:class extends Map{constructor(){super([['cf-turnstile-response','valid-token']])}},URLSearchParams,fetch:async()=>({ok,status:503,headers:new Headers()})});
  window.kuaraTurnstileReady();
  return {feedback,button,submit:()=>submit({preventDefault(){}}),get resets(){return resetCount},refresh:()=>widgetOptions.callback('new-token')};
 }
