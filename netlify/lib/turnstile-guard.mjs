@@ -45,9 +45,9 @@ export async function guardForm(request, context, { secret, fetcher = fetch } = 
       body: JSON.stringify({ secret, response:token }),
       redirect: 'error', signal: AbortSignal.timeout(8000),
     });
-    if (!response.ok) return fail(503, 'A verificação está indisponível. Tente novamente.');
+    if (!response.ok) { console.error('Turnstile verification HTTP', response.status); return fail(503, 'A verificação está indisponível. Tente novamente.'); }
     verdict = await response.json();
-  } catch { return fail(503, 'A verificação está indisponível. Tente novamente.'); }
+  } catch (error) { console.error('Turnstile verification failed:', error.name, error.message); return fail(503, 'A verificação está indisponível. Tente novamente.'); }
   if (verdict.success !== true || verdict.hostname !== url.hostname || verdict.action !== data['form-name']) return fail(403, 'A verificação expirou ou não foi aceita. Tente novamente.');
   // Sign only validated contact fields. The visitor cannot supply this proof.
   fields.set('kuara-verification', await signForm(data, secret));
