@@ -2,3 +2,4 @@
 [data-turnstile-widget]{display:flex;justify-content:flex-start;margin-block:8px}
 .turnstile-status{font:inherit;line-height:1.5;margin:8px 0 0}
 .turnstile-status:empty{display:none}
+.turnstile-status[data-state="success"]{padding:14px 16px;border:1px solid currentColor;border-radius:8px;overflow-wrap:anywhere}

@@ -1,0 +1,18 @@
+/* Content containers may grow vertically; image masks and slider viewports keep their own clipping. */
+@media (max-width: 900px) {
+  main, main :where(section, article, form, fieldset, div), .site-footer :where(div, nav) { min-width: 0; }
+  main > section:not(.kiln-gallery), .home-ending, .page-section, .course-reference-intro {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  main .shell, .individual-session__columns, .course-reference-copy,
+  .about-opening__story, .social-editorial__copy { overflow: visible; }
+  main :where(h1,h2,h3,p,label,summary), .site-footer { overflow-wrap: break-word; }
+  main form, main fieldset { max-width: 100%; }
+  main form :where(input,select,textarea) { min-width: 0; max-width: 100%; box-sizing: border-box; }
+  main form :where(input,select,textarea):not([type=checkbox]):not([type=radio]):not([type=hidden]) { font-size: max(1rem, 16px); }
+  main form label, .footer-contact { overflow-wrap: anywhere; }
+  .kiln-gallery, .community-slider, .follow-cards--preview, .article-related { min-width: 0; max-width: 100%; }
+  .individual-mentorship__theme-grid article { height: auto; overflow: visible; }
+  .individual-mentorship__theme-grid :is(p,h3) { white-space: normal; overflow-wrap: break-word; }
+}

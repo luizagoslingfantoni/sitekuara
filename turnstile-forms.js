@@ -12,6 +12,7 @@
       element.setAttribute('aria-live', 'polite');
       form.append(element);
     }
+    element.dataset.state = '';
     element.textContent = text;
   }
   window.kuaraTurnstileReady = () => {
@@ -25,7 +26,7 @@
         action: form.getAttribute('name'), language:'pt-br', theme:'light',
         size: form.clientWidth < 320 ? 'compact' : 'flexible',
         'response-field': false,
-        callback: token => { field.value = token; status(form, ''); },
+        callback: token => { field.value = token; if (form.querySelector('[data-turnstile-status]')?.dataset.state !== 'success') status(form, ''); },
         'expired-callback': () => { field.value = ''; status(form, 'A verificação expirou. Confirme novamente antes de enviar.'); },
         'error-callback': () => { field.value = ''; status(form, 'Não foi possível carregar a verificação. Confira a conexão ou recarregue a página.'); },
       });
@@ -49,14 +50,17 @@
       try {
         const response = await fetch(form.action, { method:'POST', headers:{ 'Content-Type':'application/x-www-form-urlencoded' }, body:new URLSearchParams(fields).toString() });
         if (!response.ok) throw new Error('Não foi possível concluir o envio.');
-        if (form.hasAttribute('data-whatsapp-form')) {
-          const lines = [`Olá, quero falar sobre ${form.dataset.formKind || 'a Kûara'}.`];
-          const excluded = new Set(['consent','autorizacao','verificacao','form-name','website','cf-turnstile-response','kuara-verification']);
-          for (const [name, value] of fields) if (!excluded.has(name) && String(value).trim()) lines.push(`${name.replaceAll('_',' ')}: ${String(value).trim()}`);
-          window.location.assign('https://wa.me/5537999662621?text=' + encodeURIComponent(lines.join('\n')));
-        } else {
-          window.location.assign(form.action);
-        }
+        form.reset();
+        if (window.turnstile && widgets.has(form)) window.turnstile.reset(widgets.get(form));
+        status(form, form.name.startsWith('newsletter-')
+          ? 'Cadastro recebido com sucesso! Obrigada por acompanhar a Kûara.'
+          : 'Formulário enviado com sucesso! Recebemos suas informações e entraremos em contato.');
+        const feedback = form.querySelector('[data-turnstile-status]');
+        feedback.dataset.state = 'success';
+        feedback.tabIndex = -1;
+        feedback.focus({ preventScroll: true });
+        feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (button) button.disabled = false;
       } catch {
         status(form, 'Não foi possível concluir o envio. Seus campos foram mantidos. Confirme a verificação e tente novamente.');
         form.elements.namedItem('cf-turnstile-response').value = '';
