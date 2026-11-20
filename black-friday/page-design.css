@@ -622,7 +622,7 @@ main>#pre-venda .presale-submit:hover{background:#162a45}
 
 /* O logo acompanha a navegação depois do início da rolagem. */
 .hero-brand{width:160px}
-.header-brand{display:none;flex:0 0 auto;width:96px;color:inherit;line-height:0}
+.header-brand{display:none;flex:0 0 auto;width:96px;color:inherit;line-height:0;transform:translateY(-8px)}
 .header-brand:before{content:"";display:block;width:100%;height:38px;background:currentColor;-webkit-mask:url('assets/logo-kuara-white.svg') center/contain no-repeat;mask:url('assets/logo-kuara-white.svg') center/contain no-repeat}
 .page-header[data-scrolled="true"] .header-brand{display:block;animation:header-logo-in .2s ease-out}
 .header-brand:focus-visible{outline:2px solid currentColor;outline-offset:6px}
