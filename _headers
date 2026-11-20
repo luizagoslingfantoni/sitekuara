@@ -12,3 +12,15 @@
 /assets/catalogo-mulheres-de-barro-outubro-2026.pdf
   Content-Type: application/pdf
   Content-Disposition: attachment; filename="catalogo-mulheres-de-barro-outubro-2026.pdf"
+
+/black-friday/
+  Cache-Control: no-store
+
+/black-friday/index.html
+  Cache-Control: no-store
+
+/black-friday/vendas
+  Cache-Control: no-store
+
+/black-friday/vendas.html
+  Cache-Control: no-store

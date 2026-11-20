@@ -1,0 +1,102 @@
+/* Versão de inscrições: a partir de 27/11/2026. */
+.sales-version .reference-layout{width:min(1180px,calc(100% - 100px));grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(40px,5vw,88px);align-items:center}
+.sales-version .hero-offer-cards{grid-template-columns:1fr;width:100%;max-width:440px;justify-self:end;margin:0}
+.sales-version .condition-card{background:var(--kuara-paper);color:var(--kuara-blue);padding:clamp(24px,2.2vw,36px);border-radius:12px 12px 32px 12px;min-height:0}
+.sales-version .condition-card h2,.sales-version .condition-card .reference-price,.sales-version .condition-card .installments,.sales-version .condition-card .hero-inclusions{color:var(--kuara-blue)}
+.sales-version .condition-card h2{font-size:clamp(27px,2.2vw,34px);line-height:1.13;margin-bottom:18px}
+.sales-version .condition-card .reference-price{font-size:64px;line-height:1.05;margin:0 0 8px}
+.sales-version .reference-price>span{font-size:22px}
+.sales-version .condition-card .installments{margin-bottom:22px;text-align:left}
+.sales-version .condition-card .hero-inclusions{font-size:15px;line-height:1.55;margin:0 0 24px}
+.sales-version .condition-card .hero-inclusions li:before{color:var(--kuara-clay)}
+.sales-version .offer-seal{font-size:10px;margin-bottom:22px}
+.sales-version .hero-mini-card .hero-purchase-button{justify-content:center;font-size:15px;min-height:50px;margin-top:0;background:var(--kuara-clay);color:#fff}
+.sales-version .hero-mini-card .hero-purchase-button:hover{background:var(--kuara-blue)}
+.sales-version .hero-guarantee{text-align:center;font-size:13px;line-height:1.5;margin-top:12px;color:#465469}
+.hero-sales-dates{margin-top:22px;font-size:16px;line-height:1.55;font-weight:600}
+.hero-sales-dates p{color:#e7b95f;margin:0 0 3px}
+.hero-sales-dates strong{color:#f5eee5;font-size:14px;letter-spacing:.04em}
+
+/* Sem a pré-venda, habilidades e acompanhamento dividem a seção. */
+.sales-version .learning-overview{grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:24px}
+.sales-version .learning-overview>.skills-column{grid-column:auto}
+.sales-version #curso .learning-overview .support-card{justify-content:flex-start;gap:24px}
+.sales-version #curso .support-block h3{font-size:clamp(26px,2vw,34px);line-height:1.2;letter-spacing:-.04em;margin:0}
+.sales-version #curso .support-block .support-copy{margin-top:24px}
+.sales-version #curso .support-block .support-resources{margin-top:26px}
+
+/* Um percurso único: investimento, inscrição e garantia. */
+.sales-version .bf-purchase-card{padding:clamp(28px,2.2vw,40px);justify-content:flex-start;max-width:510px;justify-self:end}
+.sales-version #oferta .purchase-button{font-size:16px;line-height:1.4}
+.sales-version .purchase-calendar{display:block;margin:28px 0 0;padding:0 0 28px}
+.sales-version .purchase-calendar h4{font-size:16px;letter-spacing:.13em;margin:0 0 10px}
+.sales-version #oferta .purchase-calendar p,.sales-version .purchase-calendar time{font-size:32px;line-height:1.2;font-weight:600}
+.purchase-availability{display:block;font-size:14px;line-height:1.5;color:#465469;margin-top:10px}
+.sales-version .purchase-guarantee{display:grid;grid-template-columns:64px minmax(0,1fr);align-items:start;gap:10px 18px;margin-top:0;padding-top:28px;border-top:2px solid var(--kuara-clay)}
+.sales-version .purchase-guarantee h4{display:contents}
+.sales-version .purchase-guarantee h4 strong{grid-column:1;grid-row:1/3;font-size:84px;line-height:.95;letter-spacing:-.07em}
+.sales-version .purchase-guarantee h4 span{grid-column:2;font-size:23px;line-height:1.15;letter-spacing:-.035em;max-width:11ch}
+.sales-version #oferta .purchase-guarantee p{grid-column:2;font-size:15px;line-height:1.55}
+
+@media(min-width:1060px){
+ .sales-version .crossed-tapes{flex-basis:clamp(120px,21dvh,260px)}
+}
+@media(min-width:1201px){
+ .sales-version .bf-offer-layout{grid-template-columns:minmax(0,1fr) minmax(340px,min(29%,510px))}
+}
+@media(max-width:1200px){
+ .sales-version .bf-offer-layout{grid-template-columns:1fr}
+ .sales-version .bf-purchase-card{justify-self:center}
+}
+@media(min-width:1060px) and (max-height:850px){
+ .sales-version .crossed-tapes{flex-basis:140px}
+ .sales-version .condition-card{padding:22px 28px}
+ .sales-version .condition-card h2{font-size:27px;margin-bottom:14px}
+ .sales-version .offer-seal{margin-bottom:16px}
+ .sales-version .condition-card .reference-price{font-size:54px}
+ .sales-version .condition-card .installments{margin-bottom:16px}
+ .sales-version .condition-card .hero-inclusions{font-size:14px;margin-bottom:18px}
+ .sales-version .hero-sales-dates{margin-top:18px}
+}
+@media(min-width:1060px) and (max-height:760px){
+ .sales-version .crossed-tapes{flex-basis:100px}
+}
+@media(min-width:761px) and (max-width:1059px){
+ .sales-version .reference-layout{width:calc(100% - 72px);max-width:none;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px;padding-bottom:40px;flex:1}
+ .sales-version .condition-card{padding:26px 22px}
+ .sales-version .condition-card h2{font-size:27px}
+ .sales-version .reference-copy .hero-subheading{font-size:22px}
+ .sales-version .reference-copy h1{font-size:8.4cqi}
+ .sales-version .reference-intro{font-size:16px}
+}
+@media(max-width:900px){
+ .sales-version .learning-overview{grid-template-columns:1fr}
+ .sales-version #curso .learning-overview .support-card{display:flex;gap:28px}
+ .sales-version .support-access{padding:28px 0 0;border-top:1px solid #23375466;border-left:0}
+}
+@media(max-width:760px){
+ .sales-version .reference-layout{display:grid;grid-template-columns:1fr;width:calc(100% - 48px);gap:32px;padding:12px 0 38px;max-width:600px}
+ .sales-version .hero-offer-cards{max-width:none;justify-self:stretch}
+ .sales-version .condition-card{padding:28px}
+ .sales-version .condition-card h2{font-size:29px}
+ .sales-version .reference-copy h1{font-size:8.4cqi}
+ .sales-version .condition-card .reference-price{font-size:64px}
+ .sales-version .bf-purchase-card{padding:30px 26px}
+ .sales-version .purchase-guarantee{grid-template-columns:56px minmax(0,1fr);gap:10px 16px}
+ .sales-version .purchase-guarantee h4 strong{font-size:76px}
+ .sales-version .purchase-guarantee h4 span{font-size:22px}
+}
+@media(max-width:540px){
+ .sales-version #curso .learning-overview .support-card{display:flex;gap:24px}
+ .sales-version .support-access{border-left:0;border-top:1px solid #23375466;padding:24px 0 0}
+}
+@media(max-width:360px){
+ .sales-version .condition-card{padding:26px 22px}
+ .sales-version .bf-purchase-card{padding:26px 16px}
+ .sales-version .purchase-guarantee{grid-template-columns:44px minmax(0,1fr);gap:10px 12px}
+ .sales-version .purchase-guarantee h4 strong{font-size:62px}
+ .sales-version .purchase-guarantee h4 span{font-size:21px}
+ .sales-version #oferta .purchase-guarantee p{font-size:14px}
+ .sales-version #oferta .purchase-calendar p,.sales-version .purchase-calendar time{font-size:28px}
+ .hero-sales-dates{font-size:14px}
+}
