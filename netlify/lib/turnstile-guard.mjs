@@ -1,5 +1,5 @@
 import { signForm } from './form-proof.mjs';
-const names = new Set(['pre-venda-black-friday-kuara-2026','newsletter-kuara','newsletter-escritos','interesse-ceramica-geopoetica','interesse-forno-de-latao','interesse-pre-colombiano','interesse-queimas-poeticas','avisos-politicas-sociais','contato-kuara','pedido-fornos-de-tijolos','interesse-fornos-de-tijolos','pedido-barros-artesanais','interesse-barros-artesanais']);
+const names = new Set(['pre-venda-black-friday-2026','newsletter-kuara','newsletter-escritos','interesse-ceramica-geopoetica','interesse-forno-de-latao','interesse-pre-colombiano','interesse-queimas-poeticas','avisos-politicas-sociais','contato-kuara','pedido-fornos-de-tijolos','interesse-fornos-de-tijolos','pedido-barros-artesanais','interesse-barros-artesanais']);
 const single = ['form-name','email','nome','sobrenome','telefone','whatsapp','consent','autorizacao','website','cf-turnstile-response'];
 const fail = (status, message) => new Response(message, { status, headers: { 'Content-Type':'text/plain; charset=utf-8', 'Cache-Control':'no-store', 'X-Content-Type-Options':'nosniff' } });
 

@@ -7,7 +7,7 @@ export const forms = Object.freeze({
   'interesse-queimas-poeticas': ['BREVO_LIST_QUEIMAS_POETICAS', 'consent'],
   'avisos-politicas-sociais': ['BREVO_LIST_POLITICAS_SOCIAIS', 'autorizacao'],
   'contato-kuara': ['BREVO_LIST_CONTATO', 'autorizacao'],
-  'pre-venda-black-friday-kuara-2026': ['BREVO_LIST_BLACK_FRIDAY_2026', 'autorizacao'],
+  'pre-venda-black-friday-2026': ['BREVO_LIST_BLACK_FRIDAY_2026', 'autorizacao'],
 });
 
 const clean = (value, max) => typeof value === 'string' ? value.trim().slice(0, max) : '';
@@ -25,7 +25,7 @@ export async function syncContact(data, { env = process.env, fetcher = fetch,
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return { skipped: 'invalid-email' };
   const list = env[variable];
   // Keep this campaign in its own Netlify form until a dedicated Brevo list is configured.
-  if (name === 'pre-venda-black-friday-kuara-2026' && !list) return { skipped: 'campaign-list-not-configured', storedIn: 'netlify-forms' };
+  if (name === 'pre-venda-black-friday-2026' && !list) return { skipped: 'campaign-list-not-configured', storedIn: 'netlify-forms' };
   if (!/^\d+$/.test(list || '') || !Number.isSafeInteger(Number(list)) || Number(list) < 1) {
     throw new Error(`Brevo: configure ${variable} with a positive list ID.`);
   }
