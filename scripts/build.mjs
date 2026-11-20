@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const defaultRoot = fileURLToPath(new URL('../', import.meta.url));
-const directories = new Set(['a-kuara','agenda','approved-orientacao','assets','blog','ceramicageopoetica','coletivo-mulheres-de-barro','contato','galeria','galeria-kuara','mentorias','newsletter','politicas-sociais','privacidade','termos-de-uso']);
+const directories = new Set(['a-kuara','agenda','approved-orientacao','assets','black-friday','blog','ceramicageopoetica','coletivo-mulheres-de-barro','contato','galeria','galeria-kuara','mentorias','newsletter','politicas-sociais','privacidade','termos-de-uso']);
 const extensions = new Set(['.html','.css','.js','.xml','.webmanifest','.svg','.png','.jpg','.jpeg','.webp','.gif','.avif','.ico','.woff','.woff2','.ttf','.mp4','.webm','.pdf']);
 const namedFiles = new Set(['_headers','_redirects','robots.txt','content-metadata.json','instagram-feed.json','instagram-coletivo-feed.json']);
 

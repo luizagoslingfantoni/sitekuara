@@ -1,0 +1,633 @@
+/* Componentes da página alinhados ao site kuaraceramicas.com.br. */
+:root{--kuara-clay:#a24d2f;--kuara-clay-dark:#9d3e22;--kuara-paper:#f5eee5;--kuara-blue:#233754;--page-radius:24px}
+.wrap{width:min(1320px,calc(100% - 80px))}
+main>.section:not(.hero){padding-block:88px}
+main>.section:not(.hero) h2{font-size:clamp(29px,2.4vw,38px);line-height:1.12;letter-spacing:-.065em;font-weight:600}
+main>.section:not(.hero) h3{font-size:26px;line-height:1.2;letter-spacing:-.045em;font-weight:600}
+main>.section:not(.hero) .eyebrow,.budget .eyebrow{font-size:12px;letter-spacing:.07em;margin-bottom:18px}
+main>.section:not(.hero) p{font-size:16px;line-height:1.65}
+main>.section:not(.hero) .button{font-size:14px;min-height:46px;padding:13px 24px;border-radius:5px}
+main>.section:not(.hero) .text-link{font-size:14px;line-height:1.5;font-weight:600;color:var(--kuara-clay);padding:7px 0;border-bottom:1px solid #a24d2f55}
+.problem{grid-template-columns:1fr 1fr;gap:80px;align-items:center}.problem h2{max-width:430px}.problem .copy{max-width:560px}.problem-insight{padding-left:22px;border-left:2px solid var(--kuara-clay)}.problem-photo{margin:0;align-self:stretch;display:flex;flex-direction:column}.problem-photo img{height:100%;min-height:440px;max-height:620px;object-fit:cover;object-position:50% 55%;border-radius:18px 18px 0 0}.problem-photo figcaption{font-size:13px;padding:18px 22px;background:var(--kuara-paper);border-radius:0 0 18px 18px;line-height:1.5;color:var(--kuara-blue)}
+#curso{border-radius:24px 24px 0 0;background-image:linear-gradient(#f5eee54d,#f5eee54d),url('assets/textura-areia-optimized.jpg')}.section-intro{max-width:850px;margin-bottom:36px}.section-intro>p:last-child{max-width:720px}.curriculum{gap:18px;align-items:stretch}.curriculum article,.curriculum article+article{padding:18px 18px 25px;border:0;border-radius:24px;background:#fff;display:flex;flex-direction:column}.lesson-visual{position:relative;margin-bottom:23px}.lesson-photo{width:100%;height:250px;margin:0;border-radius:16px;object-fit:cover}.lesson-badge{position:absolute;top:14px;left:14px;background:var(--kuara-blue);color:white;font-size:12px;font-weight:600;border-radius:999px;padding:5px 11px;line-height:1.5}.curriculum article:last-child .lesson-badge{background:var(--kuara-clay-dark)}.curriculum .lesson{font:600 12px/1.5 Inter,Arial,sans-serif;letter-spacing:.06em;color:var(--kuara-clay);margin:0 5px 13px}.curriculum .lesson-date{font-size:12px;line-height:1.5;letter-spacing:.03em;color:#465469;margin:-31px 5px 13px;text-align:right}.curriculum h3{margin:0 5px 15px;color:#141414}.curriculum p{margin:0 5px;color:#141414}
+.learning-support{padding:34px;margin-top:30px;border-radius:24px;background:#f5eee5f0}.support{margin:0;padding:0;border:0;grid-template-columns:1fr 1.4fr;gap:60px}.support h3{max-width:340px;margin-bottom:0}.support p:last-child{margin-bottom:0}.support .muted{font-size:14px!important;color:#465469}.materials{border:0;padding:24px 0 0;margin-top:24px;border-top:1px solid #23375426;gap:10px}.materials span{font-size:14px;line-height:1.45;background:white;border-radius:8px;padding:10px 14px}.materials span:before{display:none}
+.fit{grid-template-columns:1fr 1.1fr;gap:80px}.fit h2{max-width:470px}.fit h3{margin-bottom:14px}.fit .check-list li{font-size:16px;padding:18px 0 18px 25px}.fit-no{border-radius:12px;background:var(--kuara-paper);padding:20px;font-size:15px}.fit-no p{margin-bottom:0}.budget{border:0;background:#fff;padding:0 0 76px}.budget-grid{padding:32px 36px;background:var(--kuara-paper);border-radius:18px;grid-template-columns:1fr 1.4fr;gap:60px}.budget h3{font-size:26px;line-height:1.2}.budget p{font-size:16px;line-height:1.65}.budget p.eyebrow{font-size:12px}
+#oferta{border-radius:24px 24px 0 0;background:var(--kuara-blue)}.offer-grid{grid-template-columns:1fr 1fr;gap:80px}.offer-grid h2{max-width:440px}.offer-grid>div>p{max-width:520px}.offer-grid>div>p:not(.eyebrow){color:var(--kuara-paper)}.offer-deadline{font-size:15px!important;max-width:440px!important}.offer-card{padding:34px 38px;border-radius:24px;background:var(--kuara-paper)}.offer-card .price{font-size:64px;line-height:1.1;color:var(--kuara-blue)}.offer-grid .offer-card .installments{color:var(--kuara-blue);font-size:14px;margin:7px 0 22px}.offer-card ul{font-size:16px;margin:0 0 26px}.offer-card li{padding-block:12px}.offer-grid .offer-card .offer-foot{color:#465469;font-size:13px;line-height:1.5;margin:18px 0 10px}.offer-grid .offer-card .micro{font-size:12px;color:#465469;line-height:1.5}
+.social{background:var(--kuara-paper);border-radius:24px 24px 0 0}.social h2{color:var(--kuara-blue)}.social .section-intro>p:last-child{font-size:14px!important}.quotes{gap:18px}.quotes blockquote{padding:30px 25px;border-radius:18px;background:white;gap:28px;position:relative}.quotes blockquote:before{content:'“';font:70px/.6 Georgia,serif;color:var(--kuara-clay);display:block;height:28px}.quotes blockquote>p{font-size:16px!important;line-height:1.65!important}.quotes footer{border-top:1px solid #23375426;padding-top:18px;display:block;font-size:14px}.quotes footer small{font-size:12px;line-height:1.5;margin-top:5px}.social .text-link{margin-top:28px}
+#amanda{background:var(--kuara-blue);border-radius:0}.teacher{grid-template-columns:1.15fr .85fr;gap:0;align-items:stretch;overflow:hidden}.teacher>div{padding:48px;background:var(--kuara-paper);display:flex;flex-direction:column;justify-content:center}.teacher figure{margin:0;height:100%;min-height:560px}.teacher img{height:100%;max-height:720px;object-fit:cover;object-position:50% 30%;border-radius:0}#amanda h2,#amanda p,#amanda .signature{color:var(--kuara-blue)}#amanda .eyebrow{color:var(--kuara-clay)}.teacher h2{margin-bottom:26px}.teacher p{max-width:580px}.signature{margin-top:12px;font-size:14px!important}
+.guarantee{max-width:1320px;grid-template-columns:170px 1fr;gap:48px;align-items:center}.guarantee .seven{font-family:Inter,Arial,sans-serif;width:160px;height:160px;background:var(--kuara-paper);border:1px solid #a24d2f22;border-radius:50%;font-size:84px;align-items:center;margin:0;color:var(--kuara-clay)}.seven span{font-size:12px}.guarantee>div:last-child{max-width:790px}.guarantee h2{margin-bottom:20px}.guarantee p:last-child{margin-bottom:0}
+#duvidas{background:var(--kuara-paper);border-radius:24px 24px 0 0}.faq-layout{grid-template-columns:.8fr 1.2fr;gap:80px}.faq{min-width:0}.faq details{border-color:#23375426;padding:23px 0}.faq summary{font-size:16px;font-weight:600;line-height:1.5;padding-right:40px}.faq summary:after{color:var(--kuara-clay)}.faq p{font-size:16px;line-height:1.65;max-width:650px}.faq details[open] summary{color:var(--kuara-clay)}
+.final{border-radius:0;background:var(--kuara-clay);background-image:linear-gradient(#43180c22,#43180c22),url('assets/textura-terracota-optimized.jpg');background-size:cover}.final h2{max-width:700px}.final>.wrap>p:not(.eyebrow):not(.micro){max-width:690px;margin-inline:auto}.final .micro{font-size:13px!important}.final .button{background:var(--kuara-paper);color:var(--kuara-blue)}.final .button:hover{background:var(--kuara-blue);color:var(--kuara-paper)}.page-footer{background:var(--kuara-clay-dark);padding-top:48px}.footer-columns{gap:32px}.footer-columns p,.footer-columns a{font-size:14px;line-height:1.6}.footer-columns h3{font-size:12px}.footer-bottom{font-size:12px;line-height:1.5;padding-bottom:24px}
+@media(max-width:1100px){.wrap{width:calc(100% - 60px)}.problem,.fit,.offer-grid,.faq-layout{gap:40px}.lesson-photo{height:200px}.curriculum .lesson-date{margin:-6px 5px 10px;text-align:left}.teacher>div{padding:34px}.teacher figure{min-height:580px}.quotes{grid-template-columns:1fr}.quotes blockquote{padding:28px}.quotes blockquote>p{max-width:none}.support,.budget-grid{gap:35px}.offer-card{padding:28px}.offer-card .price{font-size:56px}}
+@media(max-width:760px){.wrap{width:calc(100% - 40px)}main>.section:not(.hero){padding-block:58px}main>.section:not(.hero) h2{font-size:30px;line-height:1.15}main>.section:not(.hero) h3{font-size:24px}.problem,.fit,.offer-grid,.teacher,.faq-layout,.support,.budget-grid{grid-template-columns:1fr;gap:28px}.problem-photo img{height:340px;min-height:0}.problem .copy{max-width:none}.curriculum{grid-template-columns:1fr;gap:20px}.lesson-photo{height:260px}.curriculum .lesson-date{margin:-31px 5px 13px;text-align:right}.learning-support{padding:25px 20px}.materials{gap:8px}.materials span{font-size:13px}.support h3{max-width:none}.fit h2{max-width:none}.budget{padding-bottom:50px}.budget-grid{padding:26px 22px}.offer-card .price{font-size:56px}.teacher{gap:0}.teacher>div{padding:30px 24px}.teacher figure,.teacher>div{grid-column:auto;grid-row:auto}.teacher figure{order:2;min-height:0;height:440px}.teacher img{height:440px;object-position:center 25%}.guarantee{grid-template-columns:100px 1fr;gap:24px}.guarantee .seven{width:95px;height:95px;font-size:48px}.seven span{margin-top:8px;font-size:10px}.guarantee .eyebrow{display:none}.guarantee h2{font-size:27px!important}.faq-layout{gap:20px}.footer-columns{grid-template-columns:1fr 1fr;gap:30px}.footer-columns>div:first-child{grid-column:1/-1}}
+@media(max-width:440px){.guarantee{grid-template-columns:1fr}.footer-columns{grid-template-columns:1fr}.curriculum .lesson-date{font-size:11px}.lesson-photo{height:220px}.offer-card{padding:26px 22px}}
+
+#curso .lesson{display:flex;justify-content:space-between;gap:10px;align-items:center}#curso .lesson-date{font:500 12px/1.5 Inter,Arial,sans-serif;letter-spacing:0;margin:0;color:#465469;text-align:right}
+.quotes blockquote>p{flex:1}
+/* Composição da seção A Kûara: imagem de barro ao fundo e painel claro. */
+main>#autonomia.problem{display:block;width:100%;margin:0;padding:clamp(28px,4vw,64px);background:#6d412e linear-gradient(#23375422,#23375422);background-image:linear-gradient(#23375422,#23375422),url('assets/hero-clay-optimized.jpg');background-size:cover;background-position:center}
+#autonomia .problem-panel{width:100%;max-width:1500px;margin:0 auto;background:#fff;padding:clamp(28px,3vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+#autonomia .problem-story h2{max-width:470px;margin-bottom:28px}
+#autonomia .problem-photo{align-self:stretch;min-width:0}
+#autonomia .problem-photo img{min-height:420px;height:100%;max-height:600px;border-radius:16px;object-position:center}
+#autonomia .problem-photo figcaption{background:none;padding:15px 0 0;border-radius:0}
+@media(max-width:760px){main>#autonomia.problem{padding:28px 20px}#autonomia .problem-panel{grid-template-columns:1fr;padding:28px 22px;gap:28px}#autonomia .problem-photo img{height:300px;min-height:0}#autonomia .problem-story h2{margin-bottom:23px}}
+/* Galeria 2 × 2: substituir os espaços reservados por imagens ao recebê-las. */
+.problem-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-self:center;min-width:0}
+.gallery-photo{display:block;position:relative;aspect-ratio:1;width:100%;padding:0;border:0;border-radius:14px;background:#f5eee5;overflow:hidden;color:#465469}
+.gallery-photo:disabled{cursor:default;opacity:1;border:1px solid #23375415}
+.gallery-photo:not(:disabled){cursor:zoom-in}
+.gallery-photo img{width:100%;height:100%;object-fit:cover;transition:transform .2s}
+.gallery-photo:not(:disabled):hover img{transform:scale(1.04)}
+.gallery-placeholder{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;font-size:14px;font-weight:500}
+.gallery-placeholder svg{width:44px;height:44px;fill:none;stroke:#a24d2f;stroke-width:1.3}
+#photo-dialog{padding:0;width:fit-content;max-width:94vw;max-height:94svh;overflow:visible;background:transparent;border:0}
+#photo-dialog::backdrop{background:#0b1019e6}
+#photo-dialog .photo-expanded{display:block;max-width:94vw;max-height:88svh;object-fit:contain;border-radius:8px}
+.photo-close{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:1px solid #23375422;background:white;color:#233754;font-size:30px;line-height:1;display:grid;place-items:center;box-shadow:0 2px 12px #0003}
+@media(max-width:760px){.problem-gallery{gap:10px}.gallery-photo{border-radius:10px}.gallery-placeholder svg{width:32px;height:32px}.gallery-placeholder{font-size:13px;gap:8px}}
+@media(prefers-reduced-motion:reduce){.gallery-photo img{transition:none}}
+
+/* Aprendizado, acompanhamento e aulas: componentes da identidade Kûara. */
+#curso.learning-section{background:#fff;border-radius:0}
+.learning-section .section-intro{max-width:860px;margin-bottom:48px}
+.learning-overview{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:32px;align-items:stretch}
+.skills-column{display:flex;flex-direction:column;min-width:0}
+#curso .skills-column>h3{font-size:28px;margin:0 0 22px}
+.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;flex:1}
+.skill-card{background:var(--kuara-blue);color:#fff;padding:28px;border-radius:18px;min-width:0}
+.skill-card.clay{background:var(--kuara-clay-dark)}
+.skill-card svg{display:block;width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:24px}
+.skill-card h4{font-size:19px;letter-spacing:-.025em;line-height:1.3;margin:0 0 12px;font-weight:600}
+#curso .skill-card p{font-size:16px;line-height:1.65;margin:0;color:#fff}
+.support-card{position:relative;overflow:hidden;padding:34px;background:var(--kuara-paper);border:1px solid #e7dbcb;border-radius:24px;display:flex;flex-direction:column}
+.support-card:before{content:'';position:absolute;right:-35px;top:-35px;width:145px;height:145px;border:1px solid #a24d2f26;border-radius:50%;box-shadow:0 0 0 22px #a24d2f08,0 0 0 44px #a24d2f05;pointer-events:none}
+#curso .support-card .eyebrow{font-size:13px;margin-bottom:20px;color:var(--kuara-clay-dark)}
+.support-duration{display:flex;align-items:center;gap:16px;margin-bottom:23px;position:relative}
+.support-duration>span{font-size:88px;line-height:.9;letter-spacing:-.075em;color:var(--kuara-clay);font-weight:500}
+.support-duration>div{font-size:23px;line-height:1.25;letter-spacing:-.04em}
+.support-duration strong{font-size:18px;font-weight:500}
+#curso .support-card h3{font-size:27px;margin-bottom:16px;max-width:330px}
+#curso .support-card>p:not(.eyebrow){margin-bottom:18px;line-height:1.6}
+.support-channels{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:23px}
+.support-channels span{font-size:14px;padding:6px 10px;border:1px solid #a24d2f33;color:var(--kuara-clay-dark);border-radius:6px}
+.support-resources{border-top:1px solid #23375426;padding-top:22px;margin-top:auto}
+.support-resources h4{font-size:16px;margin:0 0 10px;font-weight:600}
+.support-resources ul{padding:0;list-style:none;font-size:15px;line-height:1.5;margin:0 0 20px}
+.support-resources li{position:relative;padding-left:16px;margin-bottom:7px}
+.support-resources li:before{content:'·';position:absolute;left:0;color:var(--kuara-clay);font-weight:700}
+.access-note{display:flex;align-items:center;gap:14px;background:#fff;border-radius:10px;padding:14px 17px}
+.access-note strong{font-size:24px;letter-spacing:-.05em;white-space:nowrap}
+.access-note span{font-size:14px;line-height:1.4;max-width:170px}
+#curso .support-card .support-footnote{font-size:14px;line-height:1.5;color:#465469;margin:18px 0 0}
+.lessons-and-planning{display:grid;grid-template-columns:minmax(0,3fr) minmax(260px,1fr);gap:24px;align-items:start;margin-top:64px;padding-top:54px;border-top:1px solid #23375426}
+.lesson-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.course-lesson{border:1px solid #23375420;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 8px 24px #23375406}
+.course-lesson>img{width:100%;aspect-ratio:1.65;height:auto;object-fit:cover}
+.lesson-card-body{display:flex;flex-direction:column;padding:24px 22px 18px;min-height:248px}
+.lesson-card-tag{font-size:12px;line-height:1.5;font-weight:700;letter-spacing:.07em;color:#766547;display:flex;justify-content:space-between;gap:8px;margin-bottom:14px}
+.lesson-card-tag>span{font-size:11px;letter-spacing:.02em;font-weight:500;color:#465469}
+.lesson-card-body>h3{font-size:23px;line-height:1.25;letter-spacing:-.05em;color:#171717;font-weight:600;margin-bottom:28px}
+.lesson-description{padding:0 22px 22px}
+#curso .lesson-description p{font-size:16px;line-height:1.6;margin-bottom:0;color:#465469}
+.planning-card{background:var(--kuara-paper);border-radius:20px;overflow:hidden}
+.fit-brief{padding:24px}
+#curso .fit-brief h3{font-size:24px;margin-bottom:15px}
+#curso .fit-brief>p{font-size:15px;line-height:1.5;margin-bottom:15px}
+#curso .fit-brief>p strong{font-weight:500}
+.fit-brief details{font-size:14px;border-top:1px solid #23375426;padding-top:14px}
+.fit-brief summary{padding-right:22px;font-weight:600;line-height:1.5}
+.fit-brief summary:after{font-size:18px;top:-3px}
+#curso .fit-brief details p{font-size:15px;line-height:1.55;margin:15px 0 0}
+.build-budget{padding:24px;background:#e9dfd2}
+.budget-label{font-size:12px;letter-spacing:.05em;font-weight:600;display:block;color:var(--kuara-clay-dark);margin-bottom:12px}
+.budget-price{font-size:32px;letter-spacing:-.06em;font-weight:600;line-height:1.1;margin-bottom:15px}
+.budget-price span{font-size:13px;letter-spacing:0;display:block;font-weight:400;margin-top:6px}
+#curso .build-budget p{font-size:14px;line-height:1.5;margin-bottom:12px}
+.build-budget a{display:inline-block;font-size:14px;line-height:1.5;color:var(--kuara-clay-dark);text-decoration:underline;text-underline-offset:4px}
+
+/* Depoimentos navegáveis e galeria dos processos, lado a lado. */
+#experiencias.social{padding-inline:0}
+.social-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:start}
+.social-columns h2{max-width:510px;margin-bottom:18px}
+#experiencias .testimonial-context,.results-column>p:not(.eyebrow){font-size:15px;line-height:1.6;color:#465469;margin-bottom:28px;max-width:480px}
+.testimonial-carousel{border-radius:22px;background:#fff;padding:32px}
+.testimonial-stage{display:grid}
+.testimonial-slide{grid-area:1/1;display:flex;flex-direction:column;gap:22px;margin:0;min-height:325px}
+.testimonial-slide[hidden]{display:flex;visibility:hidden;pointer-events:none}
+.testimonial-slide:before{content:'“';display:block;height:38px;font:80px/.9 Georgia,serif;color:var(--kuara-clay)}
+#experiencias .testimonial-slide>p{font-size:20px;line-height:1.6;letter-spacing:-.025em;margin:0 0 10px;flex:1}
+.testimonial-slide footer{display:block;padding:0;background:none;color:var(--kuara-blue)}
+.testimonial-slide footer strong{font-size:16px;font-weight:600}
+.testimonial-slide footer small{display:block;font-size:13px;margin-top:4px;color:#465469}
+.testimonial-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #23375426;padding-top:18px;margin-top:26px}
+.testimonial-controls>button{border:0;background:none;color:var(--kuara-clay);font-size:14px;font-weight:600;padding:9px 0;min-height:40px}
+.testimonial-dots{display:flex;gap:2px}
+.testimonial-dots button{display:grid;place-items:center;width:32px;height:40px;border:0;background:none;padding:0}
+.testimonial-dots button:before{content:'';width:7px;height:7px;background:#23375433;border-radius:50%;transition:width .2s}
+.testimonial-dots button[aria-pressed=true]:before{width:22px;border-radius:4px;background:var(--kuara-clay)}
+.results-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.results-gallery .gallery-photo{aspect-ratio:1}
+.results-gallery .gallery-photo img{height:100%;width:100%;object-fit:cover}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+:where(button,a,summary,[tabindex]):focus-visible{outline:3px solid #c8914c;outline-offset:5px}
+@media(min-width:1600px){.lesson-card-body{min-height:246px}}
+@media(max-width:1200px){.lessons-and-planning{grid-template-columns:1fr}.planning-card{display:grid;grid-template-columns:1.2fr 1fr}.fit-brief,.build-budget{padding:28px}.lesson-card-body{min-height:230px}.learning-overview{gap:24px}.skill-card{padding:24px}.support-card{padding:28px}.social-columns{gap:36px}}
+@media(max-width:900px){.learning-overview{grid-template-columns:1fr}.support-card{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}.support-card>.eyebrow,.support-duration,.support-card>h3,.support-card>p:not(.support-footnote),.support-channels{grid-column:1}.support-resources{grid-column:2;grid-row:2/6;border:0;padding:0;margin:0}.support-card .support-footnote{grid-column:1/-1}.skill-card{min-height:220px}.lesson-card-body{padding:22px 18px 18px;min-height:260px}.lesson-card-body>h3{font-size:21px}.social-columns{grid-template-columns:1fr;gap:48px}.testimonial-slide{min-height:280px}.results-gallery .gallery-photo{aspect-ratio:1.2}}
+@media(max-width:640px){.learning-section .section-intro{margin-bottom:34px}.skills-grid{gap:12px}.skill-card{padding:22px;min-height:0}.skill-card svg{margin-bottom:20px}.skill-card h4{font-size:18px}#curso .skill-card p{font-size:16px}.support-card{display:flex;padding:28px 24px}.support-resources{border-top:1px solid #23375426;padding-top:22px}.lessons-and-planning{margin-top:40px;padding-top:36px;gap:28px}.lesson-cards{grid-template-columns:1fr;gap:20px}.lesson-card-body{min-height:210px;padding:24px}.lesson-card-body>h3{font-size:25px}.lesson-card-tag{font-size:13px}.lesson-card-tag>span{font-size:12px}.course-lesson>img{aspect-ratio:1.85}.planning-card{grid-template-columns:1fr}.fit-brief,.build-budget{padding:26px}.testimonial-carousel{padding:26px 22px}#experiencias .testimonial-slide>p{font-size:18px}.testimonial-controls{gap:8px}.testimonial-controls>button{font-size:14px}.results-gallery{gap:10px}.results-gallery .gallery-photo{aspect-ratio:1}}
+@media(max-width:480px){.skills-grid{grid-template-columns:1fr}.skill-card{padding:26px}.skill-card svg{margin-bottom:16px}.skill-card h4{font-size:20px}}
+
+.support-duration>span{font-size:76px}
+.support-card{padding:30px}
+.support-channels{margin-bottom:18px}
+.support-resources{padding-top:18px}
+.support-resources ul{margin-bottom:16px}
+.support-duration{margin-bottom:20px}
+@media(min-width:641px) and (max-width:900px){.support-resources{grid-row:2/5}}
+
+/* Mesma largura externa do hero em toda a página. */
+:root{--page-width:min(1860px,calc(100% - 60px));--section-gutter:40px}
+.reference-hero{width:var(--page-width)}
+main>.section:not(.hero),main>#autonomia.problem,.page-footer{width:var(--page-width);max-width:none;margin-inline:auto}
+main>.section>.wrap,.page-footer>.wrap{width:calc(100% - var(--section-gutter)*2);max-width:none}
+main>.section.wrap{padding-inline:var(--section-gutter)}
+main>#autonomia.problem{padding:var(--section-gutter)}
+#autonomia .problem-panel{max-width:none;border-radius:18px}
+.page-footer{padding-inline:0}
+
+/* Acompanhamento e acesso apresentados em duas colunas. */
+#curso .support-card{border:0;display:flex;flex-direction:column;padding:32px}
+.support-card:before{content:none;display:none}
+.support-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-bottom:28px}
+.support-highlights>div+div{padding-left:28px;border-left:1px solid #23375426}
+#curso .support-highlights h3{font-size:36px;line-height:1.1;letter-spacing:-.05em;color:var(--kuara-blue);margin:0 0 9px;max-width:none}
+#curso .support-highlights p{font-size:16px;line-height:1.4;margin:0;color:var(--kuara-blue)}
+#curso .support-card>p{font-size:16px;line-height:1.65;margin:0 0 24px}
+#curso .support-resources{margin-top:0;padding-top:24px;border-top:1px solid #23375426}
+.support-resources ul{font-size:16px;line-height:1.55;margin-bottom:28px}
+#curso .support-cta{margin-top:auto;align-self:flex-start;background:var(--kuara-clay);color:#fff}
+#curso .support-cta:hover{background:var(--kuara-blue)}
+
+/* Cápsulas do catálogo de mentorias. */
+.lesson-card-body>h3{color:var(--kuara-blue)}
+.lesson-card-tag{align-items:center}
+.lesson-card-tag>.lesson-format{display:inline-flex;align-items:center;justify-content:center;padding:7px 11px;border-radius:999px;background:var(--kuara-blue);color:var(--kuara-paper);font-size:12px;font-weight:700;letter-spacing:.035em;line-height:1;white-space:nowrap}
+.lesson-card-tag>.lesson-format.is-live{background:var(--kuara-clay-dark)}
+#curso .fit-brief h3,#curso .build-budget h3{font-size:24px;line-height:1.2;letter-spacing:-.045em;font-weight:600;color:var(--kuara-blue);margin:0 0 15px}
+#curso .build-budget p{font-size:15px;line-height:1.5;margin-bottom:15px}
+@media(max-width:1100px){:root{--section-gutter:30px}}
+@media(max-width:760px){:root{--section-gutter:20px}#autonomia .problem-panel{padding:28px 22px;border-radius:16px}}
+@media(max-width:640px){:root{--page-width:calc(100% - 28px)}#curso .support-card{padding:26px 22px}.support-highlights{gap:16px;margin-bottom:24px}.support-highlights>div+div{padding-left:16px}#curso .support-highlights h3{font-size:30px}#curso .support-highlights p{font-size:15px}#curso .support-cta{width:100%}.lesson-card-tag>.lesson-format{font-size:11px}}
+@media(max-width:360px){#curso .support-card{padding:24px 18px}.support-highlights{gap:12px}.support-highlights>div+div{padding-left:12px}#curso .support-highlights h3{font-size:27px}}
+@media(max-width:420px){.support-highlights{grid-template-columns:1fr;gap:20px}.support-highlights>div+div{padding-left:0;border-left:0;padding-top:20px;border-top:1px solid #23375426}}
+
+/* Habilidades, acompanhamento e inscrições com as mesmas linhas de início e fim. */
+#curso .learning-heading{font-size:28px;margin:0 0 22px}
+.learning-overview{grid-template-columns:minmax(0,2.15fr) minmax(0,1fr) minmax(0,.9fr);gap:20px;align-items:stretch}
+.learning-overview>.skills-column{min-height:0}
+.learning-overview .skills-grid{grid-template-rows:repeat(2,minmax(0,1fr));height:100%;gap:14px}
+.learning-overview .skill-card{padding:26px;min-height:0}
+.learning-overview .skill-card svg{margin-bottom:22px}
+.learning-overview .skill-card h4{font-size:18px;line-height:1.3}
+#curso .learning-overview .skill-card p{font-size:16px;line-height:1.6}
+#curso .learning-overview .support-card{padding:28px;min-width:0;gap:24px;border-radius:24px;justify-content:space-between}
+#curso .support-block h3{font-size:32px;line-height:1.1;letter-spacing:-.05em;color:var(--kuara-blue);margin:0 0 8px;max-width:none}
+#curso .support-block .support-label{font-size:15px;line-height:1.45;margin:0}
+#curso .support-block .support-copy{font-size:16px;line-height:1.6;margin:20px 0 0}
+.support-access{padding-top:24px;border-top:1px solid #23375466}
+#curso .support-block .support-resources{padding:0;margin:22px 0 0;border:0}
+.support-block .support-resources h4{font-size:15px;margin-bottom:12px}
+.support-block .support-resources ul{font-size:15px;line-height:1.5;margin:0}
+.support-block .support-resources li{margin-bottom:8px}
+.support-block .support-resources li:last-child{margin-bottom:0}
+.learning-presale{display:flex;flex-direction:column;min-width:0;overflow:hidden;border-radius:24px;background:var(--kuara-paper);border-top:3px solid var(--kuara-mustard)}
+.learning-presale .enrollment-period{padding:26px 24px 24px;flex-shrink:0}
+.learning-presale .card-kicker{font-size:12px;letter-spacing:.04em;margin:0 0 15px}
+.learning-presale .enrollment-dates{gap:8px}
+.learning-presale .enrollment-dates time,.learning-presale .enrollment-dates time span,.learning-presale .enrollment-dates .date-until{font-size:clamp(24px,1.8vw,30px);font-weight:600;line-height:1.2;letter-spacing:-.055em}
+#curso .learning-presale .enrollment-period p{font-size:14px;line-height:1.5;margin:12px 0 0}
+.learning-presale .presale-details{padding:26px 24px;justify-content:flex-start;flex:1}
+.learning-presale .presale-date{font-size:15px;letter-spacing:.02em;line-height:1.4;margin-bottom:16px}
+#curso .learning-presale h3{font-size:24px;line-height:1.15;letter-spacing:-.045em;margin:0 0 16px}
+#curso .learning-presale .presale-details p{font-size:16px;line-height:1.55;margin:0 0 24px}
+#curso .learning-presale .button{margin-top:auto;width:100%;font-size:14px;padding:13px 15px;min-height:46px;justify-content:center}
+.learning-presale .presale-details small{font-size:14px;line-height:1.5;color:#465469;text-align:center;margin-top:12px}
+@media(min-width:1201px) and (max-width:1400px){.learning-overview{gap:16px;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,.95fr)}.learning-overview .skill-card{padding:22px}#curso .learning-overview .support-card{padding:24px}.learning-presale .enrollment-period,.learning-presale .presale-details{padding:24px 20px}#curso .learning-presale h3{font-size:22px}}
+@media(max-width:1200px){.learning-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.learning-overview>.skills-column{grid-column:1/-1}.learning-overview .skills-grid{height:auto;grid-template-rows:repeat(2,1fr)}.learning-presale .enrollment-dates time,.learning-presale .enrollment-dates time span,.learning-presale .enrollment-dates .date-until{font-size:30px}.learning-presale .presale-details{justify-content:center}}
+@media(max-width:640px){#curso .learning-heading{font-size:24px}.learning-overview{grid-template-columns:1fr;gap:20px}.learning-overview>.skills-column{grid-column:auto}.learning-overview .skills-grid{grid-template-rows:none;gap:12px}.learning-overview .skill-card{padding:24px}#curso .learning-overview .support-card{padding:26px;gap:24px}.learning-presale .enrollment-period,.learning-presale .presale-details{padding:26px}.learning-presale .presale-details{justify-content:flex-start}#curso .learning-presale .button{margin-top:0}}
+@media(max-width:360px){.learning-overview .skill-card{padding:22px}#curso .learning-overview .support-card{padding:24px 22px}.learning-presale .enrollment-period,.learning-presale .presale-details{padding:24px 22px}.learning-presale .enrollment-dates time,.learning-presale .enrollment-dates time span,.learning-presale .enrollment-dates .date-until{font-size:26px}}
+
+/* Hierarquia das seções e aulas, preservando a escala do hero. */
+main>.section:not(.hero) h2{font-size:clamp(36px,3.5vw,54px);line-height:1.1;letter-spacing:-.06em}
+#autonomia .problem-story h2{max-width:650px}
+.learning-section .section-intro{max-width:none}
+#curso .learning-overview .support-card{border-top:3px solid var(--kuara-mustard)}
+.lessons-and-planning{align-items:stretch}
+.lesson-cards{align-items:stretch}
+.course-lesson{height:100%;min-width:0}
+.course-lesson{display:flex;flex-direction:column}
+.course-lesson>img{height:clamp(150px,12vw,190px);aspect-ratio:auto;flex-shrink:0}
+.lesson-card-body{padding:22px;min-height:0;flex:0 0 auto}
+.lesson-card-body>h3{font-size:clamp(29px,2.15vw,36px);line-height:1.12;letter-spacing:-.05em;margin-bottom:22px}
+.lesson-card-tag{margin-bottom:16px}
+.lesson-description{padding:0 22px 22px}
+
+/* Amanda: composição da seção Compromisso Social do site Kûara. */
+#amanda{background:var(--kuara-blue);border-radius:24px 24px 0 0;color:var(--kuara-paper)}
+#amanda .teacher{grid-template-columns:1.1fr 1fr;gap:clamp(40px,5vw,100px);align-items:stretch;overflow:visible}
+#amanda .teacher figure{grid-column:1;grid-row:1;order:0;position:relative;min-height:640px;height:auto;overflow:hidden;border-radius:20px}
+#amanda .teacher img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;object-position:center 35%;border-radius:20px}
+#amanda .teacher>div{grid-column:2;grid-row:1;padding:0;background:none;display:flex;flex-direction:column;justify-content:center;min-width:0}
+#amanda h2,#amanda p,#amanda .signature{color:var(--kuara-paper)}
+#amanda .teacher .eyebrow{color:var(--kuara-paper);font-size:14px;letter-spacing:.1em;margin-bottom:24px}
+#amanda .teacher h2{max-width:650px;margin-bottom:30px}
+#amanda .teacher p:not(.eyebrow){max-width:none;font-size:18px;line-height:1.75;margin-bottom:24px}
+#amanda .teacher .teacher-note{border-left:3px solid #c8914c;background:#ffffff08;padding:20px 24px;margin:8px 0 24px}
+#amanda .signature{font-size:14px;line-height:1.6;margin-top:0}
+.offer-guarantee{border-top:1px solid #ffffff40;margin-top:30px;padding-top:26px;max-width:540px}
+#oferta .offer-guarantee h3{color:var(--kuara-paper);font-size:24px;margin-bottom:12px}
+#oferta .offer-guarantee p{color:var(--kuara-paper);font-size:16px;margin:0}
+@media(max-width:1200px){.lesson-card-body{min-height:0}#amanda .teacher figure{min-height:600px}#amanda .teacher p:not(.eyebrow){font-size:17px}}
+@media(max-width:900px){#amanda .teacher{grid-template-columns:1fr;gap:34px}#amanda .teacher figure{grid-column:1;grid-row:1;min-height:0;height:480px}#amanda .teacher>div{grid-column:1;grid-row:2}#amanda .teacher h2{max-width:none}.lesson-card-body>h3{font-size:28px}.lesson-card-body{padding:20px 18px}.lesson-description{padding:0 18px 20px}}
+@media(max-width:640px){main>.section:not(.hero) h2{font-size:36px}.course-lesson{height:auto}.course-lesson>img{height:180px}.lesson-card-body{padding:24px;min-height:0}.lesson-card-body>h3{font-size:30px;margin-bottom:28px}.lesson-description{padding:0 24px 24px}#amanda .teacher figure{height:380px}#amanda .teacher p:not(.eyebrow){font-size:16px;line-height:1.7}#amanda .teacher .teacher-note{padding:18px}#amanda .teacher .eyebrow{font-size:12px}}
+@media(max-width:360px){main>.section:not(.hero) h2{font-size:32px}.lesson-card-body>h3{font-size:28px}#amanda .teacher figure{height:320px}}
+
+/* Galeria única: depoimentos e imagens fazem parte da mesma composição. */
+#experiencias{background:var(--kuara-paper);border-radius:24px 24px 0 0}
+.mosaic-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin-bottom:42px}
+.mosaic-intro h2{max-width:760px;margin:0}
+#experiencias .mosaic-intro p{max-width:440px;font-size:16px;line-height:1.6;color:#465469;margin:0}
+.community-mosaic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:'photo1 quote1 photo2' 'quote2 photo3 photo2' 'photo4 quote3 photo5';gap:20px}
+.mosaic-photo-1{grid-area:photo1}.mosaic-photo-2{grid-area:photo2}.mosaic-photo-3{grid-area:photo3}.mosaic-photo-4{grid-area:photo4}.mosaic-photo-5{grid-area:photo5}
+.mosaic-quote-1{grid-area:quote1}.mosaic-quote-2{grid-area:quote2}.mosaic-quote-3{grid-area:quote3}
+.community-mosaic .mosaic-photo{aspect-ratio:auto;height:100%;min-height:340px;border-radius:22px;position:relative}
+.community-mosaic .mosaic-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:22px}
+.mosaic-quote{margin:0;padding:34px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;background:white;color:var(--kuara-blue);border-radius:22px}
+.mosaic-quote-2{background:var(--kuara-blue);color:var(--kuara-paper)}
+.mosaic-quote-3{background:var(--kuara-clay-dark);color:var(--kuara-paper)}
+#experiencias .mosaic-quote>p{font-size:clamp(18px,1.4vw,23px);line-height:1.6;letter-spacing:-.025em;color:inherit;margin:0}
+.mosaic-quote footer{display:block;background:none;color:inherit;border-top:1px solid currentColor;padding:20px 0 0;margin:0}
+.mosaic-quote footer strong{font-size:16px;font-weight:600}
+.mosaic-quote footer small{display:block;font-size:13px;line-height:1.5;margin-top:5px;opacity:.85}
+.mosaic-action{display:flex;justify-content:center;margin-top:38px}
+#experiencias .mosaic-action .button{font-size:17px;min-height:54px;padding:16px 40px}
+
+/* Oferta Black Friday: inclusos organizados e investimento em primeiro plano. */
+main>#oferta.black-friday-offer{padding-top:0;padding-bottom:88px;background:var(--kuara-blue);color:var(--kuara-paper);border-radius:24px 24px 0 0;overflow:clip}
+.bf-offer-strip{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px var(--section-gutter);background:var(--kuara-mustard);color:var(--kuara-blue)}
+.bf-offer-strip>span:first-child{font-size:25px;font-weight:700;line-height:1.2;letter-spacing:-.035em}
+.bf-offer-strip>span:last-child{font-size:14px;font-weight:600;letter-spacing:.05em;line-height:1.5}
+.bf-offer-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:clamp(32px,5vw,80px);align-items:start;padding-top:64px}
+#oferta .bf-offer-content>.eyebrow{color:var(--kuara-mustard);font-size:13px;letter-spacing:.08em;margin-bottom:22px}
+#oferta h2{color:var(--kuara-paper);max-width:650px;margin-bottom:26px}
+#oferta .offer-lead{font-size:19px;line-height:1.65;max-width:660px;color:var(--kuara-paper);margin-bottom:36px}
+#oferta .included-title{font-size:23px;color:var(--kuara-paper);margin-bottom:20px}
+.offer-inclusions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.offer-inclusion{padding:26px;background:#ffffff09;border:1px solid #ffffff2b;border-radius:14px}
+.offer-inclusion h4{font-size:22px;line-height:1.3;letter-spacing:-.035em;font-weight:500;margin:0 0 17px;color:var(--kuara-paper)}
+.offer-inclusion h4 strong{font-size:42px;line-height:1;font-weight:600;color:var(--kuara-mustard);margin-right:5px}
+#oferta .offer-inclusion p{font-size:16px;line-height:1.6;margin:0;color:var(--kuara-paper)}
+.offer-materials{grid-column:1/-1}
+.offer-materials h4{font-size:22px;font-weight:600}
+.offer-materials ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;font-size:16px;line-height:1.5}
+.offer-materials li{position:relative;padding-left:23px}
+.offer-materials li:before{content:'✓';position:absolute;left:0;top:0;color:var(--kuara-mustard);font-size:16px}
+.offer-access{display:flex;align-items:center;gap:24px;margin-top:28px;padding-top:25px;border-top:1px solid #ffffff38}
+.offer-access strong{font-size:36px;letter-spacing:-.05em;font-weight:600;line-height:1.1;white-space:nowrap;color:var(--kuara-mustard)}
+#oferta .offer-access p{font-size:16px;line-height:1.6;margin:0;max-width:430px;color:var(--kuara-paper)}
+.bf-purchase-card{min-width:0;background:var(--kuara-paper);color:var(--kuara-blue);padding:36px;border-top:5px solid var(--kuara-mustard);border-radius:20px;position:sticky;top:24px}
+.purchase-heading>span{display:inline-block;background:var(--kuara-blue);color:var(--kuara-paper);font-size:12px;letter-spacing:.06em;font-weight:600;line-height:1.5;padding:8px 12px;border-radius:5px;margin-bottom:24px}
+#oferta .purchase-heading h3{font-size:32px;line-height:1.15;letter-spacing:-.04em;color:var(--kuara-blue);margin:0 0 28px}
+#oferta .purchase-price>p:first-child{font-size:16px;line-height:1.5;margin:0 0 8px;color:#465469}
+.bf-price{display:flex;align-items:baseline;gap:5px;line-height:1;white-space:nowrap;color:var(--kuara-blue)}
+.bf-price strong{font-size:clamp(80px,7vw,112px);letter-spacing:-.08em;line-height:1;font-weight:700}
+.bf-price>span{font-size:32px;letter-spacing:-.04em;line-height:1}
+.bf-price>span:first-child{font-size:27px;margin-right:6px}
+#oferta .purchase-price .installments{font-size:16px;line-height:1.5;margin:12px 0 28px;color:#465469}
+#oferta .purchase-button{width:100%;min-height:58px;background:var(--kuara-clay);color:white;font-size:17px;font-weight:600;border-radius:6px;padding:16px 20px}
+#oferta .purchase-button:hover{background:var(--kuara-blue)}
+.purchase-deadline{padding:22px;margin-top:24px;background:#e9dfd2;border-radius:10px}
+.purchase-deadline strong{color:var(--kuara-clay-dark);font-size:14px;letter-spacing:.07em}
+#oferta .purchase-deadline p{color:var(--kuara-blue);font-size:15px;line-height:1.5;margin:10px 0 8px}
+.purchase-deadline>span{font-size:14px;line-height:1.5;color:#465469}
+.purchase-guarantee{margin-top:25px;padding-top:24px;border-top:1px solid #23375426}
+.purchase-guarantee h4{font-size:18px;line-height:1.3;margin:0 0 10px;font-weight:600}
+#oferta .purchase-guarantee p{font-size:14px;line-height:1.6;color:#465469;margin:0}
+#oferta .purchase-note{font-size:13px;line-height:1.5;color:#465469;margin:22px 0 0}
+
+/* FAQ inspirado na referência, integrado ao rodapé terracota. */
+main>#duvidas{background:var(--kuara-clay-dark);color:var(--kuara-paper);border-radius:24px 24px 0 0;padding-bottom:64px}
+#duvidas .faq-layout{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,5vw,80px);align-items:start}
+.faq-intro{position:sticky;top:32px;min-width:0}
+#duvidas .faq-intro .eyebrow{color:var(--kuara-paper);font-size:12px;letter-spacing:.08em;margin-bottom:22px}
+#duvidas .faq-intro h2{color:var(--kuara-paper);margin-bottom:26px}
+#duvidas .faq-intro>p:not(.eyebrow){font-size:18px;line-height:1.65;color:var(--kuara-paper);max-width:410px;margin-bottom:28px}
+.faq-person{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.faq-person img{width:58px;height:58px;object-fit:cover;object-position:center 20%;border-radius:50%}
+.faq-person span{font-size:15px;line-height:1.5;color:var(--kuara-paper)}
+#duvidas .faq-contact{background:var(--kuara-paper);color:var(--kuara-blue);font-size:16px;min-height:50px;padding:14px 26px;border-radius:6px}
+#duvidas .faq-contact:hover{background:var(--kuara-mustard)}
+#duvidas .faq details{border:0;border-radius:12px;background:var(--kuara-paper);padding:0;margin-bottom:12px;overflow:hidden}
+#duvidas .faq details:last-child{margin-bottom:0;border:0}
+#duvidas .faq summary{display:flex;align-items:center;gap:18px;padding:9px 22px 9px 9px;min-height:76px;font-size:18px;line-height:1.4;font-weight:500;letter-spacing:-.02em;color:var(--kuara-blue)}
+#duvidas .faq summary:after{display:none}
+.faq-symbol{flex:0 0 52px;height:52px;display:grid;place-items:center;border-radius:6px;background:var(--kuara-mustard);color:var(--kuara-blue)}
+.faq-symbol:before{content:'+';font-size:30px;font-weight:400;line-height:1}
+#duvidas details[open] .faq-symbol:before{content:'−'}
+#duvidas .faq details[open] summary{color:var(--kuara-blue);font-weight:600}
+#duvidas .faq-answer{padding:8px 26px 26px 79px}
+#duvidas .faq-answer p{max-width:none;margin:0;color:#465469;font-size:16px;line-height:1.7}
+.page-footer{background:var(--kuara-clay-dark);color:var(--kuara-paper);border:0;padding-top:0;border-radius:0 0 24px 24px;margin-bottom:30px}
+.page-footer .footer-columns{border-top:1px solid #f5eee540;padding-top:40px}
+.page-footer p,.page-footer a,.page-footer h3,.page-footer .footer-bottom{color:var(--kuara-paper)}
+
+@media(max-width:1200px){.mosaic-intro{display:block}.mosaic-intro h2{margin-bottom:22px}.community-mosaic{gap:16px}.mosaic-quote{padding:27px}.bf-offer-layout{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:30px}.bf-purchase-card{padding:28px}.offer-inclusion{padding:22px}.offer-inclusions{grid-template-columns:1fr}.offer-materials ul{grid-template-columns:1fr}.offer-access{gap:18px}.purchase-deadline{padding:18px}}
+@media(max-width:1000px){.community-mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:none}.community-mosaic>*{grid-area:auto}.community-mosaic .mosaic-photo{min-height:320px}.mosaic-quote{min-height:320px}.bf-offer-layout{grid-template-columns:1fr}.bf-purchase-card{position:static;max-width:650px;width:100%;justify-self:center;padding:34px}.offer-inclusions{grid-template-columns:repeat(2,minmax(0,1fr))}.offer-materials ul{grid-template-columns:repeat(2,minmax(0,1fr))}#oferta h2,#oferta .offer-lead{max-width:none}.bf-offer-content{max-width:none}#duvidas .faq-layout{grid-template-columns:1fr;gap:38px}.faq-intro{position:static}#duvidas .faq-intro h2 br{display:none}.faq-intro h2{max-width:none}.faq-person{margin-bottom:22px}}
+@media(max-width:640px){.mosaic-intro{margin-bottom:28px}.community-mosaic{grid-template-columns:1fr;gap:16px}.community-mosaic .mosaic-photo{height:300px;min-height:0}.mosaic-quote{min-height:0;padding:28px 24px;gap:26px}#experiencias .mosaic-quote>p{font-size:19px}.mosaic-action{margin-top:28px}.bf-offer-strip{display:block;padding-block:18px}.bf-offer-strip>span{display:block}.bf-offer-strip>span:first-child{font-size:23px}.bf-offer-strip>span:last-child{font-size:12px;margin-top:8px;letter-spacing:.03em}.bf-offer-layout{padding-top:36px;gap:30px}main>#oferta.black-friday-offer{padding-bottom:50px}#oferta .offer-lead{font-size:17px}.offer-inclusions{grid-template-columns:1fr}.offer-materials ul{grid-template-columns:1fr}.offer-access{align-items:flex-start}.offer-access strong{font-size:30px}#oferta .offer-access p{font-size:15px}.bf-purchase-card{padding:28px 24px}#oferta .purchase-heading h3{font-size:29px}.bf-price strong{font-size:clamp(72px,20vw,96px)}.bf-price>span{font-size:28px}.bf-price>span:first-child{font-size:23px;margin-right:2px}#oferta .purchase-button{font-size:16px;padding-inline:12px}.purchase-deadline{padding:18px}main>#duvidas{padding-bottom:42px}#duvidas .faq-intro>p:not(.eyebrow){font-size:16px}#duvidas .faq summary{font-size:16px;gap:12px;padding:8px 14px 8px 8px;min-height:72px}.faq-symbol{flex-basis:42px;height:42px}#duvidas .faq-answer{padding:12px 20px 24px}#duvidas .faq-answer p{font-size:16px;line-height:1.6}.page-footer{margin-bottom:14px}.page-footer .footer-columns{padding-top:30px}}
+@media(max-width:360px){.bf-purchase-card{padding:26px 20px}.bf-price strong{font-size:68px}.bf-price>span{font-size:24px}#oferta .purchase-heading h3{font-size:27px}.community-mosaic .mosaic-photo{height:260px}.mosaic-quote{padding:26px 22px}}
+
+/* Galeria ampliada, preservando a composição aprovada dentro de uma área rolável. */
+.mosaic-intro{margin-bottom:24px}
+#experiencias .mosaic-intro p{max-width:none}
+.community-scroll{height:clamp(520px,78vh,860px);overflow-y:scroll;overflow-x:hidden;scrollbar-gutter:stable;padding-right:18px;scrollbar-color:var(--kuara-clay) #e2d6c7;scrollbar-width:auto;border-radius:22px 0 0 22px}
+.community-scroll::-webkit-scrollbar{width:12px}
+.community-scroll::-webkit-scrollbar-track{background:#e2d6c7;border-radius:12px}
+.community-scroll::-webkit-scrollbar-thumb{background:var(--kuara-clay);border:3px solid #e2d6c7;border-radius:12px}
+.community-scroll:focus-visible{outline:3px solid var(--kuara-clay);outline-offset:7px}
+.community-mosaic{grid-template-areas:'photo1 quote1 photo2' 'quote2 photo3 photo2' 'photo4 quote3 photo5' 'quote4 photo6 quote5' 'quote6 quote7 photo7' 'photo8 quote8 quote9' 'quote10 quote11 quote12'}
+.mosaic-photo-6{grid-area:photo6}.mosaic-photo-7{grid-area:photo7}.mosaic-photo-8{grid-area:photo8}
+.mosaic-quote-4{grid-area:quote4}.mosaic-quote-5{grid-area:quote5}.mosaic-quote-6{grid-area:quote6}.mosaic-quote-7{grid-area:quote7}.mosaic-quote-8{grid-area:quote8}.mosaic-quote-9{grid-area:quote9}.mosaic-quote-10{grid-area:quote10}.mosaic-quote-11{grid-area:quote11}.mosaic-quote-12{grid-area:quote12}
+.mosaic-quote-5,.mosaic-quote-7,.mosaic-quote-11{background:var(--kuara-blue);color:var(--kuara-paper)}
+.mosaic-quote-6,.mosaic-quote-9,.mosaic-quote-12{background:var(--kuara-clay-dark);color:var(--kuara-paper)}
+
+/* Oferta conforme a referência: três pilares e um único card de investimento. */
+main>#oferta.black-friday-offer{padding-bottom:64px}
+.bf-offer-strip>span:only-child{font-size:25px;font-weight:700;letter-spacing:-.035em;line-height:1.2;margin:0}
+.bf-offer-layout{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(26px,2.5vw,48px);align-items:stretch;padding-top:48px}
+.bf-offer-content{min-width:0;display:flex;flex-direction:column}
+#oferta .bf-offer-content>.eyebrow{font-size:clamp(16px,1.3vw,23px);letter-spacing:.15em;line-height:1.5;margin-bottom:24px}
+#oferta h2{max-width:950px;font-size:clamp(36px,3.5vw,62px);line-height:1.18;letter-spacing:-.035em;margin-bottom:clamp(36px,4vw,72px)}
+#oferta .included-title{font-size:23px;margin-bottom:24px}
+.offer-inclusions{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;flex:1}
+.offer-inclusion{padding:clamp(22px,1.8vw,34px);border:0;border-radius:20px;background:#ffffff08;min-width:0}
+.offer-inclusion h4,.offer-materials h4{font-size:clamp(32px,2.6vw,44px);line-height:1.15;letter-spacing:-.04em;color:#e5b660;font-weight:600;margin:0 0 25px}
+#oferta .offer-inclusion p{font-size:clamp(16px,1.15vw,20px);line-height:1.65;margin:0 0 20px}
+#oferta .offer-inclusion p:last-child{margin-bottom:0}
+.offer-class-list{margin:0 0 32px;padding-left:22px;font-size:clamp(16px,1.15vw,20px);line-height:1.65}
+.offer-class-list li+li{margin-top:12px}
+.offer-materials{grid-column:auto}
+.offer-materials ul{display:block;padding-left:20px;list-style:disc;margin:24px 0 0;font-size:clamp(15px,1vw,18px);line-height:1.5}
+.offer-materials li{padding-left:0;margin-bottom:10px}
+.offer-materials li:last-child{margin-bottom:0}
+.offer-materials li:before{display:none}
+.bf-purchase-card{position:static;top:auto;align-self:stretch;display:flex;flex-direction:column;padding:clamp(26px,2vw,38px);max-width:none;justify-self:stretch;width:100%}
+#oferta .purchase-heading h3{font-size:clamp(28px,2vw,34px)}
+.bf-price strong{font-size:clamp(88px,7vw,120px)}
+#oferta .purchase-button{margin-bottom:0}
+.purchase-calendar{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;margin-top:28px;padding:4px 0 26px}
+.purchase-calendar>div{min-width:0}
+.purchase-calendar>div+div{border-left:2px solid var(--kuara-blue);padding-left:24px}
+.purchase-calendar h4{font-size:clamp(14px,1.3vw,21px);line-height:1.4;letter-spacing:.12em;font-weight:600;margin:0 0 14px}
+#oferta .purchase-calendar p,.purchase-calendar time{font-size:clamp(23px,1.8vw,32px);font-weight:600;line-height:1.25;letter-spacing:-.04em;color:var(--kuara-clay);margin:0;white-space:nowrap}
+.purchase-guarantee{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:22px;border-top:3px solid var(--kuara-clay);margin-top:auto;padding-top:28px}
+.purchase-guarantee h4{display:flex;align-items:center;gap:14px;margin:0;font-size:clamp(19px,1.45vw,26px);line-height:1.1;letter-spacing:-.04em}
+.purchase-guarantee h4 strong{font-size:clamp(68px,5vw,88px);line-height:1;font-weight:600;letter-spacing:-.07em}
+#oferta .purchase-guarantee p{font-size:clamp(14px,1vw,17px);line-height:1.5;color:var(--kuara-blue)}
+
+/* Oito dúvidas em duas colunas, com apresentação acima das perguntas. */
+#duvidas .faq-layout{display:block}
+#duvidas .faq-intro{position:static;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin-bottom:42px}
+.faq-heading{max-width:780px}
+#duvidas .faq-intro h2{max-width:none;margin-bottom:20px}
+#duvidas .faq-heading>p:not(.eyebrow){font-size:18px;line-height:1.6;margin:0;max-width:650px;color:var(--kuara-paper)}
+.faq-contact-area{flex:0 0 auto;display:flex;align-items:center;gap:28px}
+.faq-contact-area .faq-person{margin:0}
+#duvidas .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:16px 24px}
+#duvidas .faq details{margin:0}
+
+@media(min-width:1101px) and (max-width:1350px){
+ .bf-offer-layout{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px}
+ .offer-inclusions{gap:12px}.offer-inclusion{padding:22px 18px}
+ .purchase-calendar{gap:14px}.purchase-calendar>div+div{padding-left:16px}
+ .purchase-guarantee{gap:16px}.purchase-guarantee h4{gap:10px;font-size:18px}
+}
+@media(max-width:1100px){
+ .bf-offer-layout{grid-template-columns:1fr;gap:32px}
+ #oferta h2{max-width:850px;margin-bottom:34px;font-size:46px}
+ .offer-inclusions{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .bf-purchase-card{max-width:680px;justify-self:center;padding:34px}
+ .purchase-calendar h4{font-size:19px}.purchase-calendar time,#oferta .purchase-calendar p{font-size:30px}
+ .purchase-guarantee h4{font-size:25px}.purchase-guarantee h4 strong{font-size:82px}
+ #oferta .purchase-guarantee p{font-size:16px}
+ #duvidas .faq-intro{align-items:flex-start}.faq-contact-area{display:block}.faq-contact-area .faq-person{margin-bottom:20px}
+}
+@media(max-width:1000px){
+ .community-mosaic{grid-template-areas:none}.community-mosaic>*{grid-area:auto}
+ #duvidas .faq summary{font-size:16px;gap:12px;padding-right:14px}.faq-symbol{flex-basis:44px;height:44px}
+ #duvidas .faq-answer{padding:8px 22px 24px 65px}
+}
+@media(max-width:760px){
+ #duvidas .faq-intro{display:block}.faq-contact-area{display:flex;justify-content:space-between;gap:20px;margin-top:28px}.faq-contact-area .faq-person{margin:0}
+ #duvidas .faq{grid-template-columns:1fr;gap:12px}
+ .offer-inclusions{grid-template-columns:1fr}.offer-inclusion{padding:28px}.offer-inclusion h4{font-size:36px}
+ #oferta .offer-inclusion p,.offer-class-list{font-size:18px}.offer-materials ul{font-size:17px}
+ #oferta h2{font-size:40px}
+}
+@media(max-width:640px){
+ .community-scroll{height:74svh;min-height:400px;max-height:680px;padding-right:12px}
+ .mosaic-intro{margin-bottom:20px}#experiencias .mosaic-intro p{font-size:15px}
+ .bf-offer-strip>span:only-child{font-size:23px}.bf-offer-layout{padding-top:34px}
+ #oferta .bf-offer-content>.eyebrow{font-size:15px;letter-spacing:.11em;margin-bottom:20px}
+ #oferta h2{font-size:36px;line-height:1.16;margin-bottom:32px}
+ .bf-purchase-card{padding:28px 24px}.bf-price strong{font-size:clamp(72px,20vw,96px)}
+ .purchase-calendar{gap:14px;margin-top:25px;padding-bottom:24px}.purchase-calendar>div+div{padding-left:14px}
+ .purchase-calendar h4{font-size:13px;letter-spacing:.07em;margin-bottom:12px}
+ .purchase-calendar time,#oferta .purchase-calendar p{font-size:22px}
+ .purchase-guarantee{grid-template-columns:1fr;gap:18px;padding-top:24px}.purchase-guarantee h4{font-size:24px}.purchase-guarantee h4 strong{font-size:72px}
+ #oferta .purchase-guarantee p{font-size:16px}
+ #duvidas .faq-intro{margin-bottom:32px}#duvidas .faq-heading>p:not(.eyebrow){font-size:16px}
+ .faq-contact-area{flex-wrap:wrap}.faq-contact-area .faq-person{width:100%}
+ #duvidas .faq-answer{padding:12px 20px 24px}
+}
+@media(max-width:360px){
+ .bf-purchase-card{padding:26px 20px}.bf-price strong{font-size:68px}
+ .purchase-calendar{gap:10px}.purchase-calendar>div+div{padding-left:10px}.purchase-calendar h4{font-size:12px;letter-spacing:.04em}
+ .purchase-calendar time,#oferta .purchase-calendar p{font-size:19px}
+}
+
+/* Cadastro de pré-venda: campos, chamada e consentimento no mesmo painel. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+main>#pre-venda.presale-section{background:white;padding-block:48px;scroll-margin-top:24px}
+.presale-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.5fr);align-items:start;gap:clamp(30px,3vw,60px);padding:40px var(--section-gutter);background:var(--kuara-blue);color:var(--kuara-paper);border-radius:22px}
+#pre-venda .presale-copy h2{font-size:clamp(20px,1.65vw,28px);font-weight:600;letter-spacing:.13em;line-height:1.3;color:#e5b660;margin:0 0 20px}
+#pre-venda .presale-copy p{font-size:clamp(17px,1.2vw,21px);line-height:1.65;margin:0 0 16px;color:var(--kuara-paper)}
+.presale-copy small{display:block;font-size:14px;line-height:1.5;color:#e2dfdc}
+.presale-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,.9fr);gap:24px;align-content:start;min-width:0}
+.presale-field{min-width:0;display:block}
+.presale-first{grid-column:1;grid-row:1}.presale-last{grid-column:2;grid-row:1}.presale-email{grid-column:1;grid-row:2}
+.presale-field input{display:block;width:100%;min-width:0;height:70px;padding:18px 20px;background:white;color:var(--kuara-blue);border:1px solid #fff;border-radius:3px;font:400 18px/1.4 Inter,Arial,sans-serif;box-shadow:none}
+.presale-field input::placeholder{color:#767676;opacity:1}
+.presale-field input:focus-visible{outline:3px solid #e5b660;outline-offset:3px}
+.presale-consent{grid-column:3;grid-row:1/3;display:flex;flex-direction:column;align-items:flex-start;gap:14px;min-width:0;font-size:16px;line-height:1.65;cursor:pointer;color:var(--kuara-paper)}
+.presale-consent input{appearance:auto;display:block;flex:0 0 auto;width:27px;height:27px;margin:0;accent-color:#c8914c;cursor:pointer}
+.presale-consent input:focus-visible{outline:3px solid #e5b660;outline-offset:4px}
+.presale-consent a{text-decoration:underline;text-underline-offset:3px;color:inherit}
+.presale-consent a:hover{color:#e5b660}
+main>#pre-venda .presale-submit{grid-column:2;grid-row:2;align-self:start;background:#c8914c;color:#182b46;border:0;border-radius:3px;min-height:70px;padding:18px 24px;font-size:18px;font-weight:600;line-height:1.4;cursor:pointer}
+main>#pre-venda .presale-submit:hover{background:#e5b660}
+.presale-submit:focus-visible{outline:3px solid white;outline-offset:4px}
+#pre-venda .presale-status{grid-column:1/-1;margin:0;padding:16px 18px;border-left:3px solid #e5b660;background:#ffffff0d;border-radius:0 6px 6px 0;font-size:15px;line-height:1.55;color:var(--kuara-paper)}
+.presale-status[hidden]{display:none}
+.presale-form noscript{grid-column:1/-1}
+#duvidas .faq-contact-area{margin-top:0}
+
+/* Mesmo contato e símbolo usados no site principal, disponíveis durante toda a rolagem. */
+.whatsapp-float{position:fixed;right:24px;bottom:max(24px,env(safe-area-inset-bottom));z-index:50;display:grid;place-items:center;width:64px;height:64px;background:var(--kuara-clay-dark);color:var(--kuara-paper);border:1px solid #f5eee54d;border-radius:50%;box-shadow:0 5px 22px #17263c26;transition:background .2s,transform .2s}
+.whatsapp-float svg{display:block;width:30px;height:30px;fill:currentColor}
+.whatsapp-float:hover{background:var(--kuara-blue);transform:translateY(-2px)}
+.whatsapp-float:focus-visible{outline:3px solid #e5b660;outline-offset:4px}
+.page-footer .footer-bottom{padding-bottom:88px}
+@media(max-width:1200px){
+ .presale-panel{grid-template-columns:minmax(0,.85fr) minmax(0,2fr);gap:30px}
+ .presale-form{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+ .presale-consent{grid-column:1/-1;grid-row:3;flex-direction:row;align-items:flex-start;gap:14px}
+ .presale-consent input{width:24px;height:24px;margin-top:2px}
+ #pre-venda .presale-copy h2{font-size:23px}
+}
+@media(max-width:760px){
+ main>#pre-venda.presale-section{padding-block:32px}
+ .presale-panel{grid-template-columns:1fr;gap:28px;padding:30px 24px}
+ #pre-venda .presale-copy h2{font-size:23px;margin-bottom:16px}
+ #pre-venda .presale-copy p{font-size:17px;margin-bottom:12px}
+ .presale-field input{height:62px;padding:16px;font-size:16px}
+ main>#pre-venda .presale-submit{min-height:62px;font-size:17px}
+ .presale-consent{font-size:16px}
+}
+@media(max-width:540px){
+ .presale-form{grid-template-columns:1fr;gap:16px}
+ .presale-first,.presale-last,.presale-email{grid-column:1;grid-row:auto}
+ .presale-consent{grid-column:1;grid-row:4;padding-block:4px}
+ main>#pre-venda .presale-submit{grid-column:1;grid-row:5}
+ .whatsapp-float{width:56px;height:56px;right:16px;bottom:max(16px,env(safe-area-inset-bottom))}
+ .whatsapp-float svg{width:27px;height:27px}
+}
+@media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}}
+
+/* Navegação persistente com as cores da seção em exibição. */
+body>.page-header{position:sticky;top:0;left:auto;right:auto;z-index:80;width:var(--page-width);height:76px;padding-inline:var(--section-gutter);color:var(--header-ink,#233754);background:var(--header-bg,#fff);border:0;box-shadow:none;transition:background-color .2s,color .2s}
+.page-header nav a{color:inherit}
+.page-header nav a:hover{text-decoration:underline;text-underline-offset:5px}
+body>.page-header .button.outline-light{background:var(--kuara-clay);color:white;border:0;font-size:13px;line-height:1.4}
+body>.page-header[data-scroll-theme="dark"] .button.outline-light{background:var(--kuara-paper);color:var(--kuara-blue)}
+.menu-toggle{display:none}
+main>.section:not(.hero),main>#pre-venda.presale-section{scroll-margin-top:calc(var(--sticky-header-height,76px) + 20px)}
+.presale-panel{background:var(--kuara-clay-dark)}
+main>#pre-venda .presale-submit{background:var(--kuara-blue);color:var(--kuara-paper);font-weight:400}
+main>#pre-venda .presale-submit:hover{background:#162a45}
+.page-footer,.page-footer .footer-columns,.page-footer .footer-bottom{border:0;box-shadow:none}
+
+/* A quebra do título e o selo da oferta mantêm proporções estáveis. */
+.bf-offer-content{container-type:inline-size}
+#oferta #offer-title{font-size:clamp(20px,9cqi,62px);line-height:1.16}
+#offer-title>span{display:block;white-space:nowrap}
+.purchase-heading{width:max-content;max-width:100%}
+.purchase-heading>span{display:block;width:100%;box-sizing:border-box;text-align:center;font-size:12px;white-space:nowrap;margin-bottom:24px}
+#oferta .purchase-heading h3{font-size:30px;white-space:nowrap;letter-spacing:-.04em}
+.purchase-calendar{grid-template-columns:1.1fr 1fr;gap:18px}
+.purchase-calendar>div+div{padding-left:20px}
+.purchase-presale-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px 14px}
+.purchase-presale-line a{font-size:16px;line-height:1.4;color:#756d55;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+.purchase-presale-line a:hover{color:var(--kuara-clay-dark)}
+
+/* Galeria em linhas horizontais: nenhuma rolagem vertical interna. */
+.community-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px}
+.community-heading h2{margin:0}
+.community-play{flex:0 0 auto;background:none;border:0;border-bottom:1px solid currentColor;padding:7px 0;color:var(--kuara-blue);font:500 14px/1.4 Inter,Arial,sans-serif;cursor:pointer}
+.community-rows{display:grid;gap:24px}
+.community-row{min-width:0}
+.community-controls{display:flex;justify-content:flex-end;gap:9px;margin-bottom:12px}
+.community-controls button{display:grid;place-items:center;width:42px;height:42px;border:1px solid #23375440;border-radius:50%;background:transparent;color:var(--kuara-blue);cursor:pointer}
+.community-controls button:hover{background:var(--kuara-blue);color:var(--kuara-paper)}
+.community-controls svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.community-play:focus-visible,.community-controls button:focus-visible,.testimonial-read:focus-visible{outline:3px solid var(--kuara-clay);outline-offset:4px}
+.community-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;min-width:0;border-radius:22px}
+.community-track::-webkit-scrollbar{display:none}
+.community-track:focus-visible{outline:3px solid var(--kuara-clay);outline-offset:5px}
+.community-track>*{grid-area:auto;scroll-snap-align:start;min-width:0;height:370px;min-height:0}
+.community-track .mosaic-photo{height:370px;aspect-ratio:auto;border-radius:22px}
+.community-track .mosaic-photo img{width:100%;height:100%;object-fit:cover;border-radius:22px}
+.community-track .mosaic-quote{padding:28px;gap:20px;justify-content:space-between}
+#experiencias .community-track .mosaic-quote>p{font-size:18px;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:7;overflow:hidden;margin:0}
+.community-track .mosaic-quote footer{padding-top:17px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.community-track .mosaic-quote footer strong{font-size:15px}
+.community-track .mosaic-quote footer small{font-size:12px}
+.testimonial-read{flex:0 0 auto;border:0;padding:0;background:none;color:inherit;text-decoration:underline;text-underline-offset:4px;font:500 13px/1.5 Inter,Arial,sans-serif;cursor:pointer;max-width:90px;text-align:right}
+#testimonial-dialog{width:min(620px,calc(100% - 36px));max-height:85dvh;margin:auto;padding:42px;background:var(--kuara-paper);color:var(--kuara-blue);border:0;border-radius:22px;overflow:auto}
+#testimonial-dialog::backdrop{background:#101923b8}
+.testimonial-close{position:absolute;right:14px;top:10px;border:0;background:none;color:var(--kuara-blue);font-size:30px;line-height:1;padding:7px;cursor:pointer}
+#testimonial-dialog h3{font-size:25px;line-height:1.3;margin:0 32px 24px 0}
+#testimonial-dialog blockquote{margin:0}
+#testimonial-dialog blockquote p{font-size:19px;line-height:1.65;margin:0}
+#testimonial-dialog .testimonial-source{font-size:14px;line-height:1.5;margin:24px 0 0;border-top:1px solid #23375430;padding-top:18px}
+@media(max-width:1100px){
+ .community-track{grid-auto-columns:calc((100% - 20px)/2)}
+ .community-track .mosaic-quote{padding:26px}
+}
+@media(max-width:760px){
+ body>.page-header{height:66px;justify-content:space-between;gap:16px}
+ .menu-toggle{display:flex;align-items:center;gap:9px;padding:10px 0;background:none;border:0;color:inherit;font:600 15px/1.4 Inter,Arial,sans-serif;cursor:pointer}
+ .menu-toggle svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+ .page-header nav{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 24px 26px;background:var(--header-bg,#fff);color:inherit;margin:0;flex-direction:column;align-items:flex-start;gap:22px;font-size:18px;box-shadow:0 12px 14px #00000012}
+ .page-header[data-menu-open="true"] nav{display:flex}
+ body>.page-header .button.outline-light{font-size:12px;padding:10px 12px}
+ #duvidas .faq-contact-area{margin-top:24px}
+}
+@media(max-width:640px){
+ .community-heading{align-items:flex-start;gap:20px;margin-bottom:12px;flex-wrap:wrap}
+ .community-heading h2{flex:1 0 100%}
+ .community-play{font-size:13px}
+ .community-rows{gap:0}
+ .community-controls{margin-bottom:14px}
+ .community-track{grid-auto-columns:100%;gap:16px;border-radius:20px}
+ .community-track>*,.community-track .mosaic-photo{height:365px;min-height:0}
+ .community-track .mosaic-quote{padding:26px;gap:18px}
+ #experiencias .community-track .mosaic-quote>p{font-size:17px;-webkit-line-clamp:8;line-height:1.5}
+ .community-track .mosaic-quote footer{padding-top:15px}
+ .purchase-calendar{grid-template-columns:1fr 1fr;gap:12px}
+ .purchase-calendar>div+div{padding-left:12px}
+ .purchase-presale-line{gap:7px 10px}
+ .purchase-presale-line a{font-size:14px}
+ #oferta .purchase-heading h3{font-size:30px}
+ #testimonial-dialog{padding:34px 26px}
+ #testimonial-dialog blockquote p{font-size:17px;line-height:1.6}
+}
+@media(max-width:360px){
+ .purchase-calendar{grid-template-columns:1fr;gap:20px}
+ .purchase-calendar>div+div{border-left:0;border-top:1px solid #23375430;padding:18px 0 0}
+ .purchase-calendar h4{font-size:13px;letter-spacing:.07em}
+ .purchase-calendar time,#oferta .purchase-calendar p{font-size:22px}
+ .bf-purchase-card{padding-inline:12px}
+ #oferta .purchase-heading h3{font-size:30px}
+ .purchase-heading>span{font-size:12px}
+ .community-track .mosaic-quote{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){body>.page-header{transition:none}.community-track{scroll-behavior:auto}}
+
+/* Informações das aulas sempre visíveis, com descrições alinhadas. */
+.course-lesson .lesson-card-body>h3{color:var(--kuara-blue);font-weight:600;margin:0;font-size:clamp(29px,2.15vw,36px);line-height:1.12;letter-spacing:-.05em}
+.course-lesson .lesson-description{margin-top:0;padding:0 22px 24px}
+@media(min-width:641px){@supports(grid-template-rows:subgrid){.lesson-cards{grid-template-rows:auto auto 1fr;row-gap:0}.course-lesson{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0}}}
+@media(max-width:900px){.course-lesson .lesson-card-body>h3{font-size:28px}.course-lesson .lesson-description{padding:0 18px 22px}}
+@media(max-width:640px){.course-lesson .lesson-card-body>h3{font-size:30px}.course-lesson .lesson-description{padding:0 24px 26px}}
+
+/* O logo acompanha a navegação depois do início da rolagem. */
+.hero-brand{width:160px}
+.header-brand{display:none;flex:0 0 auto;width:96px;color:inherit;line-height:0;transform:translateY(-8px)}
+.header-brand:before{content:"";display:block;width:100%;height:38px;background:currentColor;-webkit-mask:url('assets/logo-kuara-white.svg') center/contain no-repeat;mask:url('assets/logo-kuara-white.svg') center/contain no-repeat}
+.page-header[data-scrolled="true"] .header-brand{display:block;animation:header-logo-in .2s ease-out}
+.header-brand:focus-visible{outline:2px solid currentColor;outline-offset:6px}
+@keyframes header-logo-in{from{opacity:0}to{opacity:1}}
+@media(min-width:1060px) and (max-height:850px){.hero-brand{width:140px}}
+@media(max-width:760px){.page-header .menu-toggle{order:0}.page-header .header-brand{order:1;width:76px}.page-header>.button{order:2}.page-header[data-scrolled="true"] .menu-toggle span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}}
+@media(max-width:640px){.hero-brand{width:144px}}
+@media(prefers-reduced-motion:reduce){.page-header[data-scrolled="true"] .header-brand{animation:none}}

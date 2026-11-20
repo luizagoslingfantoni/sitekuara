@@ -1,0 +1,50 @@
+/* Mosaico fixo: cada espaço alterna fotos e depoimentos por esmaecimento. */
+.community-grid{overflow:visible;border-radius:0}
+.community-fallback{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.community-grid.is-ready{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,360px);grid-template-areas:'a b c' 'd e c' 'f g h';gap:20px}
+.community-tile{position:relative;min-width:0;min-height:0;overflow:hidden;border-radius:22px;background:#fff;isolation:isolate}
+.community-tile:nth-child(1){grid-area:a}.community-tile:nth-child(2){grid-area:b}.community-tile:nth-child(3){grid-area:c}.community-tile:nth-child(4){grid-area:d}.community-tile:nth-child(5){grid-area:e}.community-tile:nth-child(6){grid-area:f}.community-tile:nth-child(7){grid-area:g}.community-tile:nth-child(8){grid-area:h}
+.community-face{position:absolute;inset:0;min-width:0;height:100%;opacity:1}
+.community-face.is-entering{z-index:2;animation:community-in .65s ease both}
+.community-face.is-leaving{z-index:1;animation:community-out .65s ease both;pointer-events:none}
+.community-face>.mosaic-photo,.community-face>.mosaic-quote{grid-area:auto;width:100%;height:100%;min-height:0;margin:0;border-radius:22px}
+.community-face>.mosaic-photo{position:relative;display:block;aspect-ratio:auto;overflow:hidden;cursor:zoom-in}
+.community-face>.mosaic-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:22px}
+.community-face>.mosaic-quote{padding:30px;gap:20px;display:flex;flex-direction:column;justify-content:space-between}
+#experiencias .community-face .mosaic-quote>p{font-size:clamp(17px,1.25vw,22px);line-height:1.5;margin:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6;overflow:hidden;flex-shrink:0}
+.community-tile:nth-child(3) .mosaic-quote{justify-content:center;gap:32px}
+#experiencias .community-tile:nth-child(3) .mosaic-quote>p{-webkit-line-clamp:17}
+.community-face .mosaic-quote footer{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding-top:18px}
+.community-face .mosaic-quote footer strong{font-size:16px}
+.community-face .mosaic-quote footer small{font-size:12px}
+.community-next{border:0;border-bottom:1px solid currentColor;padding:7px 0;background:none;color:var(--kuara-blue);font:500 14px/1.4 Inter,Arial,sans-serif;cursor:pointer}
+.community-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.community-next:focus-visible{outline:3px solid var(--kuara-clay);outline-offset:4px}
+.community-tile:focus-within{outline:3px solid var(--kuara-clay);outline-offset:4px}
+@keyframes community-in{from{opacity:0}to{opacity:1}}
+@keyframes community-out{from{opacity:1}to{opacity:0}}
+@media(max-width:1200px){
+ .community-grid.is-ready{gap:16px;grid-template-rows:repeat(3,360px)}
+ .community-face>.mosaic-quote{padding:26px}
+}
+@media(max-width:1000px){
+ .community-grid.is-ready{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,350px);grid-template-areas:'a b' 'c d'}
+ .community-tile:nth-child(3) .mosaic-quote{justify-content:space-between;gap:20px}
+ #experiencias .community-tile:nth-child(3) .mosaic-quote>p{-webkit-line-clamp:7}
+}
+@media(max-width:640px){
+ .community-grid.is-ready{grid-template-columns:1fr;grid-template-rows:repeat(2,350px);grid-template-areas:'a' 'b';gap:16px}
+ .community-fallback{grid-template-columns:1fr}
+ .community-face>.mosaic-quote{padding:28px 26px}
+ #experiencias .community-face .mosaic-quote>p{font-size:18px;-webkit-line-clamp:7}
+ .community-heading{gap:18px;margin-bottom:24px}
+ .community-actions{width:100%;justify-content:space-between;gap:16px}
+ .community-play,.community-next{font-size:13px}
+}
+@media(max-width:360px){
+ .community-face>.mosaic-quote{padding:24px 22px}
+ #experiencias .community-face .mosaic-quote>p{font-size:17px}
+ .community-face .mosaic-quote footer{gap:10px}
+ .community-face .mosaic-quote footer strong{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.community-face.is-entering,.community-face.is-leaving{animation:none}}
