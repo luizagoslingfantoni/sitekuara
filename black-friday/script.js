@@ -9,12 +9,44 @@ if (presaleForm) {
  });
 }
 const ribbonToggle = document.querySelector('.ribbon-toggle');
+const heroMotionRoot = document.querySelector('.reference-hero');
+const heroVideo = heroMotionRoot.querySelector('video');
+const heroReducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+let heroMotionPaused = heroReducedMotion.matches || Boolean(heroVideo && navigator.connection?.saveData);
+let heroInView = true;
+const syncHeroMotion = () => {
+ heroMotionRoot.classList.toggle('is-paused', heroMotionPaused);
+ ribbonToggle.setAttribute('aria-pressed', String(heroMotionPaused));
+ const subject = heroVideo ? 'vídeo e faixas animadas' : 'faixas animadas';
+ ribbonToggle.setAttribute('aria-label', `${heroMotionPaused ? 'Retomar' : 'Pausar'} ${subject}`);
+ ribbonToggle.textContent = heroMotionPaused ? '▶' : 'Ⅱ';
+ if (!heroVideo) return;
+ if (heroMotionPaused || document.hidden || !heroInView) {
+  heroVideo.pause();
+ } else {
+  if (!heroVideo.getAttribute('src')) heroVideo.src = heroVideo.dataset.src;
+  heroVideo.play().catch(() => {
+   if (document.hidden || !heroInView || heroMotionPaused) return;
+   heroMotionPaused = true;
+   syncHeroMotion();
+  });
+ }
+};
 ribbonToggle.addEventListener('click', () => {
- const paused = document.querySelector('.reference-hero').classList.toggle('is-paused');
- ribbonToggle.setAttribute('aria-pressed', String(paused));
- ribbonToggle.setAttribute('aria-label', paused ? 'Retomar faixas animadas' : 'Pausar faixas animadas');
- ribbonToggle.textContent = paused ? '▶' : 'Ⅱ';
+ heroMotionPaused = !heroMotionPaused;
+ syncHeroMotion();
 });
+heroReducedMotion.addEventListener('change', event => {
+ if (event.matches) { heroMotionPaused = true; syncHeroMotion(); }
+});
+if (heroVideo) {
+ new IntersectionObserver(([entry]) => {
+  heroInView = entry.isIntersecting;
+  syncHeroMotion();
+ }).observe(heroMotionRoot);
+ document.addEventListener('visibilitychange', syncHeroMotion);
+}
+syncHeroMotion();
 
 // As fotos recebidas entram como <img> nos quatro botões da galeria.
 // data-full-image pode apontar para uma versão maior que a miniatura.
