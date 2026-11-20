@@ -114,6 +114,7 @@ mobileMenu.addEventListener('change', () => setMenuOpen(false));
 let headerFrame = 0;
 const updateHeaderTheme = () => {
  headerFrame = 0;
+ pageHeader.dataset.scrolled = String(scrollY > 8);
  if (document.querySelector('dialog[open]')) return;
  let color = 'rgb(255, 255, 255)';
  if (scrollY > 40) {
