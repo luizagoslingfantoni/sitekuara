@@ -1,0 +1,22 @@
+/* A barra opcional de revisão do Netlify não faz parte desta prévia visual. */
+body>[data-netlify-deploy-id][data-netlify-site-id="d373f7bd-4f0b-49ec-908f-dcb052ac5d37"]{display:none!important}
+.problem-gallery[hidden]{display:none}
+.presale-form{row-gap:0}
+.presale-form .presale-email,.presale-form .presale-submit{margin-top:24px}
+.presale-form [data-turnstile-widget],.presale-form .turnstile-status{grid-column:1/-1;min-width:0;max-width:100%}
+.presale-form [data-turnstile-widget]{display:flex;justify-content:flex-start}
+.presale-form .turnstile-status{font-size:16px;line-height:1.5;margin:0;color:var(--kuara-paper)}
+.turnstile-status:empty{display:none}
+.presale-form .turnstile-status:not(:empty){margin-top:20px}
+.turnstile-status[data-state="success"]{padding:16px;border:1px solid currentColor;border-radius:8px}
+.presale-submit:disabled{opacity:.65;cursor:wait}
+.condition-card .hero-inclusions{margin-top:18px}
+#oferta .purchase-price{margin-bottom:28px}
+.thanks-main{width:min(780px,calc(100% - 48px));margin:10vh auto;padding:48px;background:var(--kuara-paper);border-top:4px solid var(--kuara-mustard);border-radius:20px}
+.thanks-main h1{font-size:clamp(30px,5vw,48px);color:var(--kuara-blue)}
+.thanks-main p{font-size:18px;color:var(--kuara-blue)}
+@media(max-width:640px){.thanks-main{padding:28px}}
+@media(max-width:1200px){.presale-form .presale-email,.presale-form .presale-submit,.presale-form .presale-consent{margin-top:20px}}
+@media(max-width:540px){.presale-form .presale-last,.presale-form .presale-email,.presale-form .presale-consent,.presale-form .presale-submit{margin-top:16px}}
+
+.sales-version .condition-card .checkout-channel,#oferta .checkout-channel{font-size:13px;text-align:center;color:#465469;margin:9px 0 0;line-height:1.5}

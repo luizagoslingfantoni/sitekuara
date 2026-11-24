@@ -1,2 +1,7 @@
 /mentorias/mentoria-individual/* /mentorias/orientacao-individual/:splat 301
 /mentoria-individual/ /mentorias/orientacao-individual/ 301
+
+/black-friday /black-friday/ 301
+
+/blackfriday /black-friday/index.html 200
+/blackfriday/ /black-friday/index.html 200

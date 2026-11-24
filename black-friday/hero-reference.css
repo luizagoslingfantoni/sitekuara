@@ -1,0 +1,148 @@
+/* Hero conforme referência enviada em 19/11. */
+header{width:min(1320px,calc(100% - 72px));height:76px;gap:30px}header nav{margin-left:auto;margin-right:70px}header .button.outline-light{background:#a84e2f;color:#fff;border-radius:6px;padding:7px 12px;min-height:0;font-size:13px}header img{width:106px}
+.reference-hero{position:relative;isolation:isolate;width:min(1860px,calc(100% - 60px));margin:0 auto 40px;border-radius:25px;overflow:hidden;color:#fff;min-height:780px;background:radial-gradient(ellipse at 100% 0%,#ffb953 0,transparent 37%),linear-gradient(90deg,#070503 0%,#461104 22%,#a53615 49%,#fa5520 80%,#ff8d3c 100%)}
+.reference-hero:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#0007,transparent 75%),repeating-linear-gradient(90deg,transparent 0,transparent 31%,#ffffff10 31%,#ffffff10 47%,transparent 47%,transparent 63%);pointer-events:none}.hero-halftone{position:absolute;inset:0;z-index:-1;opacity:.24;background-image:radial-gradient(circle,#ffe3bd 1.4px,transparent 2px);background-size:12px 12px;mask-image:linear-gradient(110deg,transparent 10%,#0006 45%,black 100%)}
+.crossed-tapes{height:300px;position:relative;margin-top:20px;pointer-events:none}.sale-tape{position:absolute;left:-9%;width:118%;height:90px;overflow:hidden;display:flex;align-items:center;box-shadow:0 7px 12px #0005}.tape-black{top:102px;transform:rotate(4.6deg);background:linear-gradient(#080808,#595854 10%,#0a0a0a 20%,#282828 50%,#0a0a0a 83%,#77736a 91%,#080808);color:#fff;border-block:2px solid #d0c6af}.tape-gold{top:112px;transform:rotate(-5.8deg);background:linear-gradient(#ffd399,#d4924c 10%,#f8c082 24%,#dba166 60%,#b87a3f 82%,#ffd7a8 94%,#b97b40);color:#121211;border-block:2px solid #382519}.sale-tape:after{content:'';position:absolute;inset:8px 0;border-block:2px solid currentColor;opacity:.8}.tape-black:after{opacity:.65}.tape-track{display:flex;width:max-content;animation:tape-slide 44s linear infinite}.tape-black .tape-track{animation-direction:reverse;animation-duration:53s}.tape-repeat{display:flex;flex-shrink:0;gap:58px;padding-right:58px;white-space:nowrap}.tape-repeat span{font-family:Inter,Arial,sans-serif;font-size:clamp(34px,3.3vw,58px);font-weight:900;letter-spacing:-.045em;line-height:1.1}.tape-black .tape-repeat span:nth-child(even){color:#e2b27b}.reference-hero.is-paused .tape-track{animation-play-state:paused}@keyframes tape-slide{to{transform:translateX(-50%)}}
+.reference-hero .ribbon-toggle{position:absolute;right:18px;bottom:16px;z-index:3;background:#32160c88;border:1px solid #ffffff44;color:white;width:28px;height:28px;border-radius:50%;font-size:12px}
+.reference-layout{width:min(1320px,calc(100% - 110px));margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:start;gap:65px;padding:24px 0 80px}.reference-copy h1{font-size:clamp(36px,3.1vw,54px);line-height:1.12;letter-spacing:-.04em;text-align:left;margin:0 0 24px;max-width:none;font-weight:700}.reference-intro{font-size:18px;line-height:1.5;color:#dbccc6;max-width:510px;margin:0}.reference-intro strong{font-weight:600}.date-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:white;color:#596c88;border-radius:28px;width:196px;min-height:102px;margin-top:30px;padding:16px}.date-card strong{font-size:16px;color:#a84e2f}.date-card span{font-size:19px}
+.hero-offer-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.hero-mini-card{background:#fff;color:#596c88;border-radius:30px;padding:28px 20px 24px;min-height:294px;display:flex;flex-direction:column}.hero-mini-card h2{font:700 19px/1.2 Inter,Arial,sans-serif;letter-spacing:-.035em;text-align:center;color:#ad4b2a;margin:0 0 22px}.hero-mini-card p,.hero-mini-card ul{font-size:16px;line-height:1.5;margin:0 0 18px;color:#596c88}.hero-mini-card ul{padding:0;list-style:none}.hero-mini-card ul li{margin-bottom:5px}.hero-mini-card .button{background:#a84e2f;color:#fff;font-size:16px;font-weight:400;border-radius:20px;padding:15px 8px;min-height:54px;white-space:nowrap;width:100%;margin-top:auto}.hero-mini-card .button:hover{background:#233754}.hero-mini-card small{font-size:10px;text-align:center;margin-top:10px;color:#596c88;line-height:1.4}.condition-card{text-align:center}.condition-card .reference-price{font-size:28px;white-space:nowrap;font-weight:400;letter-spacing:-.03em;margin:13px 0 24px}.condition-card>p:last-child{margin-top:auto;margin-bottom:8px}
+@media(max-width:1400px){.reference-layout{gap:35px;width:calc(100% - 80px);grid-template-columns:.8fr 1.2fr}.hero-offer-cards{gap:15px}.hero-mini-card{padding:25px 16px}.hero-mini-card h2{font-size:17px}.hero-mini-card p,.hero-mini-card ul{font-size:15px}.hero-mini-card .button{font-size:15px}.condition-card .reference-price{font-size:25px}.reference-intro{font-size:16px}.crossed-tapes{height:270px}.reference-hero{min-height:720px}.reference-copy h1{font-size:40px}}
+@media(max-width:1050px){header nav{margin-right:15px;gap:20px}.reference-layout{grid-template-columns:1fr;gap:30px;max-width:780px;padding-bottom:55px}.reference-copy{display:grid;grid-template-columns:1fr 170px;column-gap:30px}.reference-copy h1{grid-column:1}.reference-intro{grid-column:1}.date-card{grid-column:2;grid-row:1/3;width:170px;align-self:end;margin:0}.reference-copy h1 br{display:none}.reference-intro{max-width:none}.hero-mini-card{min-height:270px}.crossed-tapes{height:220px}.sale-tape{height:70px}.tape-black{top:75px}.tape-gold{top:90px}.tape-repeat span{font-size:40px}.reference-hero{min-height:0}.reference-layout{padding-top:10px}}
+@media(max-width:640px){header{width:calc(100% - 40px);height:70px;gap:15px}header nav{display:none}header .button.outline-light{font-size:11px;padding:8px 10px}.reference-hero{width:calc(100% - 28px);border-radius:19px;margin-bottom:0}.crossed-tapes{height:160px;margin-top:8px}.sale-tape{height:51px;left:-14%;width:128%}.tape-black{top:50px;transform:rotate(7deg)}.tape-gold{top:63px;transform:rotate(-8deg)}.tape-repeat{gap:25px;padding-right:25px}.tape-repeat span{font-size:28px}.sale-tape:after{inset:5px 0;border-width:1px}.reference-layout{width:calc(100% - 40px);display:block;padding:7px 0 50px}.reference-copy{display:block}.reference-copy h1{font-size:34px;line-height:1.13;margin-bottom:20px}.reference-copy h1 br{display:block}.reference-intro{font-size:15px;line-height:1.6}.date-card{margin-top:24px;min-height:76px;width:170px;border-radius:22px}.date-card strong{font-size:13px}.date-card span{font-size:16px}.hero-offer-cards{grid-template-columns:1fr;gap:16px;margin-top:28px}.hero-mini-card{border-radius:25px;padding:26px;min-height:0}.hero-mini-card h2{font-size:19px;margin-bottom:18px}.hero-mini-card h2 br{display:none}.hero-mini-card h2 br:after{content:' '}.hero-mini-card p,.hero-mini-card ul{font-size:16px}.hero-mini-card .button{font-size:17px;max-width:260px;align-self:center}.hero-mini-card small{margin-bottom:0}.condition-card .reference-price{font-size:32px;margin:6px 0 20px}.condition-card>p:last-child{margin:0}.hero-mini-card ul{margin-bottom:0;text-align:center}.hero-mini-card:first-child p{text-align:center}.reference-hero .ribbon-toggle{bottom:12px;right:12px}}
+@media(prefers-reduced-motion:reduce){.tape-track{animation:none}.reference-hero .ribbon-toggle{display:none}}
+
+@media(max-width:640px){.reference-hero:before{background:linear-gradient(90deg,#0009,#39140880)}.reference-intro{color:#fff}}
+
+/* Faixas e cartões com a paleta Kûara. */
+:root{--kuara-blue:#233754;--kuara-mustard:#d8bd66}
+.tape-black{background:var(--kuara-blue);border-color:#7a889b;color:#f5eee5;box-shadow:0 7px 12px #15233840}
+.tape-gold{background:var(--kuara-mustard);border-color:#9a823b;color:var(--kuara-blue);box-shadow:0 7px 12px #15233840}
+.tape-black .tape-repeat span:nth-child(even){color:var(--kuara-mustard)}
+.sale-tape:after{opacity:.5;border-width:1px}.tape-repeat span{font-size:clamp(30px,3vw,54px);letter-spacing:-.04em}
+.hero-offer-cards{gap:13px;align-items:stretch}.hero-mini-card{position:relative;overflow:hidden;border-radius:8px 8px 28px 8px;padding:26px 20px 22px;min-height:345px;box-shadow:0 12px 24px #32160c15;background:#f5eee5;color:var(--kuara-blue);border-top:4px solid var(--kuara-mustard)}
+.hero-mini-card .card-kicker{font-size:9px;font-weight:700;letter-spacing:.08em;margin-bottom:18px;color:#a24d2f;line-height:1.5}
+.hero-mini-card h2{text-align:left;text-transform:none;font-size:24px;letter-spacing:-.05em;color:var(--kuara-blue);margin:0 0 18px;line-height:1.1}.hero-mini-card h2 br{display:block}
+.hero-mini-card p,.hero-mini-card ul{font-size:14px;color:var(--kuara-blue);line-height:1.5}
+.card-date{display:flex;align-items:baseline;font-size:48px;line-height:1;letter-spacing:-.07em;font-weight:600;border-bottom:1px solid #23375433;padding-bottom:15px;margin-bottom:17px}.card-date>span{font-size:25px;font-weight:400}.card-date i{font-size:28px;margin-left:auto;font-style:normal;color:#a24d2f}
+.hero-mini-card .button{border-radius:7px;font-size:13px;font-weight:600;min-height:46px;padding:12px;display:flex;justify-content:space-between;gap:8px;background:#a24d2f}.hero-mini-card small{font-size:9px;color:#465469}
+.learning-card{background:#fff;border-top-color:#a24d2f}.lesson-count{border-bottom:1px solid #23375433;padding-bottom:15px;margin-bottom:17px;display:flex;flex-direction:column;gap:6px}.lesson-count strong{font-size:35px;line-height:1;letter-spacing:-.06em;font-weight:600}.lesson-count strong span{color:#a24d2f}.lesson-count>span{font-size:11px;color:#465469}.hero-mini-card ul li{padding-left:12px;position:relative;margin-bottom:9px}.hero-mini-card ul li:before{content:'·';position:absolute;left:0;color:#a24d2f;font-weight:700}.card-wave{width:100%;height:18px;margin-top:auto;fill:none;stroke:#a24d2f;stroke-width:1.5}
+.condition-card{background:var(--kuara-blue);border-top-color:var(--kuara-mustard);color:#f5eee5;text-align:left}.offer-seal{background:var(--kuara-mustard);color:var(--kuara-blue);font-size:9px;font-weight:700;letter-spacing:.04em;padding:7px 8px;border-radius:3px;width:fit-content;margin-bottom:24px}.condition-card h2{color:#f5eee5;font-size:23px;line-height:1.15}.condition-card .reference-price{font-size:47px;font-weight:600;color:#f5eee5;letter-spacing:-.07em;margin:14px 0 10px;white-space:nowrap}.reference-price>span{font-size:18px;letter-spacing:-.03em;font-weight:400}.condition-card .price-caption{font-size:11px;color:#e2e6ec;margin-bottom:25px}.card-assurance{margin-top:auto;padding-top:18px;border-top:1px solid #ffffff40;display:flex;flex-direction:column;gap:8px;font-size:12px}.card-assurance strong{color:var(--kuara-mustard);font-weight:600}
+@media(max-width:1400px) and (min-width:1051px){.hero-mini-card{padding:22px 16px}.hero-mini-card h2{font-size:21px}.condition-card .reference-price{font-size:40px}.hero-mini-card .card-kicker{font-size:8px}}
+@media(max-width:640px){.tape-repeat span{font-size:26px}.hero-mini-card{padding:26px;min-height:0;border-radius:8px 8px 26px 8px}.hero-mini-card h2{font-size:27px}.hero-mini-card .card-kicker{font-size:10px}.hero-mini-card:first-child p,.hero-mini-card ul{text-align:left}.hero-mini-card .button{max-width:none;font-size:16px}.hero-mini-card p,.hero-mini-card ul{font-size:15px}.card-date{font-size:56px}.hero-mini-card small{font-size:11px}.card-wave{margin-top:20px}.condition-card .reference-price{font-size:58px;margin:12px 0}.condition-card .price-caption{font-size:13px}.card-assurance{font-size:14px}.offer-seal{font-size:10px}}
+
+/* Dois cartões: pré-venda e mentoria. */
+.hero-offer-cards{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:18px}.hero-mini-card{padding:28px 24px}.presale-card h2{margin-bottom:25px}.condition-card h2{font-size:27px}.condition-card .reference-price{margin:4px 0 20px;font-size:52px}.condition-card .hero-inclusions{color:#f5eee5;font-size:14px;line-height:1.5;margin-bottom:20px;text-align:left}.condition-card .hero-inclusions li:before{color:#d8bd66}.card-assurance{gap:10px}.card-assurance strong{letter-spacing:.08em;font-size:11px}
+@media(max-width:1400px) and (min-width:1051px){.hero-mini-card{padding:25px 20px}.condition-card h2{font-size:25px}}
+@media(max-width:640px){.hero-offer-cards{grid-template-columns:1fr}.hero-mini-card{padding:26px}.condition-card h2{font-size:28px}.condition-card .hero-inclusions{font-size:15px}.condition-card .reference-price{font-size:58px}}
+
+/* Fundo de fogo recuperado do projeto Kûara. */
+.reference-hero{background:#21110b url('assets/forno-latao-fire-hero.jpg') center center/cover no-repeat}
+.reference-hero:before{background:linear-gradient(90deg,rgba(10,7,5,.78) 0%,rgba(10,7,5,.58) 42%,rgba(10,7,5,.12) 100%)}
+.reference-hero .hero-halftone{display:none}.reference-intro{color:#f5eee5}
+@media(max-width:640px){.reference-hero{background-position:58% center}.reference-hero:before{background:rgba(10,7,5,.58)}}
+
+/* Calendário e pré-venda em uma sequência única. */
+.presale-card{align-self:start;padding:0;display:block}.enrollment-period{padding:25px 24px 22px;border-bottom:1px solid #23375426;background:#eae1d3}.enrollment-period .card-kicker{display:block;margin:0 0 15px;color:#233754;font-size:10px;letter-spacing:.09em}.enrollment-dates{display:flex;align-items:baseline;gap:12px;color:#233754;white-space:nowrap}.enrollment-dates time{font-size:38px;font-weight:600;letter-spacing:-.06em;line-height:1.1}.enrollment-dates time span{font-size:19px;font-weight:400;letter-spacing:-.03em}.enrollment-dates .date-until{font-size:14px;color:#465469}.enrollment-period p{font-size:11px;margin:12px 0 0;color:#465469}.presale-details{padding:24px}.presale-date{display:inline-block;font-size:10px;letter-spacing:.06em;font-weight:700;color:#a24d2f;margin-bottom:15px}.presale-details h2{font-size:23px;line-height:1.15;margin-bottom:14px}.presale-details p{font-size:14px;margin:0 0 20px}.presale-details .button{margin-top:0;justify-content:center;font-size:14px}.presale-details small{display:block;margin-top:10px}.reference-copy{padding-top:4px}
+@media(max-width:1400px) and (min-width:1051px){.enrollment-period,.presale-details{padding:22px 20px}.enrollment-dates{gap:10px}.enrollment-dates time{font-size:34px}.presale-details h2{font-size:22px}}
+@media(max-width:1050px){.reference-copy{display:block}.reference-intro{max-width:650px}}
+@media(max-width:640px){.presale-card{padding:0}.enrollment-period,.presale-details{padding:25px 26px}.enrollment-dates time{font-size:40px}.presale-details h2{font-size:25px}.presale-details p{font-size:15px}.presale-details .button{font-size:16px}.enrollment-period p{font-size:12px}}
+
+/* Equilíbrio entre os cartões e hierarquia das datas. */
+.hero-offer-cards{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.presale-card{align-self:stretch;display:flex;flex-direction:column}
+.presale-details{display:flex;flex-direction:column;flex:1}
+.presale-details .button{margin-top:auto}
+.enrollment-dates time,.enrollment-dates time span{font-size:30px;font-weight:600;letter-spacing:-.05em}
+.presale-date{font-size:14px;letter-spacing:.04em}
+@media(max-width:1400px) and (min-width:1051px){.enrollment-dates time,.enrollment-dates time span{font-size:27px}}
+@media(max-width:640px){.hero-offer-cards{grid-template-columns:1fr}.enrollment-dates time,.enrollment-dates time span{font-size:30px}.presale-date{font-size:15px}.presale-details .button{margin-top:0}}
+
+.presale-details .button{margin-top:0}.presale-details{justify-content:center}.condition-card .reference-price{line-height:1.2;margin:4px 0 18px}.condition-card .hero-inclusions li{margin-bottom:7px}
+
+.reference-copy .hero-subheading{font-family:Inter,Arial,sans-serif;font-size:clamp(20px,1.65vw,26px);font-weight:600;line-height:1.35;letter-spacing:-.025em;color:#f5eee5;margin:0 0 20px;text-align:left;max-width:510px}
+@media(max-width:640px){.reference-copy .hero-subheading{font-size:21px;margin-bottom:18px}}
+
+/* Terracotas confirmados na paleta do site oficial. */
+.tape-black{background:#9d3e22;border-color:#f5eee599;color:#f5eee5}.tape-gold{background:#a24d2f;border-color:#f5eee599;color:#fff}.tape-black .tape-repeat span:nth-child(even){color:#f5eee5}.sale-tape:after{opacity:.45}
+.condition-card .reference-price{margin-bottom:5px}.condition-card .installments{color:#f5eee5;font-size:14px;line-height:1.5;margin:0 0 22px}
+/* No desktop, o hero ocupa a primeira tela abaixo do cabeçalho. */
+@media(min-width:1060px){
+ .draft{height:28px;padding:0 20px;display:flex;align-items:center;justify-content:center}
+ header{height:76px}
+ .reference-hero{min-height:max(650px,calc(100svh - 104px));margin-bottom:0;display:flex;flex-direction:column}
+ .crossed-tapes{height:auto;flex:0 0 clamp(160px,24svh,290px);margin-top:0}
+ .sale-tape{top:calc(50% - 42px);height:clamp(64px,8.5svh,90px)}
+ .reference-layout{flex:1;align-items:center;padding:12px 0 32px;gap:45px}
+ .hero-offer-cards{align-self:center}
+ .reference-copy{padding:0}
+}
+@media(min-width:1060px) and (max-height:850px){
+ .reference-hero{min-height:max(620px,calc(100svh - 104px))}
+ .crossed-tapes{flex-basis:150px}
+ .sale-tape{height:64px;top:calc(50% - 32px)}
+ .tape-repeat span{font-size:38px}
+ .reference-layout{padding:8px 0 24px}
+ .reference-copy h1{font-size:38px;margin-bottom:18px}
+ .reference-copy .hero-subheading{font-size:21px;margin-bottom:16px}
+ .reference-intro{font-size:16px}
+ .hero-mini-card{padding:20px;min-height:0}
+ .presale-card{padding:0}
+ .enrollment-period{padding:18px 20px}
+ .enrollment-period .card-kicker{margin-bottom:10px}
+ .enrollment-period p{margin-top:8px}
+ .presale-details{padding:20px}
+ .presale-date{margin-bottom:12px}
+ .presale-details h2{font-size:23px;margin-bottom:12px}
+ .presale-details p{margin-bottom:16px}
+ .condition-card h2{font-size:24px;margin-bottom:12px}
+ .offer-seal{margin-bottom:18px}
+ .condition-card .reference-price{font-size:44px;margin:0 0 4px}
+ .condition-card .installments{margin-bottom:16px}
+ .condition-card .hero-inclusions{font-size:14px;margin-bottom:14px}
+ .condition-card .hero-inclusions li{margin-bottom:5px}
+ .card-assurance{padding-top:14px;gap:6px}
+}
+@media(min-width:1060px){.crossed-tapes{width:100%}}
+@media(min-width:1060px) and (max-height:850px){.reference-hero{min-height:max(600px,calc(100svh - 104px))}}
+.reference-hero{scroll-margin-top:104px}
+
+/* Ajustes de hierarquia solicitados na revisão. */
+.enrollment-dates .date-until{font-size:30px;font-weight:600;letter-spacing:-.05em;color:#233754}
+.presale-date{font-size:16px}
+@media(max-width:1400px) and (min-width:1051px){.enrollment-dates .date-until{font-size:27px}}
+@media(max-width:640px){.presale-date{font-size:16px}.enrollment-dates{gap:10px}.enrollment-dates time,.enrollment-dates time span,.enrollment-dates .date-until{font-size:clamp(25px,7.4vw,30px)}}
+
+/* Duas linhas explícitas, com escala relativa à coluna do título. */
+.reference-copy{container-type:inline-size}
+.reference-copy h1{font-size:8.4cqi;line-height:1.15}
+.reference-copy h1>span{display:block;white-space:nowrap}
+
+
+/* Retorno às cores originais das faixas para comparação. */
+.tape-black{background:linear-gradient(#080808,#595854 10%,#0a0a0a 20%,#282828 50%,#0a0a0a 83%,#77736a 91%,#080808);color:#fff;border-color:#d0c6af}
+.tape-gold{background:linear-gradient(#ffd399,#d4924c 10%,#f8c082 24%,#dba166 60%,#b87a3f 82%,#ffd7a8 94%,#b97b40);color:#121211;border-color:#382519}
+.tape-black .tape-repeat span:nth-child(even){color:#e2b27b}
+.sale-tape:after{border-width:2px;opacity:.8}.tape-black:after{opacity:.65}
+
+/* Mesma escala para os textos de apoio do card de inscrições. */
+.enrollment-period p,.presale-details small{font-size:14px;line-height:1.5}
+@media(max-width:640px){.enrollment-period p,.presale-details small{font-size:15px}}
+
+/* Marca em branco junto à apresentação da mentoria. */
+.hero-brand{display:block;width:176px;margin:0 0 24px}
+.hero-brand img{display:block;width:100%;height:auto;filter:brightness(0) invert(1)}
+header nav{margin-left:0;margin-right:auto}
+@media(min-width:1060px) and (max-height:850px){.hero-brand{width:148px;margin-bottom:18px}}
+@media(max-width:640px){.hero-brand{width:156px;margin-bottom:24px}header{justify-content:flex-end}}
+
+/* A primeira dobra acompanha a janela, inclusive ao trocar de monitor. */
+:root{--hero-offset:104px}
+.reference-hero{min-height:max(0px,calc(100dvh - var(--hero-offset) + 2px));margin-bottom:0;display:flex;flex-direction:column;scroll-margin-top:var(--hero-offset)}
+.crossed-tapes{width:100%;flex-shrink:0}
+.reference-layout{flex:1}
+.hero-brand{width:184px}
+.hero-brand img{filter:none;width:100%;height:auto}
+@media(min-width:1060px) and (max-height:850px){.hero-brand{width:160px}}
+@media(min-width:1060px) and (max-height:760px){.crossed-tapes{flex-basis:120px}.reference-layout{padding-top:0;padding-bottom:22px}}
+@media(max-width:1059px){.reference-hero{min-height:max(0px,calc(100dvh - var(--hero-offset) + 2px))}.reference-layout{flex:0 0 auto}}
+@media(max-width:640px){.hero-brand{width:164px}}
