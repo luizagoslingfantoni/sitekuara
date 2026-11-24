@@ -7,4 +7,4 @@ export default async (request, context) => {
  response.headers.set('Cache-Control', 'no-store');
  return response;
 };
-export const config = { path: ['/black-friday/', '/black-friday/index.html'], method: 'GET' };
+export const config = { path: ['/blackfriday', '/blackfriday/', '/black-friday/', '/black-friday/index.html'], method: 'GET' };

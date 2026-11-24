@@ -24,3 +24,9 @@
 
 /black-friday/vendas.html
   Cache-Control: no-store
+
+/blackfriday
+  Cache-Control: no-store
+
+/blackfriday/
+  Cache-Control: no-store

@@ -36,3 +36,26 @@ test('presale is signed and stored independently without enrolling in another ca
  await syncContact(verified,{env:{BREVO_LIST_BLACK_FRIDAY_2026:'36',BREVO_API_KEY:'test-only'},fetcher:async(_,options)=>{ contact=JSON.parse(options.body); return {ok:true}; }});
  assert.deepEqual(contact.listIds,[36]);
 });
+
+
+test('public /blackfriday URL keeps its address and receives the scheduled edge handler', async () => {
+ const { config } = await import('../netlify/edge-functions/black-friday.js');
+ for (const path of ['/blackfriday', '/blackfriday/']) assert(config.path.includes(path));
+ const redirects = readFileSync(new URL('../_redirects', import.meta.url), 'utf8');
+ assert.match(redirects, /^\/blackfriday \/black-friday\/index\.html 200$/m);
+ assert.match(redirects, /^\/blackfriday\/ \/black-friday\/index\.html 200$/m);
+});
+
+test('public campaign serves presale before the boundary and sales from midnight Brasília', async () => {
+ const { default: handle } = await import('../netlify/edge-functions/black-friday.js');
+ const originalNow = Date.now;
+ try {
+  Date.now = () => Date.parse('2026-11-27T02:59:59.999Z');
+  const before = await handle(new Request('https://kuaraceramicas.com.br/blackfriday'), { next: async () => new Response('presale') });
+  assert.equal(await before.text(), 'presale');
+  assert.equal(before.headers.get('Cache-Control'), 'no-store');
+  Date.now = () => Date.parse('2026-11-27T03:00:00.000Z');
+  const after = await handle(new Request('https://kuaraceramicas.com.br/blackfriday'), { next: () => assert.fail('Must serve sales at campaign start') });
+  assert.equal(after.href, 'https://kuaraceramicas.com.br/black-friday/vendas');
+ } finally { Date.now = originalNow; }
+});
