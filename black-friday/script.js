@@ -259,7 +259,7 @@ const swapTile = async tile => {
   }
  }
  // Re-check after image loading so a card never changes under a hovering reader.
- if (document.hidden || tile.gallery.element.matches(':hover,:focus-within') || document.querySelector('dialog[open]')) {
+ if (document.hidden || !tile.visible || (tile.gallery.kind === 'photo' && heroReducedMotion.matches) || tile.gallery.element.matches(':hover,:focus-within') || document.querySelector('dialog[open]')) {
   tile.gallery.queue.unshift(next);
   tile.transitioning = false;
   return;
@@ -285,13 +285,32 @@ const swapTile = async tile => {
 };
 document.fonts.ready.then(() => allQuotes.filter(quote => quote.isConnected).forEach(measureQuote));
 let galleryTick = performance.now();
+let photoElapsed = 0;
+let photoCursor = 0;
 setInterval(() => {
  const now = performance.now();
  const elapsed = Math.min(now - galleryTick, 500);
  galleryTick = now;
  if (document.hidden || document.querySelector('dialog[open]')) return;
- rotatingTiles.forEach(tile => {
-  if (!tile.visible || tile.transitioning || tile.gallery.element.matches(':hover,:focus-within')) return;
+ // One photograph changes every five seconds across the visible galleries.
+ // Pause the clock while reading, zooming or requesting reduced motion.
+ const photos = rotatingTiles.filter(tile => tile.gallery.kind === 'photo');
+ const available = tile => tile.visible && !tile.transitioning && !tile.gallery.element.matches(':hover,:focus-within');
+ if (!heroReducedMotion.matches && photos.some(available)) {
+  photoElapsed += elapsed;
+  if (photoElapsed >= 5000 && !photos.some(tile => tile.transitioning)) {
+   for (let offset = 0; offset < photos.length; offset++) {
+    const index = (photoCursor + offset) % photos.length;
+    if (!available(photos[index])) continue;
+    photoCursor = (index + 1) % photos.length;
+    photoElapsed = 0;
+    swapTile(photos[index]);
+    break;
+   }
+  }
+ }
+ rotatingTiles.filter(tile => tile.gallery.kind === 'quote').forEach(tile => {
+  if (!available(tile)) return;
   tile.elapsed += elapsed;
   if (tile.elapsed >= 10000) swapTile(tile);
  });

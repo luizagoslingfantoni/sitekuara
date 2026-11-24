@@ -43,3 +43,9 @@ main>#pre-venda .presale-submit{min-height:50px;height:50px;padding:12px 18px;fo
 @media(max-width:760px){#autonomia .problem-panel{grid-template-columns:1fr}.problem-gallery{max-width:620px;width:100%;margin-inline:auto}#amanda .teacher{grid-template-columns:1fr;gap:30px}#amanda .teacher figure{grid-column:1;grid-row:1;max-height:none;height:420px;width:min(100%,480px);justify-self:center}#amanda .teacher>div{grid-column:1;grid-row:2}.presale-panel{padding:26px 22px;gap:22px}.page-footer .footer-bottom{display:flex;flex-direction:column;align-items:flex-start;padding-bottom:72px}.offer-marquee span{font-size:22px;gap:28px;padding-right:28px}}
 @media(max-width:540px){.presale-form{gap:0}.presale-field input{height:48px}.presale-form .presale-last,.presale-form .presale-email,.presale-form .presale-consent,.presale-form .presale-submit{margin-top:12px}.presale-consent{font-size:13px}#amanda .teacher h2{font-size:36px}.sales-version .hero-sales-dates{font-size:min(17.333px,4.25cqi)}}
 @media(prefers-reduced-motion:reduce){.offer-marquee{animation:none;transform:none}}
+/* Complete lesson programme, November 24. */
+#curso .lesson-description ul{margin:0 0 20px;padding-left:20px;font-size:16px;line-height:1.6;color:#465469}
+#curso .lesson-description li+li{margin-top:7px}
+#curso .lesson-description p+ul{margin-top:16px}
+#curso .lesson-description .lesson-objective{padding-top:18px;border-top:1px solid #23375420}
+#curso .lesson-objective strong{color:var(--kuara-blue)}
