@@ -55,9 +55,11 @@
         }
         form.reset();
         if (window.turnstile && widgets.has(form)) window.turnstile.reset(widgets.get(form));
-        status(form, form.name.startsWith('newsletter-')
-          ? 'Cadastro recebido com sucesso! Obrigada por acompanhar a Kûara.'
-          : 'Formulário enviado com sucesso! Recebemos suas informações e entraremos em contato.');
+        status(form, form.name === 'pre-venda-black-friday-2026'
+          ? 'Recebemos seu cadastro. Dia 26/11 você terá acesso antecipado às vendas. Até lá!'
+          : form.name.startsWith('newsletter-')
+            ? 'Cadastro recebido com sucesso! Obrigada por acompanhar a Kûara.'
+            : 'Formulário enviado com sucesso! Recebemos suas informações e entraremos em contato.');
         const feedback = form.querySelector('[data-turnstile-status]');
         feedback.dataset.state = 'success';
         feedback.tabIndex = -1;
