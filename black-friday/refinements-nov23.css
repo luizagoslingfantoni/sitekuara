@@ -49,3 +49,6 @@ main>#pre-venda .presale-submit{min-height:50px;height:50px;padding:12px 18px;fo
 #curso .lesson-description p+ul{margin-top:16px}
 #curso .lesson-description .lesson-objective{padding-top:18px;border-top:1px solid #23375420}
 #curso .lesson-objective strong{color:var(--kuara-blue)}
+
+/* Let the planning card end immediately after its own content. */
+#curso .planning-card{align-self:start}

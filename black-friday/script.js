@@ -221,14 +221,14 @@ const wrapFace = node => {
  return face;
 };
 const addGallery = (element, kind, initial, queue) => {
- const gallery = {element, kind, queue, tiles: []};
+ const gallery = {element, kind, queue, tiles: [], independent: kind === 'photo' && element.classList.contains('problem-gallery')};
  element.replaceChildren();
- initial.forEach(item => {
+ initial.forEach((item, index) => {
   const frame = document.createElement('div');
   frame.className = 'gallery-tile';
   const content = kind === 'quote' ? item : createPhoto(item);
   frame.append(wrapFace(content));
-  const tile = {element:frame, item, gallery, elapsed:0, visible:false, transitioning:false};
+  const tile = {element:frame, item, gallery, elapsed:gallery.independent ? 2000 - index * 400 : 0, visible:false, transitioning:false};
   gallery.tiles.push(tile);
   rotatingTiles.push(tile);
   element.append(frame);
@@ -292,10 +292,18 @@ setInterval(() => {
  const elapsed = Math.min(now - galleryTick, 500);
  galleryTick = now;
  if (document.hidden || document.querySelector('dialog[open]')) return;
- // One photograph changes every five seconds across the visible galleries.
- // Pause the clock while reading, zooming or requesting reduced motion.
- const photos = rotatingTiles.filter(tile => tile.gallery.kind === 'photo');
+ // Community photographs keep their five-second rotation.
+ const photos = rotatingTiles.filter(tile => tile.gallery.kind === 'photo' && !tile.gallery.independent);
  const available = tile => tile.visible && !tile.transitioning && !tile.gallery.element.matches(':hover,:focus-within');
+ // The cost-section photos have independent three-second clocks, staggered
+ // by 400 ms. A slow image or an active fade never blocks another tile.
+ if (!heroReducedMotion.matches) {
+  rotatingTiles.filter(tile => tile.gallery.independent).forEach(tile => {
+   if (!tile.visible || tile.gallery.element.matches(':hover,:focus-within')) return;
+   tile.elapsed += elapsed;
+   if (tile.elapsed >= 3000 && !tile.transitioning) swapTile(tile);
+  });
+ }
  if (!heroReducedMotion.matches && photos.some(available)) {
   photoElapsed += elapsed;
   if (photoElapsed >= 5000 && !photos.some(tile => tile.transitioning)) {
