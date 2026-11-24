@@ -1,9 +1,6 @@
-/* Apresentação pública: os espaços para fotos aguardam os arquivos finais. */
 /* A barra opcional de revisão do Netlify não faz parte desta prévia visual. */
 body>[data-netlify-deploy-id][data-netlify-site-id="d373f7bd-4f0b-49ec-908f-dcb052ac5d37"]{display:none!important}
 .problem-gallery[hidden]{display:none}
-#autonomia .problem-panel{grid-template-columns:1fr}
-#autonomia .problem-story{max-width:1040px;width:100%;margin-inline:auto}
 .presale-form{row-gap:0}
 .presale-form .presale-email,.presale-form .presale-submit{margin-top:24px}
 .presale-form [data-turnstile-widget],.presale-form .turnstile-status{grid-column:1/-1;min-width:0;max-width:100%}
