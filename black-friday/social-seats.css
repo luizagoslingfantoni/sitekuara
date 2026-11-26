@@ -1,0 +1,21 @@
+/* Vagas sociais: bloco exclusivo da versão de vendas. */
+main>#vagas-sociais.social-seats-section{background:#fff;padding-block:56px}
+#vagas-sociais .social-seats-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(28px,4vw,56px);background:var(--kuara-paper,#f5eee5);color:var(--kuara-blue,#233754);border:1px solid #2337541f;border-radius:22px}
+#vagas-sociais .social-seats-heading,#vagas-sociais .social-seats-copy{min-width:0}
+#vagas-sociais .eyebrow{font-size:14px;line-height:1.5;letter-spacing:.08em;color:var(--kuara-clay,#a24d2f);margin:0 0 20px}
+#vagas-sociais h2{font-size:clamp(30px,3.2vw,46px);line-height:1.15;letter-spacing:-.045em;margin:0;color:var(--kuara-blue,#233754)}
+#vagas-sociais h2 span{display:block;color:var(--kuara-clay,#a24d2f)}
+#vagas-sociais .social-seats-copy p{font-size:18px;line-height:1.65;margin:0 0 18px;color:var(--kuara-blue,#233754)}
+#vagas-sociais .social-seats-copy p+p{font-size:16px;margin-bottom:26px}
+#vagas-sociais .social-seats-button{max-width:100%;min-height:52px;padding:15px 26px;background:var(--kuara-clay,#a24d2f);color:#fff;border-radius:6px;font-size:16px;text-align:center;white-space:normal}
+#vagas-sociais .social-seats-button:hover{background:var(--kuara-blue,#233754)}
+#vagas-sociais .social-seats-button:focus-visible{outline:3px solid var(--kuara-blue,#233754);outline-offset:4px}
+@media(max-width:760px){
+ main>#vagas-sociais.social-seats-section{padding-block:32px}
+ #vagas-sociais .social-seats-panel{grid-template-columns:1fr;gap:24px;padding:28px 24px;border-radius:18px}
+ #vagas-sociais .eyebrow{font-size:13px;margin-bottom:16px}
+ #vagas-sociais h2{font-size:clamp(29px,7.8vw,38px)}
+ #vagas-sociais .social-seats-copy p{font-size:16px}
+ #vagas-sociais .social-seats-copy p+p{margin-bottom:24px}
+ #vagas-sociais .social-seats-button{display:flex;width:100%;padding-inline:16px}
+}
