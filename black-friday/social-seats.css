@@ -1,21 +1,35 @@
-/* Vagas sociais: bloco exclusivo da versão de vendas. */
-main>#vagas-sociais.social-seats-section{background:#fff;padding-block:56px}
-#vagas-sociais .social-seats-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(28px,4vw,56px);background:var(--kuara-paper,#f5eee5);color:var(--kuara-blue,#233754);border:1px solid #2337541f;border-radius:22px}
-#vagas-sociais .social-seats-heading,#vagas-sociais .social-seats-copy{min-width:0}
-#vagas-sociais .eyebrow{font-size:14px;line-height:1.5;letter-spacing:.08em;color:var(--kuara-clay,#a24d2f);margin:0 0 20px}
-#vagas-sociais h2{font-size:clamp(30px,3.2vw,46px);line-height:1.15;letter-spacing:-.045em;margin:0;color:var(--kuara-blue,#233754)}
-#vagas-sociais h2 span{display:block;color:var(--kuara-clay,#a24d2f)}
-#vagas-sociais .social-seats-copy p{font-size:18px;line-height:1.65;margin:0 0 18px;color:var(--kuara-blue,#233754)}
-#vagas-sociais .social-seats-copy p+p{font-size:16px;margin-bottom:26px}
-#vagas-sociais .social-seats-button{max-width:100%;min-height:52px;padding:15px 26px;background:var(--kuara-clay,#a24d2f);color:#fff;border-radius:6px;font-size:16px;text-align:center;white-space:normal}
-#vagas-sociais .social-seats-button:hover{background:var(--kuara-blue,#233754)}
-#vagas-sociais .social-seats-button:focus-visible{outline:3px solid var(--kuara-blue,#233754);outline-offset:4px}
+/* Oferta compacta e vagas sociais na mesma coluna do hero de vendas. */
+.sales-version .hero-offer-cards{gap:14px;align-content:center}
+.sales-version .hero-offer-cards>.condition-card{padding:22px 26px;border-radius:12px 12px 24px 12px}
+.sales-version .condition-card .offer-seal{margin-bottom:12px;padding:5px 8px}
+.sales-version .condition-card h2{font-size:26px;line-height:1.13;margin-bottom:12px}
+.sales-version .condition-card .reference-price{font-size:52px;line-height:1.05;margin:0 0 12px}
+.sales-version .condition-card .hero-inclusions{font-size:15px;line-height:1.4;margin:0 0 16px}
+.sales-version .condition-card .hero-inclusions li{margin-bottom:4px}
+.sales-version .condition-card .hero-inclusions li:last-child{margin-bottom:0}
+.sales-version .hero-mini-card .hero-purchase-button{min-height:48px;padding:12px 16px;font-size:15px}
+.sales-version .hero-social-card{min-width:0;width:100%;padding:20px 26px;background:#fff;color:var(--kuara-blue,#233754);border-top:4px solid var(--kuara-mustard,#d8bd66);border-radius:12px 12px 24px 12px;box-shadow:0 12px 24px #32160c15;scroll-margin-top:100px}
+.sales-version .hero-social-card h2{font:600 13px/1.4 Inter,Arial,sans-serif;letter-spacing:.08em;text-align:left;color:var(--kuara-clay,#a24d2f);margin:0 0 8px}
+.sales-version .hero-social-card .hero-social-offer{font-size:21px;line-height:1.3;font-weight:600;letter-spacing:-.025em;color:var(--kuara-blue,#233754);margin:0 0 10px}
+.sales-version .hero-social-card .hero-social-details{font-size:15px;line-height:1.5;color:var(--kuara-blue,#233754);margin:0}
+.sales-version .hero-social-details a{color:var(--kuara-clay,#a24d2f);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.sales-version .hero-social-details a:hover{color:var(--kuara-blue,#233754)}
+.sales-version .hero-social-details a:focus-visible{outline:2px solid var(--kuara-clay,#a24d2f);outline-offset:4px;border-radius:2px}
+@media(min-width:1060px) and (max-height:850px){
+ .sales-version .hero-offer-cards>.condition-card{padding:18px 24px}
+ .sales-version .condition-card h2{font-size:25px;margin-bottom:10px}
+ .sales-version .condition-card .reference-price{font-size:48px;margin-bottom:10px}
+ .sales-version .condition-card .hero-inclusions{margin-bottom:12px}
+ .sales-version .hero-social-card{padding:16px 24px}
+}
 @media(max-width:760px){
- main>#vagas-sociais.social-seats-section{padding-block:32px}
- #vagas-sociais .social-seats-panel{grid-template-columns:1fr;gap:24px;padding:28px 24px;border-radius:18px}
- #vagas-sociais .eyebrow{font-size:13px;margin-bottom:16px}
- #vagas-sociais h2{font-size:clamp(29px,7.8vw,38px)}
- #vagas-sociais .social-seats-copy p{font-size:16px}
- #vagas-sociais .social-seats-copy p+p{margin-bottom:24px}
- #vagas-sociais .social-seats-button{display:flex;width:100%;padding-inline:16px}
+ .sales-version .hero-offer-cards{gap:14px}
+ .sales-version .hero-offer-cards>.condition-card{padding:22px 24px}
+ .sales-version .hero-social-card{padding:20px 24px}
+ .sales-version .hero-social-card .hero-social-offer{font-size:21px}
+}
+@media(max-width:360px){
+ .sales-version .hero-offer-cards>.condition-card,.sales-version .hero-social-card{padding:20px}
+ .sales-version .condition-card h2{font-size:24px}
+ .sales-version .condition-card .reference-price{font-size:48px}
 }
