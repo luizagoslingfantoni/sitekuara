@@ -1,0 +1,33 @@
+/* Comparação explícita entre a edição regular e o formato Black Friday. */
+.sales-version .edition-reference,.sales-version #oferta .purchase-price>.edition-reference{display:flex;flex-wrap:wrap;gap:4px 9px;align-items:baseline;color:#465469;font-size:14px;line-height:1.4;margin:0 0 6px}
+.sales-version .edition-reference s{font-size:18px;font-weight:500;white-space:nowrap;text-decoration-thickness:1.5px}
+.sales-version .edition-price-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin:0 0 12px}
+.sales-version .condition-card .edition-price-row .reference-price{margin:0}
+.sales-version .edition-discount{display:inline-flex;flex:0 0 62px;width:62px;height:62px;align-items:center;justify-content:center;border:1px solid #b39137;border-radius:50%;background:var(--kuara-mustard,#d8bd66);color:var(--kuara-blue,#233754);font-size:19px;font-weight:700;line-height:1;letter-spacing:-.04em;transform:rotate(-8deg)}
+.sales-version .edition-format-note,.sales-version #oferta .edition-format-note{font-size:14px;line-height:1.45;font-weight:400;color:#465469;margin:0 0 14px}
+.sales-version .condition-card .hero-inclusions{margin-bottom:12px}
+.sales-version #oferta .purchase-price{margin-bottom:20px}
+.sales-version #oferta .edition-price-row{gap:10px 14px}
+.sales-version #oferta .edition-format-note{margin:12px 0 0}
+.sales-version #oferta .edition-discount{flex-basis:66px;width:66px;height:66px;font-size:20px}
+@media(max-width:360px){
+ .sales-version .edition-price-row{gap:8px}
+ .sales-version .condition-card .edition-price-row .reference-price{font-size:44px;letter-spacing:-.04em}
+ .sales-version .condition-card .reference-price>span{font-size:18px}
+ .sales-version .edition-discount{flex-basis:52px;width:52px;height:52px;font-size:17px}
+ .sales-version #oferta .edition-discount{flex-basis:56px;width:56px;height:56px;font-size:18px}
+}
+
+ /* Mantém o selo ao lado do valor também no card mais estreito. */
+.sales-version .bf-purchase-card{container-type:inline-size}
+.sales-version #oferta .edition-price-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}
+.sales-version #oferta .edition-price-row .bf-price{gap:3px}
+.sales-version #oferta .edition-price-row .bf-price strong{font-size:clamp(46px,24cqi,82px)}
+.sales-version #oferta .edition-price-row .bf-price>span{font-size:clamp(16px,8cqi,24px)}
+.sales-version #oferta .edition-price-row .bf-price>span:first-child{margin-right:0}
+.sales-version #oferta .edition-discount{width:clamp(48px,20cqi,64px);height:clamp(48px,20cqi,64px);font-size:clamp(16px,7cqi,20px)}
+@media(max-width:360px){
+ .sales-version .condition-card .edition-price-row{gap:6px}
+ .sales-version .condition-card .edition-discount{flex-basis:48px;width:48px;height:48px;font-size:16px}
+}
+
