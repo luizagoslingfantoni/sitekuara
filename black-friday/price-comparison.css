@@ -4,11 +4,9 @@
 .sales-version .edition-price-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin:0 0 12px}
 .sales-version .condition-card .edition-price-row .reference-price{margin:0}
 .sales-version .edition-discount{display:inline-flex;flex:0 0 62px;width:62px;height:62px;align-items:center;justify-content:center;border:0;border-radius:50%;background:var(--kuara-mustard,#d8bd66);color:var(--kuara-blue,#233754);font-size:19px;font-weight:700;line-height:1;letter-spacing:-.04em;transform:rotate(-8deg)}
-.sales-version .edition-format-note,.sales-version #oferta .edition-format-note{font-size:14px;line-height:1.45;font-weight:400;color:#465469;margin:0 0 14px}
 .sales-version .condition-card .hero-inclusions{margin-bottom:12px}
 .sales-version #oferta .purchase-price{margin-bottom:20px}
 .sales-version #oferta .edition-price-row{gap:10px 14px}
-.sales-version #oferta .edition-format-note{margin:12px 0 0}
 .sales-version #oferta .edition-discount{flex-basis:66px;width:66px;height:66px;font-size:20px}
 @media(max-width:360px){
  .sales-version .edition-price-row{gap:8px}
@@ -31,3 +29,7 @@
  .sales-version .condition-card .edition-discount{flex-basis:48px;width:48px;height:48px;font-size:16px}
 }
 
+
+.sales-version .condition-card h2,.sales-version #oferta .purchase-heading h3{margin-bottom:6px}
+.sales-version .condition-card .edition-label,.sales-version #oferta .edition-label{font-size:14px;line-height:1.4;font-weight:600;color:var(--kuara-clay,#a24d2f);margin:0 0 14px}
+.sales-version #oferta .edition-label{margin-bottom:24px}
