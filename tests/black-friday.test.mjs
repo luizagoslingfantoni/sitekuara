@@ -1,15 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { blackFridayDestination } from '../netlify/lib/black-friday.mjs';
+import { blackFridayDestination, salesOnHold } from '../netlify/lib/black-friday.mjs';
 import { guardForm } from '../netlify/lib/turnstile-guard.mjs';
 import { verifiedEventData } from '../netlify/lib/form-event.mjs';
 import { syncContact } from '../netlify/lib/brevo.mjs';
 
-test('campaign changes at midnight Brasília, including the exact boundary', () => {
- assert.equal(blackFridayDestination(Date.parse('2026-11-27T02:59:59.999Z')), null);
- assert.equal(blackFridayDestination(Date.parse('2026-11-27T03:00:00.000Z')), '/black-friday/vendas');
- assert.equal(blackFridayDestination(Date.parse('2026-11-27T00:00:00-03:00')), '/black-friday/vendas');
+test('campaign hold keeps presale before, at and after the original opening time', () => {
+ assert.equal(salesOnHold, true);
+ for (const instant of [
+  '2026-11-27T02:59:59.999Z',
+  '2026-11-27T03:00:00.000Z',
+  '2026-11-27T00:00:00-03:00',
+  '2026-11-28T12:00:00-03:00',
+  '2027-01-01T00:00:00-03:00',
+ ]) assert.equal(blackFridayDestination(Date.parse(instant)), null);
+ assert.equal(blackFridayDestination(), null);
 });
 
 test('published presale identifier is accepted by Turnstile and matches the submitted form', () => {
@@ -46,16 +52,19 @@ test('public /blackfriday URL keeps its address and receives the scheduled edge 
  assert.match(redirects, /^\/blackfriday\/ \/black-friday\/index\.html 200$/m);
 });
 
-test('public campaign serves presale before the boundary and sales from midnight Brasília', async () => {
- const { default: handle } = await import('../netlify/edge-functions/black-friday.js');
+test('public campaign remains on presale for every route while opening is on hold', async () => {
+ const { default: handle, config } = await import('../netlify/edge-functions/black-friday.js');
  const originalNow = Date.now;
  try {
-  Date.now = () => Date.parse('2026-11-27T02:59:59.999Z');
-  const before = await handle(new Request('https://kuaraceramicas.com.br/blackfriday'), { next: async () => new Response('presale') });
-  assert.equal(await before.text(), 'presale');
-  assert.equal(before.headers.get('Cache-Control'), 'no-store');
-  Date.now = () => Date.parse('2026-11-27T03:00:00.000Z');
-  const after = await handle(new Request('https://kuaraceramicas.com.br/blackfriday'), { next: () => assert.fail('Must serve sales at campaign start') });
-  assert.equal(after.href, 'https://kuaraceramicas.com.br/black-friday/vendas');
+  for (const instant of ['2026-11-27T02:59:59.999Z', '2026-11-27T03:00:00.000Z', '2026-12-01T12:00:00-03:00']) {
+   Date.now = () => Date.parse(instant);
+   for (const path of config.path) {
+    const response = await handle(new Request('https://kuaraceramicas.com.br' + path), { next: async () => new Response('presale') });
+    assert(response instanceof Response);
+    assert.equal(await response.text(), 'presale');
+    assert.equal(response.headers.get('Cache-Control'), 'no-store');
+    assert.equal(response.headers.get('X-Kuara-Campaign'), 'presale-hold');
+   }
+  }
  } finally { Date.now = originalNow; }
 });
