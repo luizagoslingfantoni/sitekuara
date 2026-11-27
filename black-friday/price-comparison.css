@@ -3,7 +3,7 @@
 .sales-version .edition-reference s{font-size:18px;font-weight:500;white-space:nowrap;text-decoration-thickness:1.5px}
 .sales-version .edition-price-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin:0 0 12px}
 .sales-version .condition-card .edition-price-row .reference-price{margin:0}
-.sales-version .edition-discount{display:inline-flex;flex:0 0 62px;width:62px;height:62px;align-items:center;justify-content:center;border:1px solid #b39137;border-radius:50%;background:var(--kuara-mustard,#d8bd66);color:var(--kuara-blue,#233754);font-size:19px;font-weight:700;line-height:1;letter-spacing:-.04em;transform:rotate(-8deg)}
+.sales-version .edition-discount{display:inline-flex;flex:0 0 62px;width:62px;height:62px;align-items:center;justify-content:center;border:0;border-radius:50%;background:var(--kuara-mustard,#d8bd66);color:var(--kuara-blue,#233754);font-size:19px;font-weight:700;line-height:1;letter-spacing:-.04em;transform:rotate(-8deg)}
 .sales-version .edition-format-note,.sales-version #oferta .edition-format-note{font-size:14px;line-height:1.45;font-weight:400;color:#465469;margin:0 0 14px}
 .sales-version .condition-card .hero-inclusions{margin-bottom:12px}
 .sales-version #oferta .purchase-price{margin-bottom:20px}
